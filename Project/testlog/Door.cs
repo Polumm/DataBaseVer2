@@ -32,7 +32,7 @@ namespace testlog
 
 
 
-        //返回受delete upate insert操作影响的行数
+        //返回delete upate insert操作影响的行数
         public int Excute(string sql)
         { 
             return Command(sql).ExecuteNonQuery(); 
