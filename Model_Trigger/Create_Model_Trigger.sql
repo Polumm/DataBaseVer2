@@ -1,11 +1,3 @@
-/*学生选课表的前置视图（必须先于学生选课表创建），与课程学生SC表的触发器紧密相关*/
-create view 教学班当前选课情况(课程教学ID,上课时间,计划上限,当前人数)
-as
-select 课程教学ID,上课时间,计划上限,已选人数
-from 排课表
-/*连接课程表，取得计划上限*/
-
-go
 create table 绩点模型
 (
 学号 varchar(20),
@@ -27,7 +19,7 @@ as
 begin
     declare @学号 varchar(20), @课程教学ID varchar(20), @课程代号 varchar(20), @计划上限 smallint, @当前人数 smallint, @成绩 smallint, @课程类型 varchar(20);
     select @学号=学号, @课程教学ID=课程教学ID, @成绩=成绩 from inserted;
-	select @计划上限=计划上限, @当前人数=当前人数 from 教学班当前选课情况 where 课程教学ID=@课程教学ID;
+	select @计划上限=计划上限, @当前人数=已选人数 from 排课表 where 课程教学ID=@课程教学ID;
 	select @课程类型=课程类型,@课程代号=课程代号 from 课程 where 课程代号 = (select 课程代号 from 排课表 where 课程教学ID=@课程教学ID);
     if (@计划上限>=@当前人数)
 	begin
