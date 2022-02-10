@@ -29,7 +29,7 @@ values('10923410','wangguonian8','周二3，4节',110)
 insert into 课程教师TC
 values('8spoc001','lijiangmin98','周二5，6节',60)
 insert into 课程教师TC
-values('8spoc001','liangyueling','周二5，6节',60)
+values('8spoc001','liangyueling','周二7，8节',60)
 insert into 课程教师TC
 values('8spoc005','wangguonian8','周二7，8节',50)
 insert into 课程教师TC

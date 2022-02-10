@@ -42,20 +42,34 @@ create table 教室
 
 create table 课程
 (
-课程号 varchar(20) primary key,
+课程代号 varchar(20) primary key,
 课程名 varchar(40),
 课程类型 varchar(20) check(课程类型 in ('基础必修','专业必修','选修')),/*check属性约束，限定课程类型*/
 学分 tinyint,
 )
 
+create table 排课表
+(
+课程教学ID varchar(20) primary key,
+上课时间 varchar(40),
+教室编号 varchar(10),
+教师编号 varchar(20),
+计划上限 tinyint,
+已选人数 tinyint,
+课程代号 varchar(20),
+foreign key(教室编号) references 教室(教室编号),
+foreign key(教师编号) references 教师(教师编号),
+foreign key(课程代号) references 课程(课程代号)
+)
+
 create table 课程学生SC
 (
 学号 varchar(20),
-课程号 varchar(20),
+课程教学ID varchar(20),
 成绩 float,
-primary key(学号,课程号),
+primary key(学号,课程教学ID),
 foreign key(学号) references 学生(学号),
-foreign key(课程号) references 课程(课程号)
+foreign key(课程教学ID) references 排课表(课程教学ID)
 )
 
 create table 课程教师TC
