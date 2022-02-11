@@ -2,8 +2,7 @@ create table 系
 (
 系编号 varchar(30) primary key,
 系名 varchar(40),
-系办公室电话 varchar(50),
-学院 varchar(40),
+系办公室电话 varchar(50)
 )
 
 create table 教师
@@ -20,7 +19,6 @@ create table 班
 (
 班级编号 varchar(10) primary key,
 系编号 varchar(30),
-专业 varchar(40),
 foreign key(系编号) references 系(系编号)
 )
 
