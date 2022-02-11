@@ -16,5 +16,14 @@ namespace testlog
         {
             InitializeComponent();
         }
+        private void show()
+        {
+            //tvMenu.Nodes.
+        }
+
+        private void Tree1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+
+        }
     }
 }
