@@ -13,11 +13,6 @@ namespace testlog
     public partial class Click学生成绩总表打印 : Form
     {
         string SID1;
-        public Click学生成绩总表打印()
-        {
-            InitializeComponent();
-        }
-
         public Click学生成绩总表打印(string SID)
         {
             SID1 = SID;
@@ -27,6 +22,8 @@ namespace testlog
 
         private void showTable()
         {
+            string spacer = "                    ";//用于空格调整布局
+            label10.Text = spacer + "打印时间：" +  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             dataGridView1.Rows.Clear();
             string sql = " select* from 学生成绩评价表 where 学号 = '" + SID1 + "'";
             Door Print_grade = new Door();
@@ -42,22 +39,34 @@ namespace testlog
                 f = dr["等级"].ToString();
                 g = dr["绩点"].ToString();
                 h = dr["权重"].ToString();
-                label1.Text = dr["姓名"].ToString() + "的成绩单";
+                label6.Text = "姓名：" + dr["姓名"].ToString();
                 string[] str = { a, b, c, d, e, f, g, h };
                 dataGridView1.Rows.Add(str);
             }
-
-        }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            dr.Close();
+            string sql2 = "select* from 学生信息表 where 学号 = '" + SID1 + "'";
+            Door Print_info = new Door();
+            IDataReader dr2 = Print_info.Reader(sql2);
+            while (dr2.Read())
+            {
+                label2.Text = "学院：" + dr2["学院"].ToString();
+                label3.Text = "系：" + dr2["系"].ToString();
+                label4.Text = "专业：" + dr2["专业"].ToString();
+                label5.Text = "学号：" + dr2["学号"].ToString();
+                label6.Text = "姓名：" + dr2["姓名"].ToString();
+                label7.Text = "班级：" + dr2["班级"].ToString();
+            }
+            dr2.Close();
+            string sql3 = "select rank() over(order by 平均学分绩点 desc) as 排名,* from 年级排名表 where 学号 = '" + SID1 + "'";
+            Door Print_GPA = new Door();
+            IDataReader dr3 = Print_GPA.Reader(sql3);
+            while (dr3.Read())
+            {
+                label8.Text = "     已修学分：" + dr3["已修学分"].ToString();
+                string temp = dr3["平均学分绩点"].ToString().Substring(0,4);
+                label9.Text = spacer + "历年平均学分绩点：" + temp;
+            }
+            dr3.Close();
         }
     }
 }
