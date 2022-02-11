@@ -42,7 +42,7 @@ namespace testlog
                 f = dr["等级"].ToString();
                 g = dr["绩点"].ToString();
                 h = dr["权重"].ToString();
-                label1.Text = dr["姓名"].ToString() + "的成绩单";
+                label6.Text = "姓名：" + dr["姓名"].ToString() ;
                 string[] str = { a, b, c, d, e, f, g, h };
                 dataGridView1.Rows.Add(str);
             }
