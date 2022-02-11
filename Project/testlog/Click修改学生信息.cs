@@ -26,7 +26,7 @@ namespace testlog
             IDataReader dr = dao.Reader(sql);
             while (dr.Read())
             {
-                string a, b, c, d, e, f;
+                string a, b, c, d, e;
                 a = dr["学号"].ToString();
                 b = dr["姓名"].ToString();
                 c = dr["性别"].ToString();
