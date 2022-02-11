@@ -22,6 +22,8 @@ namespace testlog
 
         private void showTable()
         {
+            string spacer = "                    ";//用于空格调整布局
+            label10.Text = spacer + "打印时间：" +  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             dataGridView1.Rows.Clear();
             string sql = " select* from 学生成绩评价表 where 学号 = '" + SID1 + "'";
             Door Print_grade = new Door();
@@ -60,9 +62,9 @@ namespace testlog
             IDataReader dr3 = Print_GPA.Reader(sql3);
             while (dr3.Read())
             {
-                label8.Text = "已修学分：" + dr3["已修学分"].ToString();
+                label8.Text = "     已修学分：" + dr3["已修学分"].ToString();
                 string temp = dr3["平均学分绩点"].ToString().Substring(0,4);
-                label9.Text = "历年平均学分绩点：" + temp;
+                label9.Text = spacer + "历年平均学分绩点：" + temp;
             }
             dr3.Close();
         }

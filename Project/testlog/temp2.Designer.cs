@@ -30,7 +30,6 @@ namespace testlog
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,7 @@ namespace testlog
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@ namespace testlog
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
             this.tableLayoutPanel1.Controls.Add(this.label9, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 2);
@@ -85,17 +85,6 @@ namespace testlog
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1198, 571);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label9, 3);
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(636, 489);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(559, 36);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "历年平均学分绩点：";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -103,9 +92,10 @@ namespace testlog
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 489);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(627, 36);
+            this.label8.Size = new System.Drawing.Size(626, 36);
             this.label8.TabIndex = 10;
             this.label8.Text = "已修学分：";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataGridView1
             // 
@@ -190,41 +180,45 @@ namespace testlog
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(1038, 29);
+            this.label7.Location = new System.Drawing.Point(1037, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 28);
+            this.label7.Size = new System.Drawing.Size(158, 28);
             this.label7.TabIndex = 6;
             this.label7.Text = "班级：";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(843, 29);
+            this.label6.Location = new System.Drawing.Point(842, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 28);
             this.label6.TabIndex = 5;
             this.label6.Text = " 姓名：";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(636, 29);
+            this.label5.Location = new System.Drawing.Point(635, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(201, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = " 学号：";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(442, 29);
+            this.label4.Location = new System.Drawing.Point(441, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(188, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = " 专业：";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -232,9 +226,10 @@ namespace testlog
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(233, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 28);
+            this.label3.Size = new System.Drawing.Size(202, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = " 系：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -258,17 +253,31 @@ namespace testlog
             this.label2.Size = new System.Drawing.Size(224, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = " 学院：";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label10, 3);
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(636, 525);
+            this.label10.Location = new System.Drawing.Point(635, 525);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(559, 46);
+            this.label10.Size = new System.Drawing.Size(560, 46);
             this.label10.TabIndex = 12;
             this.label10.Text = "打印时间：";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label9, 3);
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(635, 489);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(560, 36);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "历年平均学分绩点：";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // temp2
             // 
@@ -277,8 +286,9 @@ namespace testlog
             this.ClientSize = new System.Drawing.Size(1198, 571);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "temp2";
-            this.Text = "temp2";
+            this.Text = "学生学业成绩表";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -296,7 +306,6 @@ namespace testlog
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -308,5 +317,6 @@ namespace testlog
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
