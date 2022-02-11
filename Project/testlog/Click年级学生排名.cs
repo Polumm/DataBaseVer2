@@ -19,7 +19,7 @@ namespace testlog
         }
         private void Table()
         {
-            string sql = " select* from 年级排名表 order by 平均学分绩点 DESC";
+            string sql = "select* from 年级排名表 order by 平均学分绩点 DESC";
             Door dao = new Door();
             IDataReader dr = dao.Reader(sql);
             while (dr.Read())
@@ -30,7 +30,7 @@ namespace testlog
                 c = dr["系"].ToString();
                 d = dr["班级"].ToString();
                 e = dr["已修学分"].ToString();
-                f = dr["平均学分绩点"].ToString();
+                f = dr["平均学分绩点"].ToString().Substring(0, 4);
 
                 string[] str = { a, b, c, d, e, f };
                 dataGridView1.Rows.Add(str);

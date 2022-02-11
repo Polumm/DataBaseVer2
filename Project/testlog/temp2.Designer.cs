@@ -29,36 +29,30 @@ namespace testlog
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("地理系", 0, 0);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("测绘系", 1, 1);
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("软件工程系");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("男", 0, 0);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("女", 1, 1);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("B1", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("男", 0, 0);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("女", 1, 1);
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("B2", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode7,
-            treeNode10});
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("地理系", 0, 0);
+            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("测绘系", 1, 1);
+            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("软件工程系");
+            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode67,
+            treeNode68,
+            treeNode69});
+            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("男", 0, 0);
+            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("女", 1, 1);
+            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("B1", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode71,
+            treeNode72});
+            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("男", 0, 0);
+            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("女", 1, 1);
+            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("B2", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode74,
+            treeNode75});
+            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode70,
+            treeNode73,
+            treeNode76});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tree1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtStuNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelect = new System.Windows.Forms.Button();
@@ -75,6 +69,13 @@ namespace testlog
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,59 +91,60 @@ namespace testlog
             this.Tree1.Location = new System.Drawing.Point(3, 24);
             this.Tree1.Margin = new System.Windows.Forms.Padding(4);
             this.Tree1.Name = "Tree1";
-            treeNode1.ImageIndex = 0;
-            treeNode1.Name = "nodeX1";
-            treeNode1.SelectedImageIndex = 0;
-            treeNode1.Text = "地理系";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "nodeX2";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "测绘系";
-            treeNode3.Name = "NodeX3";
-            treeNode3.Text = "软件工程系";
-            treeNode4.ImageIndex = 2;
-            treeNode4.Name = "nodeY1";
-            treeNode4.SelectedImageIndex = 2;
-            treeNode4.Text = "地理与信息工程学院";
-            treeNode5.ImageIndex = 0;
-            treeNode5.Name = "nodeNan";
-            treeNode5.SelectedImageIndex = 0;
-            treeNode5.Text = "男";
-            treeNode6.ImageIndex = 1;
-            treeNode6.Name = "nodeNv";
-            treeNode6.SelectedImageIndex = 1;
-            treeNode6.Text = "女";
-            treeNode7.ImageIndex = 2;
-            treeNode7.Name = "nodeB1";
-            treeNode7.SelectedImageIndex = 2;
-            treeNode7.Text = "B1";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "nodeNan";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "男";
-            treeNode9.ImageIndex = 1;
-            treeNode9.Name = "nodeNv";
-            treeNode9.SelectedImageIndex = 1;
-            treeNode9.Text = "女";
-            treeNode10.ImageIndex = 2;
-            treeNode10.Name = "nodeB2";
-            treeNode10.SelectedImageIndex = 2;
-            treeNode10.Text = "B2";
-            treeNode11.ImageIndex = 2;
-            treeNode11.Name = "AllNodes";
-            treeNode11.SelectedImageIndex = 2;
-            treeNode11.Text = "全部";
+            treeNode67.ImageIndex = 0;
+            treeNode67.Name = "nodeX1";
+            treeNode67.SelectedImageIndex = 0;
+            treeNode67.Text = "地理系";
+            treeNode68.ImageIndex = 1;
+            treeNode68.Name = "nodeX2";
+            treeNode68.SelectedImageIndex = 1;
+            treeNode68.Text = "测绘系";
+            treeNode69.Name = "NodeX3";
+            treeNode69.Text = "软件工程系";
+            treeNode70.ImageIndex = 2;
+            treeNode70.Name = "nodeY1";
+            treeNode70.SelectedImageIndex = 2;
+            treeNode70.Text = "地理与信息工程学院";
+            treeNode71.ImageIndex = 0;
+            treeNode71.Name = "nodeNan";
+            treeNode71.SelectedImageIndex = 0;
+            treeNode71.Text = "男";
+            treeNode72.ImageIndex = 1;
+            treeNode72.Name = "nodeNv";
+            treeNode72.SelectedImageIndex = 1;
+            treeNode72.Text = "女";
+            treeNode73.ImageIndex = 2;
+            treeNode73.Name = "nodeB1";
+            treeNode73.SelectedImageIndex = 2;
+            treeNode73.Text = "B1";
+            treeNode74.ImageIndex = 0;
+            treeNode74.Name = "nodeNan";
+            treeNode74.SelectedImageIndex = 0;
+            treeNode74.Text = "男";
+            treeNode75.ImageIndex = 1;
+            treeNode75.Name = "nodeNv";
+            treeNode75.SelectedImageIndex = 1;
+            treeNode75.Text = "女";
+            treeNode76.ImageIndex = 2;
+            treeNode76.Name = "nodeB2";
+            treeNode76.SelectedImageIndex = 2;
+            treeNode76.Text = "B2";
+            treeNode77.ImageIndex = 2;
+            treeNode77.Name = "AllNodes";
+            treeNode77.SelectedImageIndex = 2;
+            treeNode77.Text = "全部";
             this.Tree1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode11});
+            treeNode77});
             this.Tree1.Size = new System.Drawing.Size(268, 166);
             this.Tree1.TabIndex = 1;
-            this.Tree1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Tree1_NodeMouseClick);
+            this.Tree1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Tree1_NodeMouseDoubleClick);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
             this.Column1,
             this.Column3,
             this.Column5,
@@ -155,58 +157,8 @@ namespace testlog
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(926, 637);
+            this.dataGridView1.Size = new System.Drawing.Size(1086, 637);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 110.7647F;
-            this.Column1.HeaderText = "姓名";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 105;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 123.913F;
-            this.Column3.HeaderText = "专业";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 105;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 93.33292F;
-            this.Column5.HeaderText = "班级";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 105;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 87.85164F;
-            this.Column2.HeaderText = "已修学分";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 105;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 82.33897F;
-            this.Column6.HeaderText = "平均学分绩点";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 105;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 101.7988F;
-            this.Column4.HeaderText = "排名";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 105;
             // 
             // txtStuNo
             // 
@@ -367,19 +319,77 @@ namespace testlog
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(326, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(932, 664);
+            this.groupBox6.Size = new System.Drawing.Size(1092, 664);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "groupBox6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "学号";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 105;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column1.FillWeight = 110.7647F;
+            this.Column1.HeaderText = "姓名";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 105;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 123.913F;
+            this.Column3.HeaderText = "专业";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 105;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 93.33292F;
+            this.Column5.HeaderText = "班级";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 105;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 87.85164F;
+            this.Column2.HeaderText = "已修学分";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 105;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 82.33897F;
+            this.Column6.HeaderText = "平均学分绩点";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 105;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 101.7988F;
+            this.Column4.HeaderText = "排名";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 105;
             // 
             // temp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.ClientSize = new System.Drawing.Size(1418, 664);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
-            this.MaximumSize = new System.Drawing.Size(1280, 720);
+            this.MaximumSize = new System.Drawing.Size(1440, 720);
+            this.MinimumSize = new System.Drawing.Size(1440, 720);
             this.Name = "temp2";
             this.Text = "temp2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -400,12 +410,6 @@ namespace testlog
 
         private System.Windows.Forms.TreeView Tree1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox txtStuNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelect;
@@ -422,5 +426,12 @@ namespace testlog
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
