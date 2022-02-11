@@ -1,0 +1,1 @@
+select rank() over(order by 平均学分绩点 desc) as 排名,* from 年级排名表 where 学号 = 20191003024

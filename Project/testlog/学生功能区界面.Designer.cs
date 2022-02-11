@@ -71,7 +71,7 @@ namespace testlog
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(181, 24);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(135, 24);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // toolStripStatusLabel1
@@ -106,13 +106,13 @@ namespace testlog
             // 退出系统ToolStripMenuItem
             // 
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
@@ -143,14 +143,14 @@ namespace testlog
             // 自主选课ToolStripMenuItem
             // 
             this.自主选课ToolStripMenuItem.Name = "自主选课ToolStripMenuItem";
-            this.自主选课ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.自主选课ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.自主选课ToolStripMenuItem.Text = "自主选课";
             this.自主选课ToolStripMenuItem.Click += new System.EventHandler(this.自主选课ToolStripMenuItem_Click);
             // 
             // 个人课表查询ToolStripMenuItem
             // 
             this.个人课表查询ToolStripMenuItem.Name = "个人课表查询ToolStripMenuItem";
-            this.个人课表查询ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.个人课表查询ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.个人课表查询ToolStripMenuItem.Text = "选课情况确认";
             this.个人课表查询ToolStripMenuItem.Click += new System.EventHandler(this.个人课表查询ToolStripMenuItem_Click_1);
             // 
@@ -166,14 +166,14 @@ namespace testlog
             // 成绩总表打印ToolStripMenuItem
             // 
             this.成绩总表打印ToolStripMenuItem.Name = "成绩总表打印ToolStripMenuItem";
-            this.成绩总表打印ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.成绩总表打印ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
             this.成绩总表打印ToolStripMenuItem.Text = "成绩总表打印";
             this.成绩总表打印ToolStripMenuItem.Click += new System.EventHandler(this.成绩总表打印ToolStripMenuItem_Click);
             // 
             // 平均学分绩点查询ToolStripMenuItem
             // 
             this.平均学分绩点查询ToolStripMenuItem.Name = "平均学分绩点查询ToolStripMenuItem";
-            this.平均学分绩点查询ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.平均学分绩点查询ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
             this.平均学分绩点查询ToolStripMenuItem.Text = "平均学分绩点查询";
             this.平均学分绩点查询ToolStripMenuItem.Click += new System.EventHandler(this.平均学分绩点查询ToolStripMenuItem_Click);
             // 

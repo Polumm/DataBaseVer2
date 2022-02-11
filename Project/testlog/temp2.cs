@@ -42,7 +42,7 @@ namespace testlog
                 dataGridView1.Rows.Add(str);
             }
             dr.Close();
-            string sql2 = " select* from 学生信息表 where 学号 = '" + SID1 + "'";
+            string sql2 = "select* from 学生信息表 where 学号 = '" + SID1 + "'";
             Door Print_info = new Door();
             IDataReader dr2 = Print_info.Reader(sql2);
             while (dr2.Read())
@@ -55,6 +55,16 @@ namespace testlog
                 label7.Text = "班级：" + dr2["班级"].ToString();
             }
             dr2.Close();
+            string sql3 = "select rank() over(order by 平均学分绩点 desc) as 排名,* from 年级排名表 where 学号 = '" + SID1 + "'";
+            Door Print_GPA = new Door();
+            IDataReader dr3 = Print_GPA.Reader(sql3);
+            while (dr3.Read())
+            {
+                label8.Text = "已修学分：" + dr3["已修学分"].ToString();
+                string temp = dr3["平均学分绩点"].ToString().Substring(0,4);
+                label9.Text = "历年平均学分绩点：" + temp;
+            }
+            dr3.Close();
         }
     }
 }

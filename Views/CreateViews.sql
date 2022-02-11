@@ -8,9 +8,9 @@ from 排课表
 
 */
 
-create view 学生信息表(班级,学号,姓名,性别,出生年月,系)
+create view 学生信息表(班级,学号,姓名,性别,出生年月,系,学院,专业)
 as
-select 学生.班级编号,学号,姓名,性别,出生日期,系名
+select 学生.班级编号,学号,姓名,性别,出生日期,系名,学院,专业 
 from 学生,班,系
 where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号
 go
@@ -63,11 +63,20 @@ from 学生,课程,课程学生SC,绩点模型,排课表
 where 课程学生SC.学号=学生.学号 and 课程学生SC.课程教学ID = 排课表.课程教学ID and 排课表.课程代号 = 课程.课程代号 and 课程学生SC.学号=绩点模型.学号 and 课程.课程代号 = 绩点模型.课程代号
 go
 
+
+/*create view 年级排名表(学号,姓名,系,班级,已修学分,平均学分绩点)
+as
+select 学生.学号,姓名,系名,学生.班级编号,总学分,总绩点/总学分 平均学分绩点
+from 学生, 班, 系,(select 学号,Sum(学分) from 学生成绩评价表 group by 学号) as temporary1(学号,总学分),(select 学号,Sum(学分*绩点*权重) from 学生成绩评价表 group by 学号) as temporary2(学号,总绩点)
+where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号 and 学生.学号=temporary1.学号 and 学生.学号=temporary2.学号
+*/
+
 create view 年级排名表(学号,姓名,系,班级,已修学分,平均学分绩点)
 as
-select 学生.学号,姓名,系名,学生.班级编号,学分,权重/学分 绩点
-from 学生,班,系,(select 学号,Sum(学分) from 学生成绩评价表 group by 学号) as temporary1(学号,学分),(select 学号,Sum(学分*绩点*权重) from 学生成绩评价表 group by 学号) as temporary2(学号,权重)
-where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号 and 学生.学号=temporary1.学号 and 学生.学号=temporary2.学号
+select 学生.学号,姓名,系名,学生.班级编号,总学分,平均学分绩点 
+from
+学生, 班, 系,(select 学生.学号,总学分,总绩点/总学分 平均学分绩点 from 学生,(select 学号,Sum(学分) from 学生成绩评价表 group by 学号) as temporary1(学号,总学分),(select 学号,Sum(学分*绩点*权重) from 学生成绩评价表 group by 学号) as temporary2(学号,总绩点) where 学生.学号=temporary1.学号 and 学生.学号=temporary2.学号) as temporary3
+where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号 and 学生.学号 = temporary3.学号
 go
 
 create view 教师授课表(课程,任课老师,上课地点)
