@@ -37,7 +37,8 @@ namespace testlog
                     c = dr["专业"].ToString();
                     d = dr["班级"].ToString();
                     e = dr["已修学分"].ToString();
-                    f = dr["平均学分绩点"].ToString().Substring(0, 4);
+                    float temp = Convert.ToSingle(dr["平均学分绩点"].ToString());
+                    f = string.Format("{0:N2}", temp);//先转浮点再利用Format方法，注意该方法不对字符串生效，所以得先转float
                     g = dr["排名"].ToString();
 
                     string[] str = { a, b, c, d, e, f, g};
