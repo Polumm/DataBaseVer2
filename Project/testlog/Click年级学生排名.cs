@@ -30,7 +30,7 @@ namespace testlog
                 c = dr["系"].ToString();
                 d = dr["班级"].ToString();
                 e = dr["已修学分"].ToString();
-                f = dr["平均学分绩点"].ToString().Substring(0, 4);
+                f = dr["平均学分绩点"].ToString();
 
                 string[] str = { a, b, c, d, e, f };
                 dataGridView1.Rows.Add(str);

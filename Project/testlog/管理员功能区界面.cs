@@ -74,11 +74,6 @@ namespace testlog
         }
 
         //使用Click事件调用
-        private void 生成年级学生排名ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Click年级学生排名 rank = new Click年级学生排名();
-            rank.ShowDialog();
-        }
 
         private void 统计班级学生信息ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -120,6 +115,12 @@ namespace testlog
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void 学情查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click学情查询 study_search = new Click学情查询();
+            study_search.ShowDialog();
         }
     }
     

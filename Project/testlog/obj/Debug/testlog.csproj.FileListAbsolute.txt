@@ -62,4 +62,4 @@ D:\Coding\ver2\Project\testlog\obj\Debug\testlog.csproj.GenerateResource.cache
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.csproj.CoreCompileInputs.cache
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.exe
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.pdb
-D:\Coding\ver2\Project\testlog\obj\Debug\testlog.temp2.resources
+D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学情查询.resources

@@ -1,7 +1,7 @@
 ﻿
 namespace testlog
 {
-    partial class temp2
+    partial class Click学情查询
     {
         /// <summary>
         /// Required designer variable.

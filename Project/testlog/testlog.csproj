@@ -119,11 +119,11 @@
     <Compile Include="Click学生成绩总表打印.Designer.cs">
       <DependentUpon>Click学生成绩总表打印.cs</DependentUpon>
     </Compile>
-    <Compile Include="temp2.cs">
+    <Compile Include="Click学情查询.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="temp2.Designer.cs">
-      <DependentUpon>temp2.cs</DependentUpon>
+    <Compile Include="Click学情查询.Designer.cs">
+      <DependentUpon>Click学情查询.cs</DependentUpon>
     </Compile>
     <Compile Include="地图交互.cs">
       <SubType>Form</SubType>
@@ -238,8 +238,8 @@
     <EmbeddedResource Include="Click学生成绩总表打印.resx">
       <DependentUpon>Click学生成绩总表打印.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="temp2.resx">
-      <DependentUpon>temp2.cs</DependentUpon>
+    <EmbeddedResource Include="Click学情查询.resx">
+      <DependentUpon>Click学情查询.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="地图交互.resx">
       <DependentUpon>地图交互.cs</DependentUpon>

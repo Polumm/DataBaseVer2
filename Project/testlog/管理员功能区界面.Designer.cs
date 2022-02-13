@@ -32,6 +32,7 @@ namespace testlog
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改学生信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除学生信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,7 @@ namespace testlog
             this.删除教师信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加教师信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.生成年级学生排名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学情查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计年级学生信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计班级学生信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计学生个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace testlog
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,12 @@ namespace testlog
             this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
             this.系统ToolStripMenuItem.Text = "系统";
             // 
+            // 退出系统ToolStripMenuItem
+            // 
+            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
+            this.退出系统ToolStripMenuItem.Text = "退出系统";
+            // 
             // 信息管理ToolStripMenuItem
             // 
             this.信息管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -100,46 +106,46 @@ namespace testlog
             // 修改学生信息ToolStripMenuItem
             // 
             this.修改学生信息ToolStripMenuItem.Name = "修改学生信息ToolStripMenuItem";
-            this.修改学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.修改学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.修改学生信息ToolStripMenuItem.Text = "修改学生信息";
             this.修改学生信息ToolStripMenuItem.Click += new System.EventHandler(this.修改学生信息ToolStripMenuItem_Click);
             // 
             // 删除学生信息ToolStripMenuItem
             // 
             this.删除学生信息ToolStripMenuItem.Name = "删除学生信息ToolStripMenuItem";
-            this.删除学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.删除学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.删除学生信息ToolStripMenuItem.Text = "删除学生信息";
             this.删除学生信息ToolStripMenuItem.Click += new System.EventHandler(this.删除学生信息ToolStripMenuItem_Click);
             // 
             // 添加学生信息ToolStripMenuItem
             // 
             this.添加学生信息ToolStripMenuItem.Name = "添加学生信息ToolStripMenuItem";
-            this.添加学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.添加学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.添加学生信息ToolStripMenuItem.Text = "添加学生信息";
             this.添加学生信息ToolStripMenuItem.Click += new System.EventHandler(this.添加学生信息ToolStripMenuItem_Click);
             // 
             // 修改教师信息ToolStripMenuItem
             // 
             this.修改教师信息ToolStripMenuItem.Name = "修改教师信息ToolStripMenuItem";
-            this.修改教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.修改教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.修改教师信息ToolStripMenuItem.Text = "修改教师信息";
             // 
             // 删除教师信息ToolStripMenuItem
             // 
             this.删除教师信息ToolStripMenuItem.Name = "删除教师信息ToolStripMenuItem";
-            this.删除教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.删除教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.删除教师信息ToolStripMenuItem.Text = "删除教师信息";
             // 
             // 添加教师信息ToolStripMenuItem
             // 
             this.添加教师信息ToolStripMenuItem.Name = "添加教师信息ToolStripMenuItem";
-            this.添加教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.添加教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.添加教师信息ToolStripMenuItem.Text = "添加教师信息";
             // 
             // 信息查询ToolStripMenuItem
             // 
             this.信息查询ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.生成年级学生排名ToolStripMenuItem,
+            this.学情查询ToolStripMenuItem,
             this.统计年级学生信息ToolStripMenuItem,
             this.统计班级学生信息ToolStripMenuItem,
             this.统计学生个人信息ToolStripMenuItem,
@@ -148,12 +154,12 @@ namespace testlog
             this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
             this.信息查询ToolStripMenuItem.Text = "信息查询";
             // 
-            // 生成年级学生排名ToolStripMenuItem
+            // 学情查询ToolStripMenuItem
             // 
-            this.生成年级学生排名ToolStripMenuItem.Name = "生成年级学生排名ToolStripMenuItem";
-            this.生成年级学生排名ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.生成年级学生排名ToolStripMenuItem.Text = "生成年级学生排名";
-            this.生成年级学生排名ToolStripMenuItem.Click += new System.EventHandler(this.生成年级学生排名ToolStripMenuItem_Click);
+            this.学情查询ToolStripMenuItem.Name = "学情查询ToolStripMenuItem";
+            this.学情查询ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.学情查询ToolStripMenuItem.Text = "学情查询";
+            this.学情查询ToolStripMenuItem.Click += new System.EventHandler(this.学情查询ToolStripMenuItem_Click);
             // 
             // 统计年级学生信息ToolStripMenuItem
             // 
@@ -250,12 +256,6 @@ namespace testlog
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // 退出系统ToolStripMenuItem
-            // 
-            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.退出系统ToolStripMenuItem.Text = "退出系统";
-            // 
             // 管理员功能区界面
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -291,7 +291,7 @@ namespace testlog
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripMenuItem 信息查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 生成年级学生排名ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 学情查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 统计年级学生信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 统计班级学生信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 统计学生个人信息ToolStripMenuItem;

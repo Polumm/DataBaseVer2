@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace testlog
 {
-    public partial class temp2 : Form
+    public partial class Click学情查询 : Form
     {
-        public temp2()
+        public Click学情查询()
         {
             InitializeComponent();
         }
