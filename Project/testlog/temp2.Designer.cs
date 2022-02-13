@@ -29,66 +29,66 @@ namespace testlog
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode121 = new System.Windows.Forms.TreeNode("11D202");
-            System.Windows.Forms.TreeNode treeNode122 = new System.Windows.Forms.TreeNode("11D203");
-            System.Windows.Forms.TreeNode treeNode123 = new System.Windows.Forms.TreeNode("地理信息科学", new System.Windows.Forms.TreeNode[] {
-            treeNode121,
-            treeNode122});
-            System.Windows.Forms.TreeNode treeNode124 = new System.Windows.Forms.TreeNode("11D201");
-            System.Windows.Forms.TreeNode treeNode125 = new System.Windows.Forms.TreeNode("地理科学", new System.Windows.Forms.TreeNode[] {
-            treeNode124});
-            System.Windows.Forms.TreeNode treeNode126 = new System.Windows.Forms.TreeNode("地理系", 0, 0, new System.Windows.Forms.TreeNode[] {
-            treeNode123,
-            treeNode125});
-            System.Windows.Forms.TreeNode treeNode127 = new System.Windows.Forms.TreeNode("11C201");
-            System.Windows.Forms.TreeNode treeNode128 = new System.Windows.Forms.TreeNode("测绘科学与技术", new System.Windows.Forms.TreeNode[] {
-            treeNode127});
-            System.Windows.Forms.TreeNode treeNode129 = new System.Windows.Forms.TreeNode("11C202");
-            System.Windows.Forms.TreeNode treeNode130 = new System.Windows.Forms.TreeNode("遥感科学与技术", new System.Windows.Forms.TreeNode[] {
-            treeNode129});
-            System.Windows.Forms.TreeNode treeNode131 = new System.Windows.Forms.TreeNode("11C203");
-            System.Windows.Forms.TreeNode treeNode132 = new System.Windows.Forms.TreeNode("地理空间信息工程", new System.Windows.Forms.TreeNode[] {
-            treeNode131});
-            System.Windows.Forms.TreeNode treeNode133 = new System.Windows.Forms.TreeNode("测绘系", 1, 1, new System.Windows.Forms.TreeNode[] {
-            treeNode128,
-            treeNode130,
-            treeNode132});
-            System.Windows.Forms.TreeNode treeNode134 = new System.Windows.Forms.TreeNode("11J201");
-            System.Windows.Forms.TreeNode treeNode135 = new System.Windows.Forms.TreeNode("11J202");
-            System.Windows.Forms.TreeNode treeNode136 = new System.Windows.Forms.TreeNode("软件工程", new System.Windows.Forms.TreeNode[] {
-            treeNode134,
-            treeNode135});
-            System.Windows.Forms.TreeNode treeNode137 = new System.Windows.Forms.TreeNode("软件工程系", new System.Windows.Forms.TreeNode[] {
-            treeNode136});
-            System.Windows.Forms.TreeNode treeNode138 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode126,
-            treeNode133,
-            treeNode137});
-            System.Windows.Forms.TreeNode treeNode139 = new System.Windows.Forms.TreeNode("应用数学系");
-            System.Windows.Forms.TreeNode treeNode140 = new System.Windows.Forms.TreeNode("物理系");
-            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("数理学院", new System.Windows.Forms.TreeNode[] {
-            treeNode139,
-            treeNode140});
-            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("地质系");
-            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("地球科学学院", new System.Windows.Forms.TreeNode[] {
-            treeNode142});
-            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("思想政治教育");
-            System.Windows.Forms.TreeNode treeNode145 = new System.Windows.Forms.TreeNode("马克思主义学院", new System.Windows.Forms.TreeNode[] {
-            treeNode144});
-            System.Windows.Forms.TreeNode treeNode146 = new System.Windows.Forms.TreeNode("经济系");
-            System.Windows.Forms.TreeNode treeNode147 = new System.Windows.Forms.TreeNode("经管学院", new System.Windows.Forms.TreeNode[] {
-            treeNode146});
-            System.Windows.Forms.TreeNode treeNode148 = new System.Windows.Forms.TreeNode("英语系");
-            System.Windows.Forms.TreeNode treeNode149 = new System.Windows.Forms.TreeNode("外国语学院", new System.Windows.Forms.TreeNode[] {
-            treeNode148});
-            System.Windows.Forms.TreeNode treeNode150 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode138,
-            treeNode141,
-            treeNode143,
-            treeNode145,
-            treeNode147,
-            treeNode149});
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("11D202");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("11D203");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("地理信息科学", new System.Windows.Forms.TreeNode[] {
+            treeNode31,
+            treeNode32});
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("11D201");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("地理科学", new System.Windows.Forms.TreeNode[] {
+            treeNode34});
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("地理系", 0, 0, new System.Windows.Forms.TreeNode[] {
+            treeNode33,
+            treeNode35});
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("11C201");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("测绘科学与技术", new System.Windows.Forms.TreeNode[] {
+            treeNode37});
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("11C202");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("遥感科学与技术", new System.Windows.Forms.TreeNode[] {
+            treeNode39});
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("11C203");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("地理空间信息工程", new System.Windows.Forms.TreeNode[] {
+            treeNode41});
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("测绘系", 1, 1, new System.Windows.Forms.TreeNode[] {
+            treeNode38,
+            treeNode40,
+            treeNode42});
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("11J201");
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("11J202");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("软件工程", new System.Windows.Forms.TreeNode[] {
+            treeNode44,
+            treeNode45});
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("软件工程系", new System.Windows.Forms.TreeNode[] {
+            treeNode46});
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode36,
+            treeNode43,
+            treeNode47});
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("应用数学系");
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("物理系");
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("数理学院", new System.Windows.Forms.TreeNode[] {
+            treeNode49,
+            treeNode50});
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("地质系");
+            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("地球科学学院", new System.Windows.Forms.TreeNode[] {
+            treeNode52});
+            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("思想政治教育");
+            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("马克思主义学院", new System.Windows.Forms.TreeNode[] {
+            treeNode54});
+            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("经济系");
+            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("经管学院", new System.Windows.Forms.TreeNode[] {
+            treeNode56});
+            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("英语系");
+            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("外国语学院", new System.Windows.Forms.TreeNode[] {
+            treeNode58});
+            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode48,
+            treeNode51,
+            treeNode53,
+            treeNode55,
+            treeNode57,
+            treeNode59});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tree1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,10 +98,10 @@ namespace testlog
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtStuNo = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.txtStuName = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -113,10 +113,11 @@ namespace testlog
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,6 +125,7 @@ namespace testlog
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tree1
@@ -132,77 +134,77 @@ namespace testlog
             this.Tree1.Location = new System.Drawing.Point(3, 24);
             this.Tree1.Margin = new System.Windows.Forms.Padding(4);
             this.Tree1.Name = "Tree1";
-            treeNode121.Name = "节点21";
-            treeNode121.Text = "11D202";
-            treeNode122.Name = "节点27";
-            treeNode122.Text = "11D203";
-            treeNode123.Name = "节点12";
-            treeNode123.Text = "地理信息科学";
-            treeNode124.Name = "节点19";
-            treeNode124.Text = "11D201";
-            treeNode125.Name = "节点13";
-            treeNode125.Text = "地理科学";
-            treeNode126.ImageIndex = 0;
-            treeNode126.Name = "nodeX1";
-            treeNode126.SelectedImageIndex = 0;
-            treeNode126.Text = "地理系";
-            treeNode127.Name = "节点22";
-            treeNode127.Text = "11C201";
-            treeNode128.Name = "节点14";
-            treeNode128.Text = "测绘科学与技术";
-            treeNode129.Name = "节点23";
-            treeNode129.Text = "11C202";
-            treeNode130.Name = "节点15";
-            treeNode130.Text = "遥感科学与技术";
-            treeNode131.Name = "节点24";
-            treeNode131.Text = "11C203";
-            treeNode132.Name = "节点16";
-            treeNode132.Text = "地理空间信息工程";
-            treeNode133.ImageIndex = 1;
-            treeNode133.Name = "nodeX2";
-            treeNode133.SelectedImageIndex = 1;
-            treeNode133.Text = "测绘系";
-            treeNode134.Name = "节点25";
-            treeNode134.Text = "11J201";
-            treeNode135.Name = "节点26";
-            treeNode135.Text = "11J202";
-            treeNode136.Name = "节点17";
-            treeNode136.Text = "软件工程";
-            treeNode137.Name = "NodeX3";
-            treeNode137.Text = "软件工程系";
-            treeNode138.ImageIndex = 2;
-            treeNode138.Name = "nodeY1";
-            treeNode138.SelectedImageIndex = 2;
-            treeNode138.Text = "地理与信息工程学院";
-            treeNode139.Name = "节点6";
-            treeNode139.Text = "应用数学系";
-            treeNode140.Name = "节点7";
-            treeNode140.Text = "物理系";
-            treeNode141.Name = "节点1";
-            treeNode141.Text = "数理学院";
-            treeNode142.Name = "节点8";
-            treeNode142.Text = "地质系";
-            treeNode143.Name = "节点3";
-            treeNode143.Text = "地球科学学院";
-            treeNode144.Name = "节点9";
-            treeNode144.Text = "思想政治教育";
-            treeNode145.Name = "节点2";
-            treeNode145.Text = "马克思主义学院";
-            treeNode146.Name = "节点10";
-            treeNode146.Text = "经济系";
-            treeNode147.Name = "节点4";
-            treeNode147.Text = "经管学院";
-            treeNode148.Name = "节点11";
-            treeNode148.Text = "英语系";
-            treeNode149.Name = "节点5";
-            treeNode149.Text = "外国语学院";
-            treeNode150.ImageIndex = 2;
-            treeNode150.Name = "AllNodes";
-            treeNode150.SelectedImageIndex = 2;
-            treeNode150.Text = "全部";
+            treeNode31.Name = "节点21";
+            treeNode31.Text = "11D202";
+            treeNode32.Name = "节点27";
+            treeNode32.Text = "11D203";
+            treeNode33.Name = "节点12";
+            treeNode33.Text = "地理信息科学";
+            treeNode34.Name = "节点19";
+            treeNode34.Text = "11D201";
+            treeNode35.Name = "节点13";
+            treeNode35.Text = "地理科学";
+            treeNode36.ImageIndex = 0;
+            treeNode36.Name = "nodeX1";
+            treeNode36.SelectedImageIndex = 0;
+            treeNode36.Text = "地理系";
+            treeNode37.Name = "节点22";
+            treeNode37.Text = "11C201";
+            treeNode38.Name = "节点14";
+            treeNode38.Text = "测绘科学与技术";
+            treeNode39.Name = "节点23";
+            treeNode39.Text = "11C202";
+            treeNode40.Name = "节点15";
+            treeNode40.Text = "遥感科学与技术";
+            treeNode41.Name = "节点24";
+            treeNode41.Text = "11C203";
+            treeNode42.Name = "节点16";
+            treeNode42.Text = "地理空间信息工程";
+            treeNode43.ImageIndex = 1;
+            treeNode43.Name = "nodeX2";
+            treeNode43.SelectedImageIndex = 1;
+            treeNode43.Text = "测绘系";
+            treeNode44.Name = "节点25";
+            treeNode44.Text = "11J201";
+            treeNode45.Name = "节点26";
+            treeNode45.Text = "11J202";
+            treeNode46.Name = "节点17";
+            treeNode46.Text = "软件工程";
+            treeNode47.Name = "NodeX3";
+            treeNode47.Text = "软件工程系";
+            treeNode48.ImageIndex = 2;
+            treeNode48.Name = "nodeY1";
+            treeNode48.SelectedImageIndex = 2;
+            treeNode48.Text = "地理与信息工程学院";
+            treeNode49.Name = "节点6";
+            treeNode49.Text = "应用数学系";
+            treeNode50.Name = "节点7";
+            treeNode50.Text = "物理系";
+            treeNode51.Name = "节点1";
+            treeNode51.Text = "数理学院";
+            treeNode52.Name = "节点8";
+            treeNode52.Text = "地质系";
+            treeNode53.Name = "节点3";
+            treeNode53.Text = "地球科学学院";
+            treeNode54.Name = "节点9";
+            treeNode54.Text = "思想政治教育";
+            treeNode55.Name = "节点2";
+            treeNode55.Text = "马克思主义学院";
+            treeNode56.Name = "节点10";
+            treeNode56.Text = "经济系";
+            treeNode57.Name = "节点4";
+            treeNode57.Text = "经管学院";
+            treeNode58.Name = "节点11";
+            treeNode58.Text = "英语系";
+            treeNode59.Name = "节点5";
+            treeNode59.Text = "外国语学院";
+            treeNode60.ImageIndex = 2;
+            treeNode60.Name = "AllNodes";
+            treeNode60.SelectedImageIndex = 2;
+            treeNode60.Text = "全部";
             this.Tree1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode150});
-            this.Tree1.Size = new System.Drawing.Size(268, 166);
+            treeNode60});
+            this.Tree1.Size = new System.Drawing.Size(281, 169);
             this.Tree1.TabIndex = 1;
             this.Tree1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Tree1_NodeMouseDoubleClick);
             // 
@@ -236,8 +238,8 @@ namespace testlog
             // 
             // Column1
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.FillWeight = 110.7647F;
             this.Column1.HeaderText = "姓名";
             this.Column1.MinimumWidth = 8;
@@ -284,13 +286,13 @@ namespace testlog
             this.Column4.Name = "Column4";
             this.Column4.Width = 105;
             // 
-            // txtStuNo
+            // textBox4
             // 
-            this.txtStuNo.Location = new System.Drawing.Point(86, 42);
-            this.txtStuNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStuNo.Name = "txtStuNo";
-            this.txtStuNo.Size = new System.Drawing.Size(148, 28);
-            this.txtStuNo.TabIndex = 9;
+            this.textBox4.Location = new System.Drawing.Point(86, 42);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(148, 28);
+            this.textBox4.TabIndex = 9;
             // 
             // label1
             // 
@@ -304,21 +306,22 @@ namespace testlog
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(180, 607);
+            this.btnSelect.Location = new System.Drawing.Point(165, 393);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(116, 34);
             this.btnSelect.TabIndex = 12;
             this.btnSelect.Text = "查询";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // txtStuName
+            // textBox3
             // 
-            this.txtStuName.Location = new System.Drawing.Point(86, 91);
-            this.txtStuName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStuName.Name = "txtStuName";
-            this.txtStuName.Size = new System.Drawing.Size(148, 28);
-            this.txtStuName.TabIndex = 14;
+            this.textBox3.Location = new System.Drawing.Point(86, 91);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(148, 28);
+            this.textBox3.TabIndex = 14;
             // 
             // label2
             // 
@@ -332,33 +335,34 @@ namespace testlog
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 607);
+            this.button1.Location = new System.Drawing.Point(17, 393);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 34);
             this.button1.TabIndex = 17;
             this.button1.Text = "取消";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Tree1);
-            this.groupBox1.Location = new System.Drawing.Point(25, 27);
+            this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(274, 193);
+            this.groupBox1.Size = new System.Drawing.Size(287, 196);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "学院学情查询";
+            this.groupBox1.Text = "多级筛选区";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtStuNo);
-            this.groupBox2.Controls.Add(this.txtStuName);
-            this.groupBox2.Location = new System.Drawing.Point(28, 252);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Location = new System.Drawing.Point(16, 51);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 126);
+            this.groupBox2.Size = new System.Drawing.Size(265, 126);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "（可按学号或按姓名查询）";
@@ -367,9 +371,9 @@ namespace testlog
             // 
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Location = new System.Drawing.Point(28, 406);
+            this.groupBox3.Location = new System.Drawing.Point(16, 211);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 74);
+            this.groupBox3.Size = new System.Drawing.Size(268, 68);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             // 
@@ -395,9 +399,9 @@ namespace testlog
             // 
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Location = new System.Drawing.Point(28, 514);
+            this.groupBox4.Location = new System.Drawing.Point(16, 313);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(274, 74);
+            this.groupBox4.Size = new System.Drawing.Size(265, 74);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             // 
@@ -421,22 +425,48 @@ namespace testlog
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton1);
+            this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox1);
-            this.groupBox5.Controls.Add(this.groupBox4);
-            this.groupBox5.Controls.Add(this.btnSelect);
-            this.groupBox5.Controls.Add(this.groupBox3);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.groupBox2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(326, 664);
             this.groupBox5.TabIndex = 26;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Text = "查询区";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(13, 285);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(141, 22);
+            this.radioButton3.TabIndex = 29;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "专业学情查询";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(13, 183);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(141, 22);
+            this.radioButton2.TabIndex = 28;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "班级学情查询";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(13, 23);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(141, 22);
+            this.radioButton1.TabIndex = 27;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "学生学情查询";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -447,40 +477,24 @@ namespace testlog
             this.groupBox6.Size = new System.Drawing.Size(1092, 664);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "groupBox6";
+            this.groupBox6.Text = "展示区";
             // 
-            // radioButton1
+            // groupBox7
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(25, 224);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(141, 22);
-            this.radioButton1.TabIndex = 27;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "学生学情查询";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(25, 378);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(141, 22);
-            this.radioButton2.TabIndex = 28;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "班级学情查询";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(25, 486);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(141, 22);
-            this.radioButton3.TabIndex = 29;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "专业学情查询";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.groupBox7.Controls.Add(this.groupBox2);
+            this.groupBox7.Controls.Add(this.radioButton3);
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Controls.Add(this.radioButton2);
+            this.groupBox7.Controls.Add(this.groupBox3);
+            this.groupBox7.Controls.Add(this.radioButton1);
+            this.groupBox7.Controls.Add(this.btnSelect);
+            this.groupBox7.Controls.Add(this.groupBox4);
+            this.groupBox7.Location = new System.Drawing.Point(12, 224);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(287, 437);
+            this.groupBox7.TabIndex = 30;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "条件查询区";
             // 
             // temp2
             // 
@@ -492,7 +506,7 @@ namespace testlog
             this.MaximumSize = new System.Drawing.Size(1440, 720);
             this.MinimumSize = new System.Drawing.Size(1440, 720);
             this.Name = "temp2";
-            this.Text = "temp2";
+            this.Text = "学情查询";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -502,8 +516,9 @@ namespace testlog
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -512,10 +527,10 @@ namespace testlog
 
         private System.Windows.Forms.TreeView Tree1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtStuNo;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.TextBox txtStuName;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -538,5 +553,6 @@ namespace testlog
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
