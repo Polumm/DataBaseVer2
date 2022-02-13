@@ -19,12 +19,12 @@ namespace testlog
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            pictureBox1.BackColor = Color.LightSkyBlue;
+            //pictureBox1.BackColor = Color.LightSkyBlue;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.White;
+            //pictureBox1.BackColor = Color.White;
         }
     }
 }
