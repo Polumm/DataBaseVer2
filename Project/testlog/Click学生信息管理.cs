@@ -41,11 +41,15 @@ namespace testlog
             if (result == DialogResult.Yes)
             {
                 SqlCommandBuilder builder = new SqlCommandBuilder(adapterStu);
-                int i = adapterStu.Update(dsStu, "学号");
-                if (i > 0)
+                try
                 {
+                    adapterStu.Update(dsStu, "学号");
                     MessageBox.Show("修改成功！");
-                    ShowStudentAll();
+                    CancelAll();
+                }
+                catch
+                {
+                    MessageBox.Show("违反约束条件，修改失败！");
                 }
             }
         }
@@ -69,15 +73,15 @@ namespace testlog
                     dsStu = new DataSet();
                     String sqlDelScore = "delete from 学生 where 学号='" + stuNo + "'";
                     SqlCommand command = new SqlCommand(sqlDelScore, conn);
-                    int i = command.ExecuteNonQuery();
-                    if (i > 0)
+                    try
                     {
-                        MessageBox.Show("删除成功！");
-                        ShowStudentAll();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("删除学生成功！");
+                        CancelAll();
                     }
-                    else
+                    catch
                     {
-                        MessageBox.Show("删除失败！");
+                        MessageBox.Show("违反约束条件，删除失败！");
                     }
                 }
             }
