@@ -43,6 +43,7 @@ namespace testlog
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -100,7 +101,8 @@ namespace testlog
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
-            this.Column6});
+            this.Column6,
+            this.ColumnID});
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(0, 33);
             this.dataGridView4.MultiSelect = false;
@@ -153,6 +155,13 @@ namespace testlog
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "课程教学ID";
+            this.ColumnID.MinimumWidth = 8;
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.Visible = false;
+            // 
             // Click学生个人课表查询
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -189,5 +198,6 @@ namespace testlog
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
     }
 }

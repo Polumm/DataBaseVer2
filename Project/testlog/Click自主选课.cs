@@ -35,7 +35,7 @@ namespace testlog
             IDataReader dr = Choose_course.Reader(sql);
             while (dr.Read())
             {
-                string a, b, c, d, e, f, g, h, temp1, temp2, temp3, temp4;
+                string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
                 a = dr["课程"].ToString();
                 b = dr["课程号"].ToString();
                 c = dr["学分"].ToString();
@@ -47,11 +47,24 @@ namespace testlog
                 temp4 = dr["计划上限"].ToString();
                 f = temp1 + " " + temp2;
                 g = temp3 + "/" + temp4;
-                h = dr["课程类型"].ToString();
-                string[] str = { a, b, h, c, d, e, f, g };
+                h = dr["课程类型"].ToString();           
+                i = dr["课程教学ID"].ToString();           
+                string[] str = { a, b, h, c, d, e, f, g, i};
                 //dataGridView1.Rows.Add(str);
                 dataGridView1.Rows.Add(str);
             }
+
+            //添加buttons列
+            DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
+            // 设定列的名字
+            dgv_button_col.Name = "Choosebuttons";
+            // 在所有按钮上表示"查看详情"
+            dgv_button_col.UseColumnTextForButtonValue = true;
+            dgv_button_col.Text = "选课";
+            // 设置列标题
+            dgv_button_col.HeaderText = "点击选课";
+            // 向DataGridView追加
+            dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
 
         }
 
@@ -61,11 +74,6 @@ namespace testlog
         }
 
         private void Form_SC_Choose_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -104,17 +112,28 @@ namespace testlog
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //获取行列索引
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Choosebuttons")
+            {
+                MessageBox.Show("行: " + e.RowIndex.ToString() + ", 列: " + e.ColumnIndex.ToString() + "; 被点击了");
+            }
+
             try
             {
-                string Cno1 = dataGridView1.SelectedCells[1].Value.ToString();
+                string Cno1 = dataGridView1.SelectedCells[8].Value.ToString();
             }
             catch
             {
                 MessageBox.Show("请点击第一列空白处，选择一整行，再点击选课按钮完成选课");
                 return;
             }
-            String Cno = dataGridView1.SelectedCells[1].Value.ToString();
-            string sql = "insert into 课程学生SC values('" + Sno + "','" + Cno + "',NULL)";
+            String CTID = dataGridView1.SelectedCells[8].Value.ToString();
+            string sql = "insert into 课程学生SC values('" + Sno + "','" + CTID + "',NULL)";
             Door Choose_door = new Door();
             try
             {
@@ -135,11 +154,6 @@ namespace testlog
 
                 //MessageBox.Show("请勿重复选课！");
             }
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
