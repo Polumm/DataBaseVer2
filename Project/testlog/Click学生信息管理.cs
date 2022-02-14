@@ -32,9 +32,9 @@ namespace testlog
             //新建适配器
             adapterStu = new SqlDataAdapter(sql, conn);
             //将数据注入数据集，建立StudentInfo虚拟表
-            adapterStu.Fill(dsStu, "学号");
+            adapterStu.Fill(dsStu, "StudentInfo");
             //将数据集的虚拟表与dataGridView绑定
-            dataGridView1.DataSource = dsStu.Tables["学号"];
+            dataGridView1.DataSource = dsStu.Tables["StudentInfo"];
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -42,10 +42,13 @@ namespace testlog
             DialogResult result = MessageBox.Show("确定提交修改吗？", "提示信息", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                //adapterStu.UpdateCommand = new SqlCommand("update 学生 set 姓名 = @姓名 where 学号 = @学号");
+                //adapterStu.UpdateCommand.Parameters.Add("@姓名", SqlDbType.VarChar);
+                //adapterStu.UpdateCommand.Parameters.Add("@学号", SqlDbType.VarChar);
                 SqlCommandBuilder builder = new SqlCommandBuilder(adapterStu);
                 try
                 {
-                    adapterStu.Update(dsStu, "学号");
+                    adapterStu.Update(dsStu, "StudentInfo");
                     MessageBox.Show("修改成功！");
                     CancelAll();
                 }
@@ -72,7 +75,6 @@ namespace testlog
                     //先执行删除成绩信息
                     Door door = new Door();
                     SqlConnection conn = door.Connection();
-                    dsStu = new DataSet();
                     String sqlDelScore = "delete from 学生 where 学号='" + stuNo + "'";
                     SqlCommand command = new SqlCommand(sqlDelScore, conn);
                     try
