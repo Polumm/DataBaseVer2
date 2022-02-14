@@ -25,13 +25,15 @@ namespace testlog
         }
         private void ShowStudentAll()
         {
-            //String sql = "select * from 学生";
             Door door = new Door();
             SqlConnection conn = door.Connection();
+            //新建数据集
             dsStu = new DataSet();
+            //新建适配器
             adapterStu = new SqlDataAdapter(sql, conn);
-            //以学号为索引进行绑定
+            //将数据注入数据集，建立StudentInfo虚拟表
             adapterStu.Fill(dsStu, "学号");
+            //将数据集的虚拟表与dataGridView绑定
             dataGridView1.DataSource = dsStu.Tables["学号"];
         }
 
@@ -47,9 +49,9 @@ namespace testlog
                     MessageBox.Show("修改成功！");
                     CancelAll();
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("违反约束条件，修改失败！");
+                    throw ex;
                 }
             }
         }
@@ -79,9 +81,9 @@ namespace testlog
                         MessageBox.Show("删除学生成功！");
                         CancelAll();
                     }
-                    catch
+                    catch(Exception ex)
                     {
-                        MessageBox.Show("违反约束条件，删除失败！");
+                        throw ex;
                     }
                 }
             }
@@ -105,9 +107,9 @@ namespace testlog
                     MessageBox.Show("新增学生成功！");
                     CancelAll();
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("违反约束条件，新增失败！");
+                    throw ex;
                 }
             }
         }
