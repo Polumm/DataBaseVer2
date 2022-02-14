@@ -112,6 +112,12 @@
     <Compile Include="Click教学计划立项申请.Designer.cs">
       <DependentUpon>Click教学计划立项申请.cs</DependentUpon>
     </Compile>
+    <Compile Include="Click教师信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Click教师信息管理.Designer.cs">
+      <DependentUpon>Click教师信息管理.cs</DependentUpon>
+    </Compile>
     <Compile Include="Door.cs" />
     <Compile Include="Click学情统计分析.cs">
       <SubType>Form</SubType>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Click学情查询.resx">
       <DependentUpon>Click学情查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Click教师信息管理.resx">
+      <DependentUpon>Click教师信息管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="地图交互.resx">
       <DependentUpon>地图交互.cs</DependentUpon>

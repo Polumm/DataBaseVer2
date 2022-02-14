@@ -64,3 +64,4 @@ D:\Coding\ver2\Project\testlog\obj\Debug\testlog.exe
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.pdb
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学情查询.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生信息管理.resources
+D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click教师信息管理.resources
