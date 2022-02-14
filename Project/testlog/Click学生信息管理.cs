@@ -13,6 +13,11 @@ namespace testlog
 {
     public partial class Click学生信息管理 : Form
     {
+        //普通绑定的全局变量
+        //DataTable dt = null;
+        //BindingSource bs = null;
+
+        //数据集dataset + 适配器实现快速绑定
         //数据集和适配器全局可见
         DataSet dsStu = null;
         SqlDataAdapter adapterStu = null;
@@ -23,17 +28,36 @@ namespace testlog
             InitializeComponent();
             //ShowStudentAll();
         }
+
         private void ShowStudentAll()
         {
             Door door = new Door();
             SqlConnection conn = door.Connection();
-            //新建数据集
-            dsStu = new DataSet();
-            //新建适配器
+            /*            //普通绑定，以BindingSource作为数据（引用）的容器进行传递
+            //1、新建适配器
             adapterStu = new SqlDataAdapter(sql, conn);
-            //将数据注入数据集，建立StudentInfo虚拟表
+            //2、新建数据表，是虚拟表，临时保存数据。DataTable的对象包括DataSet和DataView。
+            dt = new DataTable();
+            //3、将数据注入虚拟表
+            adapterStu.Fill(dt);
+            //4、将虚拟表与dataGridView绑定
+            dataGridView1.DataSource = dt;
+            //5、新建并绑定BindingSource 
+            bs = new BindingSource();
+            bs.DataSource = dt; 
+            conn.Close();
+            // 设定单元格的ToolTip内容
+            //dataGridView1.Columns[0].ToolTipText = "该列单元格的内容不能为空";*/
+
+
+            //快速绑定：
+            //1、新建适配器
+            adapterStu = new SqlDataAdapter(sql, conn);
+            //2、新建数据集
+            dsStu = new DataSet();
+            //3、将数据注入数据集，建立StudentInfo虚拟表
             adapterStu.Fill(dsStu, "StudentInfo");
-            //将数据集的虚拟表与dataGridView绑定
+            //4、将数据集的虚拟表与dataGridView绑定
             dataGridView1.DataSource = dsStu.Tables["StudentInfo"];
         }
 
@@ -42,14 +66,24 @@ namespace testlog
             DialogResult result = MessageBox.Show("确定提交修改吗？", "提示信息", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                //adapterStu.UpdateCommand = new SqlCommand("update 学生 set 姓名 = @姓名 where 学号 = @学号");
-                //adapterStu.UpdateCommand.Parameters.Add("@姓名", SqlDbType.VarChar);
-                //adapterStu.UpdateCommand.Parameters.Add("@学号", SqlDbType.VarChar);
+                //若需求简单仅涉及单张表（单表视图），直接绑定数据集与dataGridView，无需考虑UpdateCommand
+                //若涉及多表或多表连接的视图，必须指定UpdateCommand的对象和内容（执行指定的sql语句）
+
+                //1、指定UpdateCommand所执行的sql语句
+                adapterStu.UpdateCommand = new SqlCommand("update 学生 set 姓名 = @姓名, 性别 = @性别, 出生日期 = @出生日期, 班级编号 = @班级编号 where 学号 = @学号");
+                //2、传递参数
+                adapterStu.UpdateCommand.Parameters.Add("@学号", SqlDbType.VarChar, 50, "学号");
+                adapterStu.UpdateCommand.Parameters.Add("@姓名", SqlDbType.VarChar, 50, "姓名");
+                adapterStu.UpdateCommand.Parameters.Add("@性别", SqlDbType.VarChar, 50, "性别");
+                adapterStu.UpdateCommand.Parameters.Add("@出生日期", SqlDbType.VarChar, 50, "出生年月");
+                adapterStu.UpdateCommand.Parameters.Add("@班级编号", SqlDbType.VarChar, 50, "班级");
+
+                //
                 SqlCommandBuilder builder = new SqlCommandBuilder(adapterStu);
                 try
                 {
-                    adapterStu.Update(dsStu, "StudentInfo");
-                    MessageBox.Show("修改成功！");
+                    adapterStu.Update(dsStu.Tables["StudentInfo"]);
+                    MessageBox.Show("提交修改成功！");
                     CancelAll();
                 }
                 catch(Exception ex)
@@ -143,25 +177,25 @@ namespace testlog
             if (i.Node.Level == 1)
             {
                 //院学生信息
-                sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 学院 = '" + i.Node.Text + "')";
+                sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 学院 = '" + i.Node.Text + "')";
                 ShowStudentAll();
             }
             if (i.Node.Level == 2)
             {
                 //系学生信息
-                sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 系 = '" + i.Node.Text + "')";
+                sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 系 = '" + i.Node.Text + "')";
                 ShowStudentAll();
             }
             if (i.Node.Level == 3)
             {
                 //专业学生信息
-                sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 专业 = '" + i.Node.Text + "')";
+                sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 专业 = '" + i.Node.Text + "')";
                 ShowStudentAll();
             }
             if (i.Node.Level == 4)
             {
                 //班学生信息
-                sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 班级编号 = '" + i.Node.Text + "')";
+                sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 班级 = '" + i.Node.Text + "')";
                 ShowStudentAll();
             }
 
