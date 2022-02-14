@@ -51,7 +51,7 @@ namespace testlog
                 }
                 catch(Exception ex)
                 {
-                    throw ex;
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace testlog
                     }
                     catch(Exception ex)
                     {
-                        throw ex;
+                        MessageBox.Show(ex.ToString());
                     }
                 }
             }
@@ -109,7 +109,7 @@ namespace testlog
                 }
                 catch(Exception ex)
                 {
-                    throw ex;
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
