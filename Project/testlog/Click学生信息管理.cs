@@ -213,7 +213,7 @@ namespace testlog
                 else
                 {
                     //Column4.HeaderText = "班排名";
-                    sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 班级 = '" + textBox2.Text + "')";
+                    sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 班级 = '" + textBox2.Text + "')";
                     ShowStudentAll();
                 }
             }
@@ -226,7 +226,7 @@ namespace testlog
                 else
                 {
                     //Column4.HeaderText = "专业排名";
-                    sql = "select * from 学生 where 学号 in (select 学号 from 学生信息表 where 专业 = '" + textBox1.Text + "')";
+                    sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 专业 = '" + textBox1.Text + "')";
                     ShowStudentAll();
                 }
             }
@@ -239,13 +239,13 @@ namespace testlog
                 else if (textBox4.Text == "")
                 {
                     //Column4.HeaderText = "专业排名,姓名搜索";
-                    sql = "select * from 学生 where 姓名 = '" + textBox3.Text + "' ";
+                    sql = "select * from 学生信息表 where 姓名 = '" + textBox3.Text + "' ";
                     ShowStudentAll();
                 }
                 else
                 {
                     //Column4.HeaderText = "专业排名，学号搜索";
-                    sql = "select * from 学生 where 学号 = '" + textBox4.Text + "' ";
+                    sql = "select * from 学生信息表 where 学号 = '" + textBox4.Text + "' ";
                     ShowStudentAll();
                 }
             }
