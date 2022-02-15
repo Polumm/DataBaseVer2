@@ -212,7 +212,6 @@ begin
 	select @课程代号 = 课程代号 from 排课表 where 课程教学ID=@课程教学ID;
 	select @成绩_before=成绩 from deleted;
 	select @成绩=成绩 from inserted;
-	if(@成绩_before is null)
 	begin
 		if (update(成绩))
 		begin
@@ -290,20 +289,9 @@ begin
 			print '操作无效！';
 		end
 	end
-	else
-	begin
-		rollback transaction
-		if (update(成绩))
-		begin
-			print '已录入绩点，不可修改！'
-		end
-		else if(update(学号) or update(课程教学ID))
-		begin
-			print '操作无效！';
-		end
-	end
 end
 go
+
 create trigger delete_绩点
 on 课程学生SC
 after delete
@@ -463,6 +451,9 @@ values('fanruoying11','范若颖','副教授','fanruoying@cug.edu.cn','070901')
 
 
 
+
+insert into 学生
+values('1','tester2','男','2002.06.25','11D203')
 insert into 学生
 values('20201000830','tester','男','2002.06.25','11D203')
 insert into 学生
@@ -572,7 +563,7 @@ values('21212711', '周一1，2节','A-406','liweifeng101',120,0, '2121271')
 insert into 排课表
 values('21212712', '周一3，4节','A-509','xiaohaijun65',120,0, '2121271')
 insert into 排课表
-values('21212801', '周一1，2节','A-212','liweifeng101',70,0, '2121280')
+values('21212801', '周一3，4节','A-212','liweifeng101',70,0, '2121280')
 insert into 排课表
 values('21212802', '周一3，4节','A-214','hupeng110709',70,0, '2121280')
 insert into 排课表
@@ -644,6 +635,8 @@ values('21130500', '周五5-8节','A-111','huaweihua601',90,0, '2113040')
 
 
 
+insert into 课程学生SC
+values('1','21212711',null)
 insert into 课程学生SC
 values('20201000830','21212712',90)
 insert into 课程学生SC

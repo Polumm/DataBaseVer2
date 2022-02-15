@@ -17,9 +17,14 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Click自主选课("20201000830"));
+            Application.Run(new Click学生成绩录入xxx("liweifeng101"));
         }
     }
 }
-//学生功能区界面("20201003150")
-//管理员功能区界面()
+
+//new Click学生信息管理()
+//new 学生功能区界面("1")
+//new 学生功能区界面("20201003150")
+//new 管理员功能区界面()
+//Click学生成绩录入xxx
+//new Click学生成绩录入xxx("liweifeng101")

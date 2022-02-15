@@ -88,6 +88,12 @@
     <Compile Include="Click学生信息管理.Designer.cs">
       <DependentUpon>Click学生信息管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="Click学生成绩录入xxx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Click学生成绩录入xxx.Designer.cs">
+      <DependentUpon>Click学生成绩录入xxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Click平均学分绩点查询.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Click学生成绩录入.resx">
       <DependentUpon>Click学生成绩录入.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Click学生成绩录入xxx.resx">
+      <DependentUpon>Click学生成绩录入xxx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click平均学分绩点查询.resx">
       <DependentUpon>Click平均学分绩点查询.cs</DependentUpon>
