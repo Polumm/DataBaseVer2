@@ -51,6 +51,17 @@ namespace testlog
                 dataGridView4.Rows.Add(str);
 
             }
+            //添加buttons列
+            DataGridViewButtonColumn dgv_button_col2 = new DataGridViewButtonColumn();
+            // 设定列的名字
+            dgv_button_col2.Name = "Cancelbuttons";
+            // 在所有按钮上表示"查看详情"
+            dgv_button_col2.UseColumnTextForButtonValue = true;
+            dgv_button_col2.Text = "退课";
+            // 设置列标题
+            dgv_button_col2.HeaderText = "点击退课";
+            // 向DataGridView追加
+            dataGridView4.Columns.Insert(dataGridView4.Columns.Count, dgv_button_col2);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,44 +81,39 @@ namespace testlog
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string Cno1 = dataGridView4.SelectedCells[1].Value.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("请点击第一列空白处，选择一整行，再点击删除退选按钮");
-                return;
-            }
-            DialogResult r = MessageBox.Show("确定要退选吗？", "提示", MessageBoxButtons.OKCancel);
-            if (r == DialogResult.OK)
-            {
-                String CTID = dataGridView4.SelectedCells[7].Value.ToString();
-                string sql = "delete from 课程学生SC where 学号 = '" + Sno + "' and 课程教学ID = '" + CTID + "'";
-                Door Choose_door = new Door();
-                try
-                {
-                    Choose_door.Excute(sql);
-                    MessageBox.Show("退选成功！");
-                    dataGridView4.Rows.Clear();
-                    showTable();
-                }
-                catch (SqlException sqlExc)
-                {
 
-                    foreach (SqlError error in sqlExc.Errors)
-                    {
-                        string msg = string.Format("{0}: {1}", error.Number, error.Message);//string msg = string.Format("{0}: {1}", error.Number, error.Message);（错误消息）
-                        MessageBox.Show("退选失败！");
-                        break;
-                    }
-                }
-            }
         }
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView4.Columns[e.ColumnIndex].Name == "Cancelbuttons")
+            {
+                DialogResult r = MessageBox.Show("确定要退选吗？", "提示", MessageBoxButtons.OKCancel);
+                if (r == DialogResult.OK)
+                {
+                    String CTID = dataGridView4.SelectedCells[7].Value.ToString();
+                    string sql = "delete from 课程学生SC where 学号 = '" + Sno + "' and 课程教学ID = '" + CTID + "'";
+                    Door Choose_door = new Door();
+                    try
+                    {
+                        Choose_door.Excute(sql);
+                        MessageBox.Show("退选成功！");
+                        dataGridView4.Columns.Remove("Cancelbuttons");
+                        showTable();
+                    }
+                    catch (SqlException sqlExc)
+                    {
 
+                        foreach (SqlError error in sqlExc.Errors)
+                        {
+                            string msg = string.Format("{0}: {1}", error.Number, error.Message);//string msg = string.Format("{0}: {1}", error.Number, error.Message);（错误消息）
+                            MessageBox.Show("成绩已录入，退选失败！");
+                            break;
+                        }
+                        //MessageBox.Show(sqlExc.ToString());
+                    }
+                }
+            }
         }
     }
 }

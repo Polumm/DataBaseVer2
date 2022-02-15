@@ -120,39 +120,37 @@ namespace testlog
             //获取行列索引
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Choosebuttons")
             {
-                MessageBox.Show("行: " + e.RowIndex.ToString() + ", 列: " + e.ColumnIndex.ToString() + "; 被点击了");
-            }
-
-            try
-            {
-                string Cno1 = dataGridView1.SelectedCells[8].Value.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("请点击第一列空白处，选择一整行，再点击选课按钮完成选课");
-                return;
-            }
-            String CTID = dataGridView1.SelectedCells[8].Value.ToString();
-            string sql = "insert into 课程学生SC values('" + Sno + "','" + CTID + "',NULL)";
-            Door Choose_door = new Door();
-            try
-            {
-                Choose_door.Excute(sql);
-                MessageBox.Show("选课成功！");
-                Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
-                Choose_course.Show();
-            }
-            catch (SqlException sqlExc)
-            {
-
-                foreach (SqlError error in sqlExc.Errors)
+                //获取课程代号
+                String Cno = dataGridView1.SelectedCells[1].Value.ToString();
+                //检验是否重复选课
+                string check_sql = "select 课程代号 from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
+                Door Check_course = new Door();
+                IDataReader dr = Check_course.Reader(check_sql);
+                while (dr.Read())
                 {
-                    string msg = string.Format("{0}: {1}", error.Number, error.Message);//string msg = string.Format("{0}: {1}", error.Number, error.Message);（错误消息）
-                    MessageBox.Show("请勿重复选课！");
-                    break;
+                    if (Cno == dr["课程代号"].ToString())
+                    {
+                        MessageBox.Show("请勿重复选课！");
+                        return;
+                    }
                 }
 
-                //MessageBox.Show("请勿重复选课！");
+                //获取课程教学ID
+                String CTID = dataGridView1.SelectedCells[8].Value.ToString();
+                string sql = "insert into 课程学生SC values('" + Sno + "','" + CTID + "',NULL)";
+                Door Choose_door = new Door();
+                try
+                {
+                    Choose_door.Excute(sql);
+                    MessageBox.Show("选课成功！");
+                    Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
+                    Choose_course.Show();
+                }
+                catch (SqlException sqlExc)
+                {
+                    MessageBox.Show(sqlExc.ToString());
+                    //MessageBox.Show("请勿重复选课！");
+                }
             }
         }
     }
