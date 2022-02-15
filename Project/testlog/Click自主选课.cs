@@ -54,6 +54,13 @@ namespace testlog
                 dataGridView1.Rows.Add(str);
             }
 
+            //防止产生重复列
+            try
+            {
+                dataGridView1.Columns.Remove("Choosebuttons");
+            }
+            catch
+            { }
             //添加buttons列
             DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
             // 设定列的名字

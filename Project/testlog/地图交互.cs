@@ -38,6 +38,7 @@ namespace testlog
         }
 
         //搜索课程，跳转至教室所在位置
+        //mod0原色复原，mod1指定教室变蓝，mod2已占用教室变红
         private void showPos(string pos, int mod)
         {
             if (mod == 1)
@@ -118,9 +119,88 @@ namespace testlog
                         break;
                 }
             }
+            if (mod == 2)
+            {
+                switch (pos)
+                {
+                    case "01":
+                        button1.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "02":
+                        button2.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "03":
+                        button3.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "04":
+                        button4.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "05":
+                        button5.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "06":
+                        button6.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "07":
+                        button7.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "08":
+                        button8.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "09":
+                        button9.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "10":
+                        button10.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "11":
+                        button12.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "12":
+                        button13.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "13":
+                        button20.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "14":
+                        button14.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "15":
+                        button19.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "16":
+                        button15.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "17":
+                        button11.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                    case "18":
+                        button21.BackColor = Color.Red;
+                        label5.BackColor = Color.Yellow;
+                        break;
+                }
+            }
             if (mod == 0)
             {
                 label5.BackColor = Color.Transparent;
+                label5.Text = "";
                 button1.BackColor = Color.Transparent;
                 button2.BackColor = Color.Transparent;
                 button3.BackColor = Color.Transparent;
@@ -445,6 +525,7 @@ namespace testlog
             comboBox3.Text = null;
             dataGridView1.Rows.Clear();
             showPos("", 0);
+            showTable();
 
         }
 
@@ -515,15 +596,14 @@ namespace testlog
             }
         }
 
-        private void showTable()
+        private void showTable(string sql = " select* from 学生可选课表")
         {
-            dataGridView1.Rows.Clear();
-            string sql = " select* from 学生可选课表";
+            string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
+            dataGridView1.Rows.Clear();          
             Door Choose_course = new Door();
             IDataReader dr = Choose_course.Reader(sql);
             while (dr.Read())
             {
-                string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
                 a = dr["课程"].ToString();
                 b = dr["课程号"].ToString();
                 c = dr["学分"].ToString();
@@ -541,7 +621,13 @@ namespace testlog
                 //dataGridView1.Rows.Add(str);
                 dataGridView1.Rows.Add(str);
             }
-
+            //防止产生重复列
+            try
+            {
+                dataGridView1.Columns.Remove("Choosebuttons");
+            }
+            catch
+            { }
             //添加buttons列
             DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
             // 设定列的名字
@@ -556,7 +642,70 @@ namespace testlog
 
         }
 
-        private void button18_Click_1(object sender, EventArgs i)
+        private void button18_Click_1(object sender, EventArgs j)
+        {
+
+            if (radioButton2.Checked && comboBox2.Text != "")
+            {
+                showPos("", 0);
+                string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
+                string sql = "select * from 学生可选课表 where 教室编号 like 'A-"+ comboBox2.Text +"%'";
+                Door Sql = new Door();
+                IDataReader dr = Sql.Reader(sql);
+                dataGridView1.Rows.Clear();
+                label5.Text = "当前层数：" + comboBox2.Text + "层";
+                label5.BackColor = Color.LightGreen;
+                while (dr.Read())
+                {
+                    a = dr["课程"].ToString();
+                    b = dr["课程号"].ToString();
+                    c = dr["学分"].ToString();
+                    d = dr["授课老师"].ToString();
+                    e = dr["上课时间"].ToString();
+                    temp1 = dr["空间位置"].ToString();
+                    temp2 = dr["教室编号"].ToString();
+                    temp3 = dr["当前人数"].ToString();
+                    temp4 = dr["计划上限"].ToString();
+                    f = temp1 + " " + temp2;
+                    g = temp3 + "/" + temp4;
+                    h = dr["课程类型"].ToString();
+                    i = dr["课程教学ID"].ToString();
+                    string[] str = { a, b, h, c, d, e, f, g, i };
+                    dataGridView1.Rows.Add(str);
+                    f = temp2.Substring(3);//截取教室编号
+                    showPos(f, 2);
+                }
+                 dr.Close();
+            }
+            else if (radioButton1.Checked && comboBox4.Text != "" && textBox1.Text != "")
+            {
+                if(comboBox4.Text == "教师")
+                {
+                    string sql = "select * from 学生可选课表 where 授课老师  = '"+ textBox1.Text + "'";
+                    showTable(sql);
+                }
+                else if(comboBox4.Text == "课程类型")
+                {
+                    string sql = "select * from 学生可选课表 where 课程类型  = '" + textBox1.Text + "'";
+                    showTable(sql);
+                }
+                else if(comboBox4.Text == "课程号")
+                {
+                    string sql = "select * from 学生可选课表 where 课程号  = '" + textBox1.Text + "'";
+                    showTable(sql);
+                }
+                else if(comboBox4.Text == "课程")
+                {
+                    string sql = "select * from 学生可选课表 where 课程  = '" + textBox1.Text + "'";
+                    showTable(sql);
+                }
+            }
+            else
+            {
+                MessageBox.Show("查询条件未输入！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        /*private void button18_Click_1(object sender, EventArgs i)
         {
 
             if (textBox1.Text != "")
@@ -590,7 +739,7 @@ namespace testlog
             {
                 MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
+        }*/
     }
     /*            if (textBox1.Text != "")
             {

@@ -62,8 +62,6 @@ namespace testlog
             this.button21 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,11 +71,21 @@ namespace testlog
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +96,7 @@ namespace testlog
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(106, 59);
             this.button18.TabIndex = 56;
-            this.button18.Text = "搜索";
+            this.button18.Text = "查询";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click_1);
             // 
@@ -136,7 +144,7 @@ namespace testlog
             "zguangyong09",
             "zhaoyingke97",
             "zhouliehong9"});
-            this.comboBox3.Location = new System.Drawing.Point(146, 298);
+            this.comboBox3.Location = new System.Drawing.Point(145, 73);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(152, 26);
@@ -145,7 +153,7 @@ namespace testlog
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 298);
+            this.label4.Location = new System.Drawing.Point(26, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 52;
@@ -154,7 +162,7 @@ namespace testlog
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 230);
+            this.label3.Location = new System.Drawing.Point(16, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 51;
@@ -170,7 +178,7 @@ namespace testlog
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(146, 230);
+            this.comboBox2.Location = new System.Drawing.Point(122, 29);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(152, 26);
@@ -184,16 +192,16 @@ namespace testlog
             "基础必修",
             "专业必修",
             "选修"});
-            this.comboBox1.Location = new System.Drawing.Point(146, 162);
+            this.comboBox1.Location = new System.Drawing.Point(141, 28);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 26);
+            this.comboBox1.Size = new System.Drawing.Size(156, 26);
             this.comboBox1.TabIndex = 49;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 162);
+            this.label2.Location = new System.Drawing.Point(4, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 48;
@@ -201,7 +209,7 @@ namespace testlog
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 81);
+            this.textBox1.Location = new System.Drawing.Point(122, 32);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 28);
@@ -221,7 +229,7 @@ namespace testlog
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("宋体", 7F);
-            this.button11.Location = new System.Drawing.Point(355, 343);
+            this.button11.Location = new System.Drawing.Point(272, 332);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(37, 30);
@@ -233,7 +241,7 @@ namespace testlog
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("宋体", 7F);
-            this.button10.Location = new System.Drawing.Point(39, 339);
+            this.button10.Location = new System.Drawing.Point(26, 329);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(51, 36);
@@ -245,7 +253,7 @@ namespace testlog
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 7F);
-            this.button9.Location = new System.Drawing.Point(38, 298);
+            this.button9.Location = new System.Drawing.Point(26, 293);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 38);
@@ -257,7 +265,7 @@ namespace testlog
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("宋体", 7F);
-            this.button8.Location = new System.Drawing.Point(170, 103);
+            this.button8.Location = new System.Drawing.Point(123, 146);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 30);
@@ -269,7 +277,7 @@ namespace testlog
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("宋体", 7F);
-            this.button7.Location = new System.Drawing.Point(167, 43);
+            this.button7.Location = new System.Drawing.Point(125, 101);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(39, 30);
@@ -281,7 +289,7 @@ namespace testlog
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("宋体", 7F);
-            this.button6.Location = new System.Drawing.Point(234, 105);
+            this.button6.Location = new System.Drawing.Point(171, 149);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 29);
@@ -293,7 +301,7 @@ namespace testlog
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("宋体", 7F);
-            this.button5.Location = new System.Drawing.Point(231, 43);
+            this.button5.Location = new System.Drawing.Point(170, 101);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(38, 30);
@@ -305,7 +313,7 @@ namespace testlog
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("宋体", 7F);
-            this.button4.Location = new System.Drawing.Point(296, 104);
+            this.button4.Location = new System.Drawing.Point(227, 149);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 30);
@@ -317,7 +325,7 @@ namespace testlog
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("宋体", 7F);
-            this.button3.Location = new System.Drawing.Point(296, 43);
+            this.button3.Location = new System.Drawing.Point(226, 101);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(39, 29);
@@ -329,7 +337,7 @@ namespace testlog
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("宋体", 7F);
-            this.button2.Location = new System.Drawing.Point(360, 105);
+            this.button2.Location = new System.Drawing.Point(272, 148);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 28);
@@ -353,7 +361,7 @@ namespace testlog
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 7F);
-            this.button1.Location = new System.Drawing.Point(359, 43);
+            this.button1.Location = new System.Drawing.Point(271, 102);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 29);
@@ -365,7 +373,7 @@ namespace testlog
             // button19
             // 
             this.button19.Font = new System.Drawing.Font("宋体", 7F);
-            this.button19.Location = new System.Drawing.Point(289, 344);
+            this.button19.Location = new System.Drawing.Point(215, 329);
             this.button19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(39, 29);
@@ -377,7 +385,7 @@ namespace testlog
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("宋体", 7F);
-            this.button20.Location = new System.Drawing.Point(227, 345);
+            this.button20.Location = new System.Drawing.Point(171, 333);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(38, 28);
@@ -389,7 +397,7 @@ namespace testlog
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(235, 81);
+            this.label5.Location = new System.Drawing.Point(208, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 65;
@@ -397,7 +405,7 @@ namespace testlog
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("宋体", 7F);
-            this.button12.Location = new System.Drawing.Point(162, 344);
+            this.button12.Location = new System.Drawing.Point(123, 333);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 29);
@@ -409,7 +417,7 @@ namespace testlog
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("宋体", 7F);
-            this.button13.Location = new System.Drawing.Point(167, 381);
+            this.button13.Location = new System.Drawing.Point(123, 376);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(39, 28);
@@ -421,7 +429,7 @@ namespace testlog
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("宋体", 7F);
-            this.button14.Location = new System.Drawing.Point(231, 375);
+            this.button14.Location = new System.Drawing.Point(171, 375);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(40, 28);
@@ -433,7 +441,7 @@ namespace testlog
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("宋体", 7F);
-            this.button15.Location = new System.Drawing.Point(290, 381);
+            this.button15.Location = new System.Drawing.Point(216, 375);
             this.button15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(38, 28);
@@ -445,7 +453,7 @@ namespace testlog
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("宋体", 7F);
-            this.button21.Location = new System.Drawing.Point(353, 381);
+            this.button21.Location = new System.Drawing.Point(270, 377);
             this.button21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(39, 27);
@@ -488,57 +496,6 @@ namespace testlog
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(907, 251);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button17);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.button16);
-            this.groupBox2.Controls.Add(this.button18);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(0, 278);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 416);
-            this.groupBox2.TabIndex = 72;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button21);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button15);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button14);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button13);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button20);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button19);
-            this.groupBox3.Controls.Add(this.button10);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button11);
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(453, 278);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(460, 416);
-            this.groupBox3.TabIndex = 73;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // Column1
             // 
@@ -610,18 +567,125 @@ namespace testlog
             this.Column9.Visible = false;
             this.Column9.Width = 150;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.groupBox6);
+            this.groupBox2.Controls.Add(this.groupBox5);
+            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.button17);
+            this.groupBox2.Controls.Add(this.button16);
+            this.groupBox2.Controls.Add(this.button18);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Location = new System.Drawing.Point(0, 278);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(453, 416);
+            this.groupBox2.TabIndex = 72;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(18, 149);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(105, 22);
+            this.radioButton2.TabIndex = 64;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "空间查询";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(18, 27);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(105, 22);
+            this.radioButton1.TabIndex = 63;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "属性查询";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboBox2);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Location = new System.Drawing.Point(18, 177);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(289, 70);
+            this.groupBox6.TabIndex = 62;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "查询楼层";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Location = new System.Drawing.Point(12, 307);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(320, 106);
+            this.groupBox5.TabIndex = 61;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "groupBox5";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboBox4);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Location = new System.Drawing.Point(18, 55);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(289, 76);
+            this.groupBox4.TabIndex = 60;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "查询条件";
+            // 
             // comboBox4
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
+            "课程类型",
             "课程号",
-            "课程"});
-            this.comboBox4.Location = new System.Drawing.Point(30, 81);
+            "课程",
+            "教师"});
+            this.comboBox4.Location = new System.Drawing.Point(6, 32);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(95, 26);
             this.comboBox4.TabIndex = 59;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button21);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button15);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button14);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.button13);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button20);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Controls.Add(this.button19);
+            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button11);
+            this.groupBox3.Controls.Add(this.pictureBox2);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(453, 278);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(460, 416);
+            this.groupBox3.TabIndex = 73;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
             // 
             // 地图交互
             // 
@@ -638,6 +702,12 @@ namespace testlog
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -689,5 +759,10 @@ namespace testlog
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

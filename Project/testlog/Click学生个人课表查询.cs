@@ -51,6 +51,13 @@ namespace testlog
                 dataGridView4.Rows.Add(str);
 
             }
+            //防止产生重复列
+            try
+            {
+                dataGridView4.Columns.Remove("Choosebuttons");
+            }
+            catch
+            { }
             //添加buttons列
             DataGridViewButtonColumn dgv_button_col2 = new DataGridViewButtonColumn();
             // 设定列的名字
@@ -97,8 +104,7 @@ namespace testlog
                     try
                     {
                         Choose_door.Excute(sql);
-                        MessageBox.Show("退选成功！");
-                        dataGridView4.Columns.Remove("Cancelbuttons");
+                        MessageBox.Show("退选成功！");                     
                         showTable();
                     }
                     catch (SqlException sqlExc)
