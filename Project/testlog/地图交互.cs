@@ -705,41 +705,46 @@ namespace testlog
                 MessageBox.Show("查询条件未输入！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        /*private void button18_Click_1(object sender, EventArgs i)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (textBox1.Text != "")
-            {
-                string a, b, c, d, e, f, g, h;
-                string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
-                Door Sql = new Door();
-                IDataReader dr = Sql.Reader(sql);
-                dataGridView1.Rows.Clear();
-                while (dr.Read())
-                {
-                    showPos("", 0);
-                    a = dr["课程号"].ToString();
-                    b = dr["课程"].ToString();
-                    c = dr["课程类型"].ToString();
-                    d = dr["学分"].ToString();
-                    e = dr["上课时间"].ToString();
-                    f = dr["教室编号"].ToString();
-                    g = dr["授课老师"].ToString();
-                    h = dr["计划上限"].ToString();
-                    label5.Text = "当前层数：" + dr["教室编号"].ToString()[2] + "层";
-                    label5.BackColor = Color.LightGreen;
-                    string[] str = { a, b, c, d, e, f, g, h };
-                    dataGridView1.Rows.Add(str);
-                    f = f.Substring(3);//截取教室编号
-                    showPos(f, 1);
-                }
-                 dr.Close();
-            }
-            else
-            {
-                MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }*/
+        }
+        /*private void button18_Click_1(object sender, EventArgs i)
+{
+
+   if (textBox1.Text != "")
+   {
+       string a, b, c, d, e, f, g, h;
+       string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
+       Door Sql = new Door();
+       IDataReader dr = Sql.Reader(sql);
+       dataGridView1.Rows.Clear();
+       while (dr.Read())
+       {
+           showPos("", 0);
+           a = dr["课程号"].ToString();
+           b = dr["课程"].ToString();
+           c = dr["课程类型"].ToString();
+           d = dr["学分"].ToString();
+           e = dr["上课时间"].ToString();
+           f = dr["教室编号"].ToString();
+           g = dr["授课老师"].ToString();
+           h = dr["计划上限"].ToString();
+           label5.Text = "当前层数：" + dr["教室编号"].ToString()[2] + "层";
+           label5.BackColor = Color.LightGreen;
+           string[] str = { a, b, c, d, e, f, g, h };
+           dataGridView1.Rows.Add(str);
+           f = f.Substring(3);//截取教室编号
+           showPos(f, 1);
+       }
+        dr.Close();
+   }
+   else
+   {
+       MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+   }
+}*/
     }
     /*            if (textBox1.Text != "")
             {

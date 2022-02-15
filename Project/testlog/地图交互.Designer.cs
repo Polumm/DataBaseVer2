@@ -32,12 +32,8 @@ namespace testlog
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(地图交互));
             this.button18 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -72,10 +68,16 @@ namespace testlog
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -111,54 +113,6 @@ namespace testlog
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "guoguanyu747",
-            "guomingqiang",
-            "hekaihua9809",
-            "huaweihua601",
-            "huhuaimin214",
-            "hupeng110709",
-            "liangyueling",
-            "lihui9790314",
-            "lijiangmin98",
-            "liujianyu106",
-            "liuxiuguo225",
-            "liweifeng101",
-            "luwenzhong01",
-            "lvjianjun007",
-            "panxiong0029",
-            "qikunlun0630",
-            "qikunlun1127",
-            "qinyangmin07",
-            "songxiaoqing",
-            "wangguonian8",
-            "wanglunche13",
-            "wenhui721206",
-            "wuguobin7372",
-            "xiaohaijun65",
-            "yaoyao180305",
-            "zguangyong09",
-            "zhaoyingke97",
-            "zhouliehong9"});
-            this.comboBox3.Location = new System.Drawing.Point(145, 73);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(152, 26);
-            this.comboBox3.TabIndex = 53;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "教师：";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -184,29 +138,6 @@ namespace testlog
             this.comboBox2.Size = new System.Drawing.Size(152, 26);
             this.comboBox2.TabIndex = 50;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "基础必修",
-            "专业必修",
-            "选修"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 28);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 26);
-            this.comboBox1.TabIndex = 49;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "课程类型：";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(122, 32);
@@ -229,10 +160,10 @@ namespace testlog
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("宋体", 7F);
-            this.button11.Location = new System.Drawing.Point(272, 332);
+            this.button11.Location = new System.Drawing.Point(406, 341);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(37, 30);
+            this.button11.Size = new System.Drawing.Size(39, 29);
             this.button11.TabIndex = 40;
             this.button11.Text = "17";
             this.button11.UseVisualStyleBackColor = true;
@@ -241,10 +172,10 @@ namespace testlog
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("宋体", 7F);
-            this.button10.Location = new System.Drawing.Point(26, 329);
+            this.button10.Location = new System.Drawing.Point(162, 338);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(51, 36);
+            this.button10.Size = new System.Drawing.Size(39, 27);
             this.button10.TabIndex = 39;
             this.button10.Text = "10";
             this.button10.UseVisualStyleBackColor = true;
@@ -253,10 +184,10 @@ namespace testlog
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 7F);
-            this.button9.Location = new System.Drawing.Point(26, 293);
+            this.button9.Location = new System.Drawing.Point(162, 306);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 38);
+            this.button9.Size = new System.Drawing.Size(39, 29);
             this.button9.TabIndex = 38;
             this.button9.Text = "09";
             this.button9.UseVisualStyleBackColor = true;
@@ -265,10 +196,10 @@ namespace testlog
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("宋体", 7F);
-            this.button8.Location = new System.Drawing.Point(123, 146);
+            this.button8.Location = new System.Drawing.Point(267, 147);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(41, 30);
+            this.button8.Size = new System.Drawing.Size(39, 29);
             this.button8.TabIndex = 37;
             this.button8.Text = "08";
             this.button8.UseVisualStyleBackColor = true;
@@ -277,10 +208,10 @@ namespace testlog
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("宋体", 7F);
-            this.button7.Location = new System.Drawing.Point(125, 101);
+            this.button7.Location = new System.Drawing.Point(264, 102);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(39, 30);
+            this.button7.Size = new System.Drawing.Size(39, 29);
             this.button7.TabIndex = 36;
             this.button7.Text = "07";
             this.button7.UseVisualStyleBackColor = true;
@@ -289,10 +220,10 @@ namespace testlog
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("宋体", 7F);
-            this.button6.Location = new System.Drawing.Point(171, 149);
+            this.button6.Location = new System.Drawing.Point(314, 148);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(37, 29);
+            this.button6.Size = new System.Drawing.Size(39, 29);
             this.button6.TabIndex = 35;
             this.button6.Text = "06";
             this.button6.UseVisualStyleBackColor = true;
@@ -301,10 +232,10 @@ namespace testlog
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("宋体", 7F);
-            this.button5.Location = new System.Drawing.Point(170, 101);
+            this.button5.Location = new System.Drawing.Point(313, 102);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(38, 30);
+            this.button5.Size = new System.Drawing.Size(39, 29);
             this.button5.TabIndex = 34;
             this.button5.Text = "05";
             this.button5.UseVisualStyleBackColor = true;
@@ -313,10 +244,10 @@ namespace testlog
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("宋体", 7F);
-            this.button4.Location = new System.Drawing.Point(227, 149);
+            this.button4.Location = new System.Drawing.Point(361, 147);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 30);
+            this.button4.Size = new System.Drawing.Size(39, 29);
             this.button4.TabIndex = 33;
             this.button4.Text = "04";
             this.button4.UseVisualStyleBackColor = true;
@@ -325,7 +256,7 @@ namespace testlog
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("宋体", 7F);
-            this.button3.Location = new System.Drawing.Point(226, 101);
+            this.button3.Location = new System.Drawing.Point(361, 102);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(39, 29);
@@ -337,10 +268,10 @@ namespace testlog
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("宋体", 7F);
-            this.button2.Location = new System.Drawing.Point(272, 148);
+            this.button2.Location = new System.Drawing.Point(410, 148);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 28);
+            this.button2.Size = new System.Drawing.Size(39, 29);
             this.button2.TabIndex = 31;
             this.button2.Text = "02";
             this.button2.UseVisualStyleBackColor = true;
@@ -353,7 +284,7 @@ namespace testlog
             this.pictureBox2.Location = new System.Drawing.Point(3, 24);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(454, 389);
+            this.pictureBox2.Size = new System.Drawing.Size(724, 382);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
@@ -361,10 +292,10 @@ namespace testlog
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 7F);
-            this.button1.Location = new System.Drawing.Point(271, 102);
+            this.button1.Location = new System.Drawing.Point(409, 102);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 29);
+            this.button1.Size = new System.Drawing.Size(39, 29);
             this.button1.TabIndex = 57;
             this.button1.Text = "01";
             this.button1.UseVisualStyleBackColor = true;
@@ -373,7 +304,7 @@ namespace testlog
             // button19
             // 
             this.button19.Font = new System.Drawing.Font("宋体", 7F);
-            this.button19.Location = new System.Drawing.Point(215, 329);
+            this.button19.Location = new System.Drawing.Point(356, 341);
             this.button19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(39, 29);
@@ -385,10 +316,10 @@ namespace testlog
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("宋体", 7F);
-            this.button20.Location = new System.Drawing.Point(171, 333);
+            this.button20.Location = new System.Drawing.Point(309, 341);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(38, 28);
+            this.button20.Size = new System.Drawing.Size(39, 29);
             this.button20.TabIndex = 59;
             this.button20.Text = "13";
             this.button20.UseVisualStyleBackColor = true;
@@ -405,7 +336,7 @@ namespace testlog
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("宋体", 7F);
-            this.button12.Location = new System.Drawing.Point(123, 333);
+            this.button12.Location = new System.Drawing.Point(261, 341);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 29);
@@ -417,10 +348,10 @@ namespace testlog
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("宋体", 7F);
-            this.button13.Location = new System.Drawing.Point(123, 376);
+            this.button13.Location = new System.Drawing.Point(263, 388);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(39, 28);
+            this.button13.Size = new System.Drawing.Size(39, 29);
             this.button13.TabIndex = 67;
             this.button13.Text = "12";
             this.button13.UseVisualStyleBackColor = true;
@@ -429,10 +360,10 @@ namespace testlog
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("宋体", 7F);
-            this.button14.Location = new System.Drawing.Point(171, 375);
+            this.button14.Location = new System.Drawing.Point(310, 388);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(40, 28);
+            this.button14.Size = new System.Drawing.Size(39, 29);
             this.button14.TabIndex = 68;
             this.button14.Text = "14";
             this.button14.UseVisualStyleBackColor = true;
@@ -441,10 +372,10 @@ namespace testlog
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("宋体", 7F);
-            this.button15.Location = new System.Drawing.Point(216, 375);
+            this.button15.Location = new System.Drawing.Point(358, 388);
             this.button15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(38, 28);
+            this.button15.Size = new System.Drawing.Size(39, 29);
             this.button15.TabIndex = 69;
             this.button15.Text = "16";
             this.button15.UseVisualStyleBackColor = true;
@@ -453,10 +384,10 @@ namespace testlog
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("宋体", 7F);
-            this.button21.Location = new System.Drawing.Point(270, 377);
+            this.button21.Location = new System.Drawing.Point(406, 388);
             this.button21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(39, 27);
+            this.button21.Size = new System.Drawing.Size(39, 29);
             this.button21.TabIndex = 70;
             this.button21.Text = "18";
             this.button21.UseVisualStyleBackColor = true;
@@ -468,7 +399,7 @@ namespace testlog
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(913, 278);
+            this.groupBox1.Size = new System.Drawing.Size(1183, 278);
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -494,8 +425,9 @@ namespace testlog
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(907, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(1177, 251);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -569,6 +501,8 @@ namespace testlog
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button23);
+            this.groupBox2.Controls.Add(this.button22);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.groupBox6);
@@ -580,10 +514,28 @@ namespace testlog
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 278);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 416);
+            this.groupBox2.Size = new System.Drawing.Size(453, 409);
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(177, 276);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(115, 25);
+            this.button23.TabIndex = 66;
+            this.button23.Text = "我的课程";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(267, 16);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(186, 64);
+            this.button22.TabIndex = 65;
+            this.button22.Text = "选中行点击跳转";
+            this.button22.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -630,6 +582,77 @@ namespace testlog
             this.groupBox5.TabIndex = 61;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "基础必修",
+            "专业必修",
+            "选修"});
+            this.comboBox1.Location = new System.Drawing.Point(141, 28);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(156, 26);
+            this.comboBox1.TabIndex = 49;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "课程类型：";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "guoguanyu747",
+            "guomingqiang",
+            "hekaihua9809",
+            "huaweihua601",
+            "huhuaimin214",
+            "hupeng110709",
+            "liangyueling",
+            "lihui9790314",
+            "lijiangmin98",
+            "liujianyu106",
+            "liuxiuguo225",
+            "liweifeng101",
+            "luwenzhong01",
+            "lvjianjun007",
+            "panxiong0029",
+            "qikunlun0630",
+            "qikunlun1127",
+            "qinyangmin07",
+            "songxiaoqing",
+            "wangguonian8",
+            "wanglunche13",
+            "wenhui721206",
+            "wuguobin7372",
+            "xiaohaijun65",
+            "yaoyao180305",
+            "zguangyong09",
+            "zhaoyingke97",
+            "zhouliehong9"});
+            this.comboBox3.Location = new System.Drawing.Point(145, 73);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(152, 26);
+            this.comboBox3.TabIndex = 53;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "教师：";
             // 
             // groupBox4
             // 
@@ -682,7 +705,7 @@ namespace testlog
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(453, 278);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(460, 416);
+            this.groupBox3.Size = new System.Drawing.Size(730, 409);
             this.groupBox3.TabIndex = 73;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
@@ -691,10 +714,12 @@ namespace testlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 694);
+            this.ClientSize = new System.Drawing.Size(1183, 687);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(1205, 743);
+            this.MinimumSize = new System.Drawing.Size(1205, 743);
             this.Name = "地图交互";
             this.Text = "地图交互";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -717,12 +742,8 @@ namespace testlog
         #endregion
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button11;
@@ -760,9 +781,15 @@ namespace testlog
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label4;
     }
 }
