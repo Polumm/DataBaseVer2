@@ -15,6 +15,7 @@ namespace testlog
         public 地图交互()
         {
             InitializeComponent();
+            showTable();
         }
 
         private string Loc = "";//全局变量，用于记录点击button的教室位置
@@ -514,8 +515,50 @@ namespace testlog
             }
         }
 
+        private void showTable()
+        {
+            dataGridView1.Rows.Clear();
+            string sql = " select* from 学生可选课表";
+            Door Choose_course = new Door();
+            IDataReader dr = Choose_course.Reader(sql);
+            while (dr.Read())
+            {
+                string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
+                a = dr["课程"].ToString();
+                b = dr["课程号"].ToString();
+                c = dr["学分"].ToString();
+                d = dr["授课老师"].ToString();
+                e = dr["上课时间"].ToString();
+                temp1 = dr["空间位置"].ToString();
+                temp2 = dr["教室编号"].ToString();
+                temp3 = dr["当前人数"].ToString();
+                temp4 = dr["计划上限"].ToString();
+                f = temp1 + " " + temp2;
+                g = temp3 + "/" + temp4;
+                h = dr["课程类型"].ToString();
+                i = dr["课程教学ID"].ToString();
+                string[] str = { a, b, h, c, d, e, f, g, i };
+                //dataGridView1.Rows.Add(str);
+                dataGridView1.Rows.Add(str);
+            }
+
+            //添加buttons列
+            DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
+            // 设定列的名字
+            dgv_button_col.Name = "Choosebuttons";
+            // 在所有按钮上表示"查看详情"
+            dgv_button_col.UseColumnTextForButtonValue = true;
+            dgv_button_col.Text = "选课";
+            // 设置列标题
+            dgv_button_col.HeaderText = "点击选课";
+            // 向DataGridView追加
+            dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
+
+        }
+
         private void button18_Click_1(object sender, EventArgs i)
         {
+
             if (textBox1.Text != "")
             {
                 string a, b, c, d, e, f, g, h;
@@ -548,7 +591,6 @@ namespace testlog
                 MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
     }
     /*            if (textBox1.Text != "")
             {

@@ -30,13 +30,6 @@ namespace testlog
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(地图交互));
-            this.课程 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.学分 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.上课时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.上课教室 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.教师 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.限制人数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.课程类型 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button18 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -45,11 +38,8 @@ namespace testlog
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.课程号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button17 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -70,62 +60,30 @@ namespace testlog
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // 课程
-            // 
-            this.课程.HeaderText = "课程";
-            this.课程.MinimumWidth = 6;
-            this.课程.Name = "课程";
-            this.课程.Width = 125;
-            // 
-            // 学分
-            // 
-            this.学分.HeaderText = "学分";
-            this.学分.MinimumWidth = 6;
-            this.学分.Name = "学分";
-            this.学分.Width = 125;
-            // 
-            // 上课时间
-            // 
-            this.上课时间.HeaderText = "上课时间";
-            this.上课时间.MinimumWidth = 6;
-            this.上课时间.Name = "上课时间";
-            this.上课时间.Width = 125;
-            // 
-            // 上课教室
-            // 
-            this.上课教室.HeaderText = "上课教室";
-            this.上课教室.MinimumWidth = 6;
-            this.上课教室.Name = "上课教室";
-            this.上课教室.Width = 125;
-            // 
-            // 教师
-            // 
-            this.教师.HeaderText = "教师";
-            this.教师.MinimumWidth = 6;
-            this.教师.Name = "教师";
-            this.教师.Width = 125;
-            // 
-            // 限制人数
-            // 
-            this.限制人数.HeaderText = "限制人数";
-            this.限制人数.MinimumWidth = 6;
-            this.限制人数.Name = "限制人数";
-            this.限制人数.Width = 125;
-            // 
-            // 课程类型
-            // 
-            this.课程类型.HeaderText = "课程类型";
-            this.课程类型.MinimumWidth = 6;
-            this.课程类型.Name = "课程类型";
-            this.课程类型.Width = 125;
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(398, 64);
+            this.button18.Location = new System.Drawing.Point(330, 87);
             this.button18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(106, 59);
@@ -136,7 +94,7 @@ namespace testlog
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(398, 145);
+            this.button16.Location = new System.Drawing.Point(330, 168);
             this.button16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(106, 59);
@@ -178,7 +136,7 @@ namespace testlog
             "zguangyong09",
             "zhaoyingke97",
             "zhouliehong9"});
-            this.comboBox3.Location = new System.Drawing.Point(186, 241);
+            this.comboBox3.Location = new System.Drawing.Point(146, 298);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(152, 26);
@@ -187,7 +145,7 @@ namespace testlog
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 244);
+            this.label4.Location = new System.Drawing.Point(27, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 52;
@@ -196,7 +154,7 @@ namespace testlog
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 185);
+            this.label3.Location = new System.Drawing.Point(27, 230);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 51;
@@ -212,7 +170,7 @@ namespace testlog
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(186, 182);
+            this.comboBox2.Location = new System.Drawing.Point(146, 230);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(152, 26);
@@ -226,7 +184,7 @@ namespace testlog
             "基础必修",
             "专业必修",
             "选修"});
-            this.comboBox1.Location = new System.Drawing.Point(186, 121);
+            this.comboBox1.Location = new System.Drawing.Point(146, 162);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(152, 26);
@@ -235,39 +193,23 @@ namespace testlog
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 124);
+            this.label2.Location = new System.Drawing.Point(27, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 48;
             this.label2.Text = "课程类型：";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 18);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "课程号：";
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 64);
+            this.textBox1.Location = new System.Drawing.Point(146, 81);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 28);
             this.textBox1.TabIndex = 46;
             // 
-            // 课程号
-            // 
-            this.课程号.HeaderText = "课程号";
-            this.课程号.MinimumWidth = 6;
-            this.课程号.Name = "课程号";
-            this.课程号.Width = 125;
-            // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(398, 224);
+            this.button17.Location = new System.Drawing.Point(330, 247);
             this.button17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(106, 59);
@@ -276,37 +218,13 @@ namespace testlog
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click_1);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.课程号,
-            this.课程,
-            this.课程类型,
-            this.学分,
-            this.上课时间,
-            this.上课教室,
-            this.教师,
-            this.限制人数});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 311);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 309);
-            this.dataGridView1.TabIndex = 45;
-            // 
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("宋体", 7F);
-            this.button11.Location = new System.Drawing.Point(1072, 470);
+            this.button11.Location = new System.Drawing.Point(355, 343);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(36, 31);
+            this.button11.Size = new System.Drawing.Size(37, 30);
             this.button11.TabIndex = 40;
             this.button11.Text = "17";
             this.button11.UseVisualStyleBackColor = true;
@@ -315,10 +233,10 @@ namespace testlog
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("宋体", 7F);
-            this.button10.Location = new System.Drawing.Point(754, 465);
+            this.button10.Location = new System.Drawing.Point(39, 339);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(51, 40);
+            this.button10.Size = new System.Drawing.Size(51, 36);
             this.button10.TabIndex = 39;
             this.button10.Text = "10";
             this.button10.UseVisualStyleBackColor = true;
@@ -327,10 +245,10 @@ namespace testlog
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("宋体", 7F);
-            this.button9.Location = new System.Drawing.Point(754, 426);
+            this.button9.Location = new System.Drawing.Point(38, 298);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(51, 40);
+            this.button9.Size = new System.Drawing.Size(50, 38);
             this.button9.TabIndex = 38;
             this.button9.Text = "09";
             this.button9.UseVisualStyleBackColor = true;
@@ -339,10 +257,10 @@ namespace testlog
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("宋体", 7F);
-            this.button8.Location = new System.Drawing.Point(878, 231);
+            this.button8.Location = new System.Drawing.Point(170, 103);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(48, 32);
+            this.button8.Size = new System.Drawing.Size(41, 30);
             this.button8.TabIndex = 37;
             this.button8.Text = "08";
             this.button8.UseVisualStyleBackColor = true;
@@ -351,10 +269,10 @@ namespace testlog
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("宋体", 7F);
-            this.button7.Location = new System.Drawing.Point(878, 170);
+            this.button7.Location = new System.Drawing.Point(167, 43);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(48, 32);
+            this.button7.Size = new System.Drawing.Size(39, 30);
             this.button7.TabIndex = 36;
             this.button7.Text = "07";
             this.button7.UseVisualStyleBackColor = true;
@@ -363,10 +281,10 @@ namespace testlog
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("宋体", 7F);
-            this.button6.Location = new System.Drawing.Point(947, 231);
+            this.button6.Location = new System.Drawing.Point(234, 105);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(36, 32);
+            this.button6.Size = new System.Drawing.Size(37, 29);
             this.button6.TabIndex = 35;
             this.button6.Text = "06";
             this.button6.UseVisualStyleBackColor = true;
@@ -375,10 +293,10 @@ namespace testlog
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("宋体", 7F);
-            this.button5.Location = new System.Drawing.Point(941, 170);
+            this.button5.Location = new System.Drawing.Point(231, 43);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 32);
+            this.button5.Size = new System.Drawing.Size(38, 30);
             this.button5.TabIndex = 34;
             this.button5.Text = "05";
             this.button5.UseVisualStyleBackColor = true;
@@ -387,10 +305,10 @@ namespace testlog
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("宋体", 7F);
-            this.button4.Location = new System.Drawing.Point(1008, 232);
+            this.button4.Location = new System.Drawing.Point(296, 104);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 31);
+            this.button4.Size = new System.Drawing.Size(39, 30);
             this.button4.TabIndex = 33;
             this.button4.Text = "04";
             this.button4.UseVisualStyleBackColor = true;
@@ -399,10 +317,10 @@ namespace testlog
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("宋体", 7F);
-            this.button3.Location = new System.Drawing.Point(1008, 170);
+            this.button3.Location = new System.Drawing.Point(296, 43);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 31);
+            this.button3.Size = new System.Drawing.Size(39, 29);
             this.button3.TabIndex = 32;
             this.button3.Text = "03";
             this.button3.UseVisualStyleBackColor = true;
@@ -411,10 +329,10 @@ namespace testlog
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("宋体", 7F);
-            this.button2.Location = new System.Drawing.Point(1072, 231);
+            this.button2.Location = new System.Drawing.Point(360, 105);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 31);
+            this.button2.Size = new System.Drawing.Size(37, 28);
             this.button2.TabIndex = 31;
             this.button2.Text = "02";
             this.button2.UseVisualStyleBackColor = true;
@@ -422,11 +340,12 @@ namespace testlog
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(510, 68);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 24);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1008, 506);
+            this.pictureBox2.Size = new System.Drawing.Size(454, 389);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
@@ -434,10 +353,10 @@ namespace testlog
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 7F);
-            this.button1.Location = new System.Drawing.Point(1072, 170);
+            this.button1.Location = new System.Drawing.Point(359, 43);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 31);
+            this.button1.Size = new System.Drawing.Size(38, 29);
             this.button1.TabIndex = 57;
             this.button1.Text = "01";
             this.button1.UseVisualStyleBackColor = true;
@@ -446,31 +365,31 @@ namespace testlog
             // button19
             // 
             this.button19.Font = new System.Drawing.Font("宋体", 7F);
-            this.button19.Location = new System.Drawing.Point(998, 468);
+            this.button19.Location = new System.Drawing.Point(289, 344);
             this.button19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(42, 31);
+            this.button19.Size = new System.Drawing.Size(39, 29);
             this.button19.TabIndex = 58;
-            this.button19.Text = " 15";
+            this.button19.Text = "15";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("宋体", 7F);
-            this.button20.Location = new System.Drawing.Point(935, 470);
+            this.button20.Location = new System.Drawing.Point(227, 345);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(48, 29);
+            this.button20.Size = new System.Drawing.Size(38, 28);
             this.button20.TabIndex = 59;
-            this.button20.Text = " 13";
+            this.button20.Text = "13";
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(901, 131);
+            this.label5.Location = new System.Drawing.Point(235, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 65;
@@ -478,10 +397,10 @@ namespace testlog
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("宋体", 7F);
-            this.button12.Location = new System.Drawing.Point(868, 472);
+            this.button12.Location = new System.Drawing.Point(162, 344);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(48, 29);
+            this.button12.Size = new System.Drawing.Size(39, 29);
             this.button12.TabIndex = 66;
             this.button12.Text = "11";
             this.button12.UseVisualStyleBackColor = true;
@@ -490,106 +409,242 @@ namespace testlog
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("宋体", 7F);
-            this.button13.Location = new System.Drawing.Point(868, 532);
+            this.button13.Location = new System.Drawing.Point(167, 381);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(48, 29);
+            this.button13.Size = new System.Drawing.Size(39, 28);
             this.button13.TabIndex = 67;
-            this.button13.Text = " 12";
+            this.button13.Text = "12";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("宋体", 7F);
-            this.button14.Location = new System.Drawing.Point(941, 532);
+            this.button14.Location = new System.Drawing.Point(231, 375);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(48, 29);
+            this.button14.Size = new System.Drawing.Size(40, 28);
             this.button14.TabIndex = 68;
-            this.button14.Text = " 14";
+            this.button14.Text = "14";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("宋体", 7F);
-            this.button15.Location = new System.Drawing.Point(998, 532);
+            this.button15.Location = new System.Drawing.Point(290, 381);
             this.button15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(48, 29);
+            this.button15.Size = new System.Drawing.Size(38, 28);
             this.button15.TabIndex = 69;
-            this.button15.Text = " 16";
+            this.button15.Text = "16";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("宋体", 7F);
-            this.button21.Location = new System.Drawing.Point(1060, 532);
+            this.button21.Location = new System.Drawing.Point(353, 381);
             this.button21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(48, 29);
+            this.button21.Size = new System.Drawing.Size(39, 27);
             this.button21.TabIndex = 70;
-            this.button21.Text = " 18";
+            this.button21.Text = "18";
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(913, 278);
+            this.groupBox1.TabIndex = 71;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column8,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column9});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 24);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(907, 251);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.button17);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.button16);
+            this.groupBox2.Controls.Add(this.button18);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Location = new System.Drawing.Point(0, 278);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(453, 416);
+            this.groupBox2.TabIndex = 72;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button21);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button15);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button14);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.button13);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button20);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Controls.Add(this.button19);
+            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button11);
+            this.groupBox3.Controls.Add(this.pictureBox2);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(453, 278);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(460, 416);
+            this.groupBox3.TabIndex = 73;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 110.7647F;
+            this.Column1.HeaderText = "课程";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 64;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 87.85164F;
+            this.Column2.HeaderText = "课程号";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "课程类型";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 123.913F;
+            this.Column3.HeaderText = "学分";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 64;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 101.7988F;
+            this.Column4.HeaderText = "授课老师";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 93.33292F;
+            this.Column5.HeaderText = "上课时间";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 82.33897F;
+            this.Column6.HeaderText = "上课地点";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 90;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "已选/容量";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 90;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "课程教学ID";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.Visible = false;
+            this.Column9.Width = 150;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "课程号",
+            "课程"});
+            this.comboBox4.Location = new System.Drawing.Point(30, 81);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(95, 26);
+            this.comboBox4.TabIndex = 59;
             // 
             // 地图交互
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1548, 627);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(913, 694);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "地图交互";
             this.Text = "地图交互";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn 课程;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 学分;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 上课时间;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 上课教室;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 教师;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 限制人数;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 课程类型;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -598,11 +653,8 @@ namespace testlog
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 课程号;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
@@ -623,5 +675,19 @@ namespace testlog
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
