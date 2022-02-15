@@ -66,8 +66,8 @@ namespace testlog
 
         private void 学生成绩录入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Click教学任务查询 Choose_course = new Click教学任务查询(TID1);
-            Choose_course.ShowDialog();
+            Click学生成绩录入 ScoreLoad = new Click学生成绩录入(TID1);
+            ScoreLoad.ShowDialog();
         }
     }
 }

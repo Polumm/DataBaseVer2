@@ -17,7 +17,7 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Click学生成绩录入xxx("liweifeng101"));
+            Application.Run(new 教师功能区界面("liweifeng101"));
         }
     }
 }

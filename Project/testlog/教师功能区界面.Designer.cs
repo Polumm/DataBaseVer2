@@ -39,13 +39,13 @@ namespace testlog
             this.教学计划申请ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选课ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学情统计分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生成绩录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.学生成绩录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,33 +78,33 @@ namespace testlog
             // 退出系统ToolStripMenuItem
             // 
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // 教学任务查询ToolStripMenuItem
             // 
             this.教学任务查询ToolStripMenuItem.Name = "教学任务查询ToolStripMenuItem";
-            this.教学任务查询ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.教学任务查询ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.教学任务查询ToolStripMenuItem.Text = "教学任务查询";
             this.教学任务查询ToolStripMenuItem.Click += new System.EventHandler(this.教学任务查询ToolStripMenuItem_Click);
             // 
             // 教学计划变更申请ToolStripMenuItem
             // 
             this.教学计划变更申请ToolStripMenuItem.Name = "教学计划变更申请ToolStripMenuItem";
-            this.教学计划变更申请ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.教学计划变更申请ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.教学计划变更申请ToolStripMenuItem.Text = "教学计划变更申请";
             // 
             // 教学计划申请ToolStripMenuItem
             // 
             this.教学计划申请ToolStripMenuItem.Name = "教学计划申请ToolStripMenuItem";
-            this.教学计划申请ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.教学计划申请ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.教学计划申请ToolStripMenuItem.Text = "教学计划立项申请";
             this.教学计划申请ToolStripMenuItem.Click += new System.EventHandler(this.教学计划申请ToolStripMenuItem_Click);
             // 
@@ -122,6 +122,13 @@ namespace testlog
             this.学情统计分析ToolStripMenuItem.Name = "学情统计分析ToolStripMenuItem";
             this.学情统计分析ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.学情统计分析ToolStripMenuItem.Text = "学情统计分析";
+            // 
+            // 学生成绩录入ToolStripMenuItem
+            // 
+            this.学生成绩录入ToolStripMenuItem.Name = "学生成绩录入ToolStripMenuItem";
+            this.学生成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.学生成绩录入ToolStripMenuItem.Text = "学生成绩录入";
+            this.学生成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.学生成绩录入ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -165,13 +172,6 @@ namespace testlog
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // 学生成绩录入ToolStripMenuItem
-            // 
-            this.学生成绩录入ToolStripMenuItem.Name = "学生成绩录入ToolStripMenuItem";
-            this.学生成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.学生成绩录入ToolStripMenuItem.Text = "学生成绩录入";
-            this.学生成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.学生成绩录入ToolStripMenuItem_Click);
             // 
             // 教师功能区界面
             // 
