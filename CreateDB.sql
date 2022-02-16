@@ -60,7 +60,7 @@ create table 排课表
 计划上限 tinyint,
 已选人数 tinyint,
 课程代号 varchar(20),
-foreign key(教室编号) references 教室(教室编号),
+/*foreign key(教室编号) references 教室(教室编号),*/
 foreign key(教师编号) references 教师(教师编号),
 foreign key(课程代号) references 课程(课程代号)
 )
@@ -1497,132 +1497,132 @@ values('20201001567','70800600',82)
 
 /*GRANT*/
 insert into 管理员密码表
-values('Admin','123')
+values('Admin','e10adc3949ba59abbe56e057f20f883e')
 
 insert into 学生密码表
-values('20201003150','123')
+values('20201003150','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表 
-values('20201003381','123')
+values('20201003381','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000193','123')
+values('20201000193','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000398','123')
+values('20201000398','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000503','123')
+values('20201000503','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000746','123')
+values('20201000746','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000872','123')
+values('20201000872','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001016','123')
+values('20201001016','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001143','123')
+values('20201001143','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001211','123')
+values('20201001211','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001219','123')
+values('20201001219','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001379','123')
+values('20201001379','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001567','123')
+values('20201001567','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001705','123')
+values('20201001705','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001735','123')
+values('20201001735','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201001902','123')
+values('20201001902','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201002137','123')
+values('20201002137','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201002276','123')
+values('20201002276','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201002743','123')
+values('20201002743','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201002920','123')
+values('20201002920','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003024','123')
+values('20201003024','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003038','123')
+values('20201003038','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003217','123')
+values('20201003217','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003752','123')
+values('20201003752','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003578','123')
+values('20201003578','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201003559','123')
+values('20201003559','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201004101','123')
+values('20201004101','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201004321','123')
+values('20201004321','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201004492','123')
+values('20201004492','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201002343','123')
+values('20201002343','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000910','123')
+values('20201000910','e10adc3949ba59abbe56e057f20f883e')
 insert into 学生密码表
-values('20201000830','123')
+values('20201000830','e10adc3949ba59abbe56e057f20f883e')
 
 insert into 教师密码表
-values('qikunlun0630','123')
+values('qikunlun0630','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('wanglunche13','123')
+values('wanglunche13','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('liuxiuguo225','123')
+values('liuxiuguo225','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('chaoyi010701','123')
+values('chaoyi010701','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('guanqinfeng1','123')
+values('guanqinfeng1','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('liujianyu106','123')
+values('liujianyu106','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('yaoyao180305','123')
+values('yaoyao180305','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('songxiaoqing','123')
+values('songxiaoqing','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('qinyangmin07','123')
+values('qinyangmin07','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('huaweihua601','123')
+values('huaweihua601','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('gongjunfang1','123')
+values('gongjunfang1','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('lvjianjun007','123')
+values('lvjianjun007','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('panxiong0029','123')
+values('panxiong0029','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('lihui9790314','123')
+values('lihui9790314','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('guomingqiang','123')
+values('guomingqiang','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('huhuaimin214','123')
+values('huhuaimin214','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('liangyueling','123')
+values('liangyueling','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('lijiangmin98','123')
+values('lijiangmin98','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('wenhui721206','123')
+values('wenhui721206','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('luwenzhong01','123')
+values('luwenzhong01','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('wuguobin7372','123')
+values('wuguobin7372','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('guoguanyu747','123')
+values('guoguanyu747','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('zguangyong09','123')
+values('zguangyong09','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('hekaihua9809','123')
+values('hekaihua9809','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('liweifeng101','123')
+values('liweifeng101','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('xiaohaijun65','123')
+values('xiaohaijun65','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('hupeng110709','123')
+values('hupeng110709','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('zhaoyingke97','123')
+values('zhaoyingke97','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('zhouliehong9','123')
+values('zhouliehong9','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('wangguonian8','123')
+values('wangguonian8','e10adc3949ba59abbe56e057f20f883e')
 insert into 教师密码表
-values('fanruoying11','123')
+values('fanruoying11','e10adc3949ba59abbe56e057f20f883e')

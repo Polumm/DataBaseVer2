@@ -17,14 +17,14 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 教师功能区界面("liweifeng101"));
+            Application.Run(new 登陆验证界面());
         }
     }
 }
 
 
 
-
+//登陆验证界面()
 //new 管理员功能区界面("Admin")
 //new 地图交互()
 //new 教师功能区界面("liweifeng101")
