@@ -75,20 +75,15 @@ foreign key(学号) references 学生(学号),
 foreign key(课程教学ID) references 排课表(课程教学ID)
 )
 
-create table 管理员密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
+create table 用户安全信息          
+ (	
+ 用户名 varchar(20) PRIMARY KEY,                          
+ 密码 varchar(max), 
+ 身份 varchar(20),
+ 手机号码 varchar(11),
+ 用户照片 image
+ ); 
 
-create table 教师密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
-
-create table 学生密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
 
 
 
@@ -1496,133 +1491,133 @@ values('20201001567','70800600',82)
 
 
 /*GRANT*/
-insert into 管理员密码表
-values('Admin','e10adc3949ba59abbe56e057f20f883e')
 
-insert into 学生密码表
-values('20201003150','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表 
-values('20201003381','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000193','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000398','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000503','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000746','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000872','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001016','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001143','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001211','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001219','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001379','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001567','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001705','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001735','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201001902','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201002137','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201002276','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201002743','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201002920','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003024','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003038','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003217','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003752','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003578','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201003559','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201004101','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201004321','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201004492','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201002343','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000910','e10adc3949ba59abbe56e057f20f883e')
-insert into 学生密码表
-values('20201000830','e10adc3949ba59abbe56e057f20f883e')
+insert into 用户安全信息
+values('Admin','e10adc3949ba59abbe56e057f20f883e','管理员','13106549999',null)
+insert into 用户安全信息
+values('20201003150','e10adc3949ba59abbe56e057f20f883e','学生','13106549994' , null)
+insert into 用户安全信息 
+values('20201003381','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201000193','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201000398','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201000503','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201000746','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201000872','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001016','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001143','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001211','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001219','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001379','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001567','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001705','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001735','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201001902','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201002137','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201002276','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201002743','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201002920','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003024','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003038','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003217','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003752','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003578','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201003559','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201004101','e10adc3949ba59abbe56e057f20f883e','学生',null , null)
+insert into 用户安全信息
+values('20201004321','e10adc3949ba59abbe56e057f20f883e','学生','13106549990' , null)
+insert into 用户安全信息
+values('20201004492','e10adc3949ba59abbe56e057f20f883e','学生','13106549981' , null)
+insert into 用户安全信息
+values('20201002343','e10adc3949ba59abbe56e057f20f883e','学生','13106549954' , null)
+insert into 用户安全信息
+values('20201000910','e10adc3949ba59abbe56e057f20f883e','学生','13106549918' , null)
+insert into 用户安全信息
+values('20201000830','e10adc3949ba59abbe56e057f20f883e','学生','18938065049' , null)
 
-insert into 教师密码表
-values('qikunlun0630','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('wanglunche13','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('liuxiuguo225','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('chaoyi010701','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('guanqinfeng1','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('liujianyu106','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('yaoyao180305','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('songxiaoqing','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('qinyangmin07','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('huaweihua601','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('gongjunfang1','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('lvjianjun007','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('panxiong0029','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('lihui9790314','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('guomingqiang','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('huhuaimin214','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('liangyueling','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('lijiangmin98','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('wenhui721206','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('luwenzhong01','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('wuguobin7372','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('guoguanyu747','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('zguangyong09','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('hekaihua9809','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('liweifeng101','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('xiaohaijun65','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('hupeng110709','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('zhaoyingke97','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('zhouliehong9','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('wangguonian8','e10adc3949ba59abbe56e057f20f883e')
-insert into 教师密码表
-values('fanruoying11','e10adc3949ba59abbe56e057f20f883e')
+insert into 用户安全信息
+values('qikunlun0630','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('wanglunche13','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('liuxiuguo225','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('chaoyi010701','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('guanqinfeng1','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('liujianyu106','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('yaoyao180305','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('songxiaoqing','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('qinyangmin07','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('huaweihua601','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('gongjunfang1','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('lvjianjun007','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('panxiong0029','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('lihui9790314','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('guomingqiang','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('huhuaimin214','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('liangyueling','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('lijiangmin98','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('wenhui721206','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('luwenzhong01','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('wuguobin7372','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('guoguanyu747','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('zguangyong09','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('hekaihua9809','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('liweifeng101','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('xiaohaijun65','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('hupeng110709','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('zhaoyingke97','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('zhouliehong9','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('wangguonian8','e10adc3949ba59abbe56e057f20f883e','教师',null , null)
+insert into 用户安全信息
+values('fanruoying11','e10adc3949ba59abbe56e057f20f883e','教师',null , null)

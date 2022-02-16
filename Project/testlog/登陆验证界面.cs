@@ -14,39 +14,32 @@ namespace testlog
 {
     public partial class 登陆验证界面 : Form
     {
+        public string code = null; //验证码
+
         public 登陆验证界面()
         {
             InitializeComponent();
+            groupBox1.BackColor = Color.FromArgb(20, 40, 60, 82);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void 登陆验证界面_Load(object sender, EventArgs e)
         {
+            Random ran = new Random();
+            int number;
+            char code1;
+            //取五个数 
+            for (int i = 0; i < 5; i++)
+            {
+                number = ran.Next();//取非负随机数
+                if (number % 2 == 0)
+                    code1 = (char)('0' + (char)(number % 10));//两个char类型运算会自动转换为int类型的运算
+                else
+                    code1 = (char)('A' + (char)(number % 26)); //转化为字符 
 
-        }
+                this.code += code1.ToString();
+            }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            label5.Text = code;//验证码
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -61,7 +54,7 @@ namespace testlog
             {
                 if(comboBox1.Text == "管理员")
                 {
-                    管理员功能区界面 formAdmin_Win= new 管理员功能区界面();
+                    管理员功能区界面 formAdmin_Win= new 管理员功能区界面(textBox1.Text);
                     formAdmin_Win.Show();
                     this.Hide();//主窗体结束，程序随即结束，因此此时只能先隐藏
                     //this.Close();
@@ -86,8 +79,6 @@ namespace testlog
             }
             
         }
-        //登陆事件
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -97,17 +88,16 @@ namespace testlog
                 //如果登陆成功，隐藏多余控件,仅留下图片
                 textBox1.Visible = false;
                 textBox2.Visible = false;
+                textBox3.Visible = false;
                 comboBox1.Visible = false;
                 button1.Visible = false;
                 button2.Visible = false;
                 label1.Visible = false;
                 label2.Visible = false;
                 label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
 
-            }
-            else
-            {
-                MessageBox.Show("用户名或密码不正确，请重新输入！");
             }
         }
 
@@ -134,59 +124,37 @@ namespace testlog
                 MessageBox.Show("输入不完整，请重新输入", "提示",MessageBoxButtons.OK,MessageBoxIcon.Warning);//提示，多重重载
                 return false;
             }
-            //根据下拉选框中的判断调用sql语句
-            String password = EncryptWithMD5(textBox2.Text.Trim());
-            if (comboBox1.Text == "学生")
-            {
-                string sql = "select 用户名, 密码 from 学生密码表 where 用户名 ='"+ textBox1.Text + "' and 密码 = '" + password + "'";
-                Door dr = new Door();
-                IDataReader Student_Door = dr.Reader(sql);//Reader是Door封装的读入方法
-                if (Student_Door.Read())//.Read()是IDataReader自带的方法，若成功读到信息，返回1
-                {
-                    return true;
-                }
-                {
-                    return false;
-                }
-            }
-            if(comboBox1.Text == "教师")
-            {
-                string sql = "select 用户名, 密码 from 教师密码表 where 用户名 ='" + textBox1.Text + "' and 密码 = '" + password + "'";
-                Door dr = new Door();
-                IDataReader Student_Door = dr.Reader(sql);//Reader是Door封装的读入方法
-                if (Student_Door.Read())//.Read()是IDataReader自带的方法，若成功读到信息，返回1
-                {
-                    return true;
-                }
-                {
-                    return false;
-                }
-                // "select 用户名, 密码 from 管理员密码表 where 用户名 =' " + textBox1.Text + "' and 密码 = '" + textBox2.Text + "'; ";
-            }
-            if(comboBox1.Text == "管理员")
-            {   //务必小心，sql是字符串，如果其中的引号是中文字符，编译器不会报错！
-                string sql = "select 用户名, 密码 from 管理员密码表 where 用户名 ='"+ textBox1.Text +"' and 密码 = '"+ password + "'";
-                Door dr = new Door();
-                IDataReader Admin_Door = dr.Reader(sql);//Reader是Door封装的读入方法
-                if (Admin_Door.Read())//.Read()是IDataReader自带的方法，若成功读到信息，返回1
-                {
-                    return true;
-                }
-                {
-                    return false;
-                }
 
+            //获取用户输入
+            String username = textBox1.Text.Trim(); //获取用户名
+            String password = EncryptWithMD5(textBox2.Text.Trim());//获取密码
+            String Identity = comboBox1.Text.Trim(); //取出身份
+
+            string sql = "select 用户名 from 用户安全信息 where 用户名 = '"+ username + "' and 密码 = '"+ password + "' and 身份 = '"+ Identity + "'";
+            Door Login_Door = new Door();
+            IDataReader dr = Login_Door.Reader(sql);//Reader是Door封装的读入方法
+
+            if (dr.Read()) //查询结果存在
+            {
+                if (textBox3.Text == code)//验证码正确
+                {
+                    MessageBox.Show("登录成功！", "Tips", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);//设置弹出对话窗
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("验证码错误！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            else
+            {
+                MessageBox.Show("用户名或密码错误！", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             return false;
 
         }
 
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {//取消事件
@@ -196,14 +164,24 @@ namespace testlog
   
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            code = null;
+            Random ran = new Random();
+            int number;
+            char code1;
+            //取五个数 
+            for (int i = 0; i < 5; i++)
+            {
+                number = ran.Next();//取非负随机数
+                if (number % 2 == 0)
+                    code1 = (char)('0' + (char)(number % 10));//两个char类型运算会自动转换为int类型的运算
+                else
+                    code1 = (char)('A' + (char)(number % 26)); //转化为字符 
 
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+                this.code += code1.ToString();
+            }
+            label5.Text = code;//验证码
         }
     }
 }

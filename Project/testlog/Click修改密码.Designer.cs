@@ -50,6 +50,7 @@ namespace testlog
             // 
             this.textBox2.Location = new System.Drawing.Point(200, 187);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(170, 28);
             this.textBox2.TabIndex = 1;
             // 
@@ -57,6 +58,7 @@ namespace testlog
             // 
             this.textBox3.Location = new System.Drawing.Point(200, 281);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(170, 28);
             this.textBox3.TabIndex = 2;
             // 
@@ -68,7 +70,6 @@ namespace testlog
             this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "原密码";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -112,7 +113,7 @@ namespace testlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 447);
+            this.ClientSize = new System.Drawing.Size(470, 447);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
