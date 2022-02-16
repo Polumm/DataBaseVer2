@@ -108,8 +108,8 @@ namespace testlog
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            地图交互 study_search = new 地图交互("Admin", 0);
-            study_search.ShowDialog();
+            地图交互 mapLoad = new 地图交互(AdminID, 0);
+            mapLoad.ShowDialog();
         }
     }
     

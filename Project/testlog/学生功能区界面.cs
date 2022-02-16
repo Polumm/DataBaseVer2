@@ -85,6 +85,12 @@ namespace testlog
             Click修改密码 Update_password = new Click修改密码(SID1, "学生");
             Update_password.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            地图交互 mapLoad = new 地图交互(SID1, 1);
+            mapLoad.ShowDialog();
+        }
     }
 }
 

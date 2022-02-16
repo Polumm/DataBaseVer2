@@ -69,5 +69,11 @@ namespace testlog
             Click学生成绩录入 ScoreLoad = new Click学生成绩录入(TID1);
             ScoreLoad.ShowDialog();
         }
+
+        private void 地图交互ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            地图交互 mapLoad = new 地图交互(TID1,2);
+            mapLoad.ShowDialog();
+        }
     }
 }

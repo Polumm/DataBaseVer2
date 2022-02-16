@@ -28,27 +28,30 @@ namespace testlog
         }
         public 地图交互(string ID, int roleNo)
         {
-            if(roleNo == 1)
-            {
-                Tno = ID;
+            InitializeComponent();
+            if (roleNo == 1)
+            {//学生
+                Sno = ID;
                 role = roleNo;
             }
             else if(roleNo == 2)
-            {
+            {//老师
                 Tno = ID;
                 role = roleNo;
             }
             else if(roleNo == 0)
-            {
+            {//管理员
                 Admin = ID;
                 role = roleNo;
+                //只有管理员看不到“我的课程”
+                button24.Visible = false;
             }
-            InitializeComponent();
-            showTable();
+            //只有管理员能进行排课
             if(role != 0)
             {
-                button16.Visible = false;
+                button16.Visible = false;              
             }
+            showTable();
         }
 
         private string Loc = "";//全局变量，用于记录点击button的教室位置
@@ -559,9 +562,8 @@ namespace testlog
         private void button17_Click_1(object sender, EventArgs e)
         {
             textBox1.Text = null;
-            comboBox1.Text = null;
             comboBox2.Text = null;
-            comboBox3.Text = null;
+            comboBox4.Text = null;
             dataGridView1.Rows.Clear();
             showPos("", 0);
             showTable();
@@ -593,110 +595,137 @@ namespace testlog
             }
         }
         
-  /*      //先搜索是否已存在，再进行信息添加
-        private void button16_Click(object sender, EventArgs e)
-        {
-            if (judge())
-            {
-                string classroom = class_room(comboBox2.Text, Loc);
-                string sql_1 = "select *from 课程教室CC where 教室编号 ='" + class_room(comboBox2.Text, Loc) + "'";
-                string sql_2 = "select *from 课程 where 课程号 ='" + textBox1.Text + "'";
-                Door Sql = new Door();
-                IDataReader dr_1 = Sql.Reader(sql_1);
-                IDataReader dr_2 = Sql.Reader(sql_2);
-
-                if (comboBox1.Text == "")
-                {
-                    MessageBox.Show("课程类型为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dr_1.Close();
-                    dr_2.Close();
-                    return;
-                }
-                if (comboBox3.Text == "")
-                {
-                    MessageBox.Show("教师为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dr_1.Close();
-                    dr_2.Close();
-                    return;
-                }
-                if (dr_1.Read())
-                {
-                    MessageBox.Show("此教室已被占用！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dr_1.Close();
-                    dr_2.Close();
-                    return;
-                }
-                if (dr_2.Read())
-                {
-                    MessageBox.Show("课程已录入，不能重复录入！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dr_1.Close();
-                    dr_2.Close();
-                    return;
-                }
-                if (!dr_2.Read())
-                {
-                    //sql_1 = "use 大学生课程学习管理与成绩评价系统 select *from Classroom where crno='" + classroom + "'";
-                    //IDataReader dr = Sql.Reader(sql_1);
-                    //string limit = dr["contain"].ToString(); 
-                    sql_2 = "insert into 课程 values('" + textBox1.Text + "',null,'" + comboBox1.Text + "',null,null,null" + ")";
-                    string sql_3 = "insert into 课程教师TC values('"+ textBox1.Text + "','"+ comboBox3.Text +"') insert into 教室 values('"+ class_room(comboBox2.Text, Loc) + "',null,null,'公教一') insert into 课程教室CC values('" + textBox1.Text + "','" + class_room(comboBox2.Text, Loc)  + "')";
-                    Sql.Excute(sql_2);
-                    Sql.Excute(sql_3);
-                }
-                MessageBox.Show("增加信息成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dr_1.Close();
-                dr_2.Close();
-                return;
-            }
-            else
-            {
-                MessageBox.Show("楼层信息未输入！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-*/
+  
         private void showTable(string sql = " select* from 学生可选课表")
         {
             string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
-            dataGridView1.Rows.Clear();          
-            Door Choose_course = new Door();
-            IDataReader dr = Choose_course.Reader(sql);
-            while (dr.Read())
+            if (role == 0)//如果是管理员
             {
-                a = dr["课程"].ToString();
-                b = dr["课程号"].ToString();
-                c = dr["学分"].ToString();
-                d = dr["授课老师"].ToString();
-                e = dr["上课时间"].ToString();
-                temp1 = dr["空间位置"].ToString();
-                temp2 = dr["教室编号"].ToString();
-                temp3 = dr["当前人数"].ToString();
-                temp4 = dr["计划上限"].ToString();
-                f = temp1 + " " + temp2;
-                g = temp3 + "/" + temp4;
-                h = dr["课程类型"].ToString();
-                i = dr["课程教学ID"].ToString();
-                string[] str = { a, b, h, c, d, e, f, g, i };
-                dataGridView1.Rows.Add(str);
+                dataGridView1.Rows.Clear();
+                Door Course = new Door();
+                IDataReader drAdmin = Course.Reader(sql);
+                while (drAdmin.Read())
+                {
+                    a = drAdmin["课程"].ToString();
+                    b = drAdmin["课程号"].ToString();
+                    c = drAdmin["学分"].ToString();
+                    d = drAdmin["授课老师"].ToString();
+                    e = drAdmin["上课时间"].ToString();
+                    temp1 = drAdmin["空间位置"].ToString();
+                    temp2 = drAdmin["教室编号"].ToString();
+                    temp3 = drAdmin["当前人数"].ToString();
+                    temp4 = drAdmin["计划上限"].ToString();
+                    f = temp1 + " " + temp2;
+                    g = temp3 + "/" + temp4;
+                    h = drAdmin["课程类型"].ToString();
+                    i = drAdmin["课程教学ID"].ToString();
+                    string[] str = { a, b, h, c, d, e, f, g, i };
+                    dataGridView1.Rows.Add(str);
+                }
+                //防止产生重复列
+                try
+                {
+                    dataGridView1.Columns.Remove("Choosebuttons");
+                }
+                catch
+                { }
+                //添加buttons列
+                DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
+                // 设定列的名字
+                dgv_button_col.Name = "Choosebuttons";
+                // 在所有按钮上表示"查看详情"
+                dgv_button_col.UseColumnTextForButtonValue = true;
+                dgv_button_col.Text = "选课";
+                // 设置列标题
+                dgv_button_col.HeaderText = "点击选课";
+                // 向DataGridView追加
+                dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
             }
-            //防止产生重复列
-            try
-            {
-                dataGridView1.Columns.Remove("Choosebuttons");
-            }
-            catch
-            { }
-            //添加buttons列
-            DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
-            // 设定列的名字
-            dgv_button_col.Name = "Choosebuttons";
-            // 在所有按钮上表示"查看详情"
-            dgv_button_col.UseColumnTextForButtonValue = true;
-            dgv_button_col.Text = "选课";
-            // 设置列标题
-            dgv_button_col.HeaderText = "点击选课";
-            // 向DataGridView追加
-            dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
 
+            else 
+            {
+                //该学生已选的课程教学ID
+                List<string> MyCourseList = new List<string>();
+                string MyCourse_Stu;
+                if (role == 1)
+                {//如果是学生
+                    MyCourse_Stu = "select 排课表.课程教学ID 课程教学ID from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
+                }
+                else
+                {//如果是老师
+                    MyCourse_Stu =  " select* from 学生可选课表 where 教师编号 = '" + Tno + "'";
+                }
+                Door Check_course = new Door();
+                IDataReader dr0 = Check_course.Reader(MyCourse_Stu);
+                while (dr0.Read())
+                {
+                    MyCourseList.Add(dr0["课程教学ID"].ToString());
+                }
+
+                string sign;
+                dataGridView1.Rows.Clear();
+                Door Choose_course = new Door();
+                IDataReader dr = Choose_course.Reader(sql);
+                while (dr.Read())
+                {
+                    a = dr["课程"].ToString();
+                    b = dr["课程号"].ToString();
+                    c = dr["学分"].ToString();
+                    d = dr["授课老师"].ToString();
+                    e = dr["上课时间"].ToString();
+                    temp1 = dr["空间位置"].ToString();
+                    temp2 = dr["教室编号"].ToString();
+                    temp3 = dr["当前人数"].ToString();
+                    temp4 = dr["计划上限"].ToString();
+                    f = temp1 + " " + temp2;
+                    g = temp3 + "/" + temp4;
+                    h = dr["课程类型"].ToString();
+                    i = dr["课程教学ID"].ToString();
+                    if (MyCourseList.Contains(i))
+                    {//已选课程，不可复选
+                        sign = "0";
+                    }
+                    else
+                    {//可选
+                        sign = "1";
+                    }
+                    string[] str = { a, b, h, c, d, e, f, g, i, sign };
+                    dataGridView1.Rows.Add(str);
+                }
+                //防止产生重复列
+                try
+                {
+                    dataGridView1.Columns.Remove("Choosebuttons");
+                }
+                catch
+                { }
+                if (role == 1)//如果是学生，添加选课按钮
+                {
+                    //添加buttons列
+                    DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
+                    // 设定列的名字
+                    dgv_button_col.Name = "Choosebuttons";
+                    // 在所有按钮上表示"查看详情"
+                    dgv_button_col.UseColumnTextForButtonValue = true;
+                    dgv_button_col.Text = "选课";
+                    // 设置列标题
+                    dgv_button_col.HeaderText = "点击选课";
+                    // 向DataGridView追加
+                    dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
+                }
+                foreach (DataGridViewRow dgr in dataGridView1.Rows)
+                {
+                    if (dgr.Cells["Column10"].Value == null)
+                    {
+                        break;
+                    }
+                    if (dgr.Cells["Column10"].Value.ToString() == "0")
+                    {
+                        dgr.DefaultCellStyle.BackColor = Color.LightBlue;
+                    }
+                }
+            }
+            
         }
 
         private void button18_Click_1(object sender, EventArgs j)
@@ -767,6 +796,42 @@ namespace testlog
         {
             try
             {
+                //获取行列索引
+                if (dataGridView1.Columns[e.ColumnIndex].Name == "Choosebuttons")
+                {
+                    //获取课程代号
+                    int CnoIndex = dataGridView1.Columns["Column2"].Index;
+                    String Cno = dataGridView1.SelectedCells[CnoIndex].Value.ToString();
+                    //获取课程代号
+                    //检验是否重复选课
+                    string check_sql = "select 课程代号 from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
+                    Door Check_course = new Door();
+                    IDataReader dr = Check_course.Reader(check_sql);
+                    while (dr.Read())
+                    {
+                        if (Cno == dr["课程代号"].ToString())
+                        {
+                            MessageBox.Show("请勿重复选课！");
+                            return;
+                        }
+                    }
+
+                    //获取课程教学ID
+                    String CTID = dataGridView1.CurrentRow.Cells["Column9"].Value.ToString();
+                    string sql = "insert into 课程学生SC values('" + Sno + "','" + CTID + "',NULL)";
+                    Door Choose_door = new Door();
+                    try
+                    {
+                        Choose_door.Excute(sql);
+                        MessageBox.Show("选课成功！");
+                        showTable();
+                        Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
+                        Choose_course.Show();
+                    }
+                    catch
+                    {
+                    }
+                }
                 //清零
                 showPos("", 0);
                 //获取空间信息
@@ -793,20 +858,14 @@ namespace testlog
              if(role == 1)
             {
                 Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
-                Choose_course.ShowDialog();
+                Choose_course.Show();
             }
             else if(role == 2)
             {
                 Click学生成绩录入 Choose_course = new Click学生成绩录入(Tno);
-                Choose_course.ShowDialog();
-            }
-            else if(role == 3)
-            {
-                Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
-                Choose_course.ShowDialog();
+                Choose_course.Show();
             }
         }
-      
     }
     
 }

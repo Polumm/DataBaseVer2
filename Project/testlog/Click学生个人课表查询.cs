@@ -54,7 +54,7 @@ namespace testlog
             //防止产生重复列
             try
             {
-                dataGridView4.Columns.Remove("Choosebuttons");
+                dataGridView4.Columns.Remove("Cancelbuttons");
             }
             catch
             { }

@@ -46,6 +46,7 @@ namespace testlog
             this.信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.成绩总表打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.平均学分绩点查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,7 @@ namespace testlog
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(135, 24);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(181, 24);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // toolStripStatusLabel1
@@ -100,7 +101,7 @@ namespace testlog
             this.退出系统ToolStripMenuItem,
             this.修改密码ToolStripMenuItem});
             this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
-            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.系统ToolStripMenuItem.Text = "系统";
             // 
             // 退出系统ToolStripMenuItem
@@ -123,10 +124,11 @@ namespace testlog
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.系统ToolStripMenuItem,
             this.选课ToolStripMenuItem,
-            this.信息查询ToolStripMenuItem});
+            this.信息查询ToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(362, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(362, 36);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +138,7 @@ namespace testlog
             this.自主选课ToolStripMenuItem,
             this.个人课表查询ToolStripMenuItem});
             this.选课ToolStripMenuItem.Name = "选课ToolStripMenuItem";
-            this.选课ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.选课ToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.选课ToolStripMenuItem.Text = "选课";
             this.选课ToolStripMenuItem.Click += new System.EventHandler(this.选课ToolStripMenuItem_Click);
             // 
@@ -160,22 +162,29 @@ namespace testlog
             this.成绩总表打印ToolStripMenuItem,
             this.平均学分绩点查询ToolStripMenuItem});
             this.信息查询ToolStripMenuItem.Name = "信息查询ToolStripMenuItem";
-            this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
+            this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.信息查询ToolStripMenuItem.Text = "信息查询";
             // 
             // 成绩总表打印ToolStripMenuItem
             // 
             this.成绩总表打印ToolStripMenuItem.Name = "成绩总表打印ToolStripMenuItem";
-            this.成绩总表打印ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.成绩总表打印ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.成绩总表打印ToolStripMenuItem.Text = "成绩总表打印";
             this.成绩总表打印ToolStripMenuItem.Click += new System.EventHandler(this.成绩总表打印ToolStripMenuItem_Click);
             // 
             // 平均学分绩点查询ToolStripMenuItem
             // 
             this.平均学分绩点查询ToolStripMenuItem.Name = "平均学分绩点查询ToolStripMenuItem";
-            this.平均学分绩点查询ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.平均学分绩点查询ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.平均学分绩点查询ToolStripMenuItem.Text = "平均学分绩点查询";
             this.平均学分绩点查询ToolStripMenuItem.Click += new System.EventHandler(this.平均学分绩点查询ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(98, 32);
+            this.toolStripMenuItem1.Text = "地图交互";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // 学生功能区界面
             // 
@@ -212,5 +221,6 @@ namespace testlog
         private System.Windows.Forms.ToolStripMenuItem 成绩总表打印ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 平均学分绩点查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

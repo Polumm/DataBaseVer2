@@ -17,15 +17,17 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 管理员功能区界面("Admin"));
+            Application.Run(new 教师功能区界面("liweifeng101"));
         }
     }
 }
 
 
 
+
+//new 管理员功能区界面("Admin")
 //new 地图交互()
-//教师功能区界面("liweifeng101")
+//new 教师功能区界面("liweifeng101")
 //new Click学生信息管理()
 //new 学生功能区界面("1")
 //new 学生功能区界面("20201003150")
