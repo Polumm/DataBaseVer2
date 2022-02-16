@@ -17,12 +17,14 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 地图交互());
+            Application.Run(new Click添加课程1());
         }
     }
 }
 
 
+
+//new 地图交互()
 //教师功能区界面("liweifeng101")
 //new Click学生信息管理()
 //new 学生功能区界面("1")

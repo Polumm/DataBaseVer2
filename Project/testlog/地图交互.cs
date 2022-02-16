@@ -16,6 +16,7 @@ namespace testlog
         string Sno = "20201000830";
         string Admin;
         int role = 0;//1学生 2老师 0管理员
+        string classroom;
         public 地图交互()
         {
             InitializeComponent();
@@ -55,7 +56,7 @@ namespace testlog
         //楼层号 + 教室索引 生成教室编号
         private string class_room(string floor, string digit)
         {
-            string classroom = "A-" + floor + digit;
+            classroom = "A-" + floor + digit;
             return classroom;
         }
 
@@ -573,18 +574,39 @@ namespace testlog
             if (judge())
             {
                 string classroom = class_room(comboBox2.Text, Loc);
+                string sql_1 = "select *from 排课表 where 教室编号 ='" + class_room(comboBox2.Text, Loc) + "'";
+                Door Sql = new Door();
+                IDataReader dr_1 = Sql.Reader(sql_1);
+
+                if (dr_1.Read())
+                {
+                    MessageBox.Show("此教室曾被占用，请注意避免时间冲突！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //1、insert课程表,接受classroom并传递给insert排课表
+                    Click添加课程1 insert_course = new Click添加课程1();
+                    insert_course.ShowDialog();
+                    string[] pos = {  };
+                    //2、insert排课表
+                }
+                dr_1.Close();
+            }
+            else
+            {
+                MessageBox.Show("请选择教室所在楼层及位置！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        
+  /*      //先搜索是否已存在，再进行信息添加
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (judge())
+            {
+                string classroom = class_room(comboBox2.Text, Loc);
                 string sql_1 = "select *from 课程教室CC where 教室编号 ='" + class_room(comboBox2.Text, Loc) + "'";
                 string sql_2 = "select *from 课程 where 课程号 ='" + textBox1.Text + "'";
                 Door Sql = new Door();
                 IDataReader dr_1 = Sql.Reader(sql_1);
                 IDataReader dr_2 = Sql.Reader(sql_2);
-                if (textBox1.Text == "")
-                {
-                    MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dr_1.Close();
-                    dr_2.Close();
-                    return;
-                }
+
                 if (comboBox1.Text == "")
                 {
                     MessageBox.Show("课程类型为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -633,7 +655,7 @@ namespace testlog
                 MessageBox.Show("楼层信息未输入！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+*/
         private void showTable(string sql = " select* from 学生可选课表")
         {
             string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
