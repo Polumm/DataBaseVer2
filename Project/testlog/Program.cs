@@ -17,7 +17,7 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Click添加课程1());
+            Application.Run(new 管理员功能区界面("Admin"));
         }
     }
 }

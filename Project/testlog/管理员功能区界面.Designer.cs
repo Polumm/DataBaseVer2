@@ -55,6 +55,7 @@ namespace testlog
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,26 +68,26 @@ namespace testlog
             this.系统ToolStripMenuItem,
             this.信息管理ToolStripMenuItem,
             this.信息查询ToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(382, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(488, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // 系统ToolStripMenuItem
             // 
             this.系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.退出系统ToolStripMenuItem});
             this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
-            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.系统ToolStripMenuItem.Text = "系统";
             // 
             // 退出系统ToolStripMenuItem
             // 
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             // 
             // 信息管理ToolStripMenuItem
@@ -99,47 +100,46 @@ namespace testlog
             this.删除教师信息ToolStripMenuItem,
             this.添加教师信息ToolStripMenuItem});
             this.信息管理ToolStripMenuItem.Name = "信息管理ToolStripMenuItem";
-            this.信息管理ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
+            this.信息管理ToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.信息管理ToolStripMenuItem.Text = "信息管理";
-            this.信息管理ToolStripMenuItem.Click += new System.EventHandler(this.信息管理ToolStripMenuItem_Click);
             // 
             // 修改学生信息ToolStripMenuItem
             // 
             this.修改学生信息ToolStripMenuItem.Name = "修改学生信息ToolStripMenuItem";
-            this.修改学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.修改学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.修改学生信息ToolStripMenuItem.Text = "修改学生信息";
             this.修改学生信息ToolStripMenuItem.Click += new System.EventHandler(this.修改学生信息ToolStripMenuItem_Click);
             // 
             // 删除学生信息ToolStripMenuItem
             // 
             this.删除学生信息ToolStripMenuItem.Name = "删除学生信息ToolStripMenuItem";
-            this.删除学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.删除学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.删除学生信息ToolStripMenuItem.Text = "删除学生信息";
             this.删除学生信息ToolStripMenuItem.Click += new System.EventHandler(this.删除学生信息ToolStripMenuItem_Click);
             // 
             // 添加学生信息ToolStripMenuItem
             // 
             this.添加学生信息ToolStripMenuItem.Name = "添加学生信息ToolStripMenuItem";
-            this.添加学生信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.添加学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.添加学生信息ToolStripMenuItem.Text = "添加学生信息";
             this.添加学生信息ToolStripMenuItem.Click += new System.EventHandler(this.添加学生信息ToolStripMenuItem_Click);
             // 
             // 修改教师信息ToolStripMenuItem
             // 
             this.修改教师信息ToolStripMenuItem.Name = "修改教师信息ToolStripMenuItem";
-            this.修改教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.修改教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.修改教师信息ToolStripMenuItem.Text = "修改教师信息";
             // 
             // 删除教师信息ToolStripMenuItem
             // 
             this.删除教师信息ToolStripMenuItem.Name = "删除教师信息ToolStripMenuItem";
-            this.删除教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.删除教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.删除教师信息ToolStripMenuItem.Text = "删除教师信息";
             // 
             // 添加教师信息ToolStripMenuItem
             // 
             this.添加教师信息ToolStripMenuItem.Name = "添加教师信息ToolStripMenuItem";
-            this.添加教师信息ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.添加教师信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.添加教师信息ToolStripMenuItem.Text = "添加教师信息";
             // 
             // 信息查询ToolStripMenuItem
@@ -151,7 +151,7 @@ namespace testlog
             this.统计学生个人信息ToolStripMenuItem,
             this.查询教师信息ToolStripMenuItem});
             this.信息查询ToolStripMenuItem.Name = "信息查询ToolStripMenuItem";
-            this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
+            this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.信息查询ToolStripMenuItem.Text = "信息查询";
             // 
             // 学情查询ToolStripMenuItem
@@ -166,21 +166,18 @@ namespace testlog
             this.统计年级学生信息ToolStripMenuItem.Name = "统计年级学生信息ToolStripMenuItem";
             this.统计年级学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.统计年级学生信息ToolStripMenuItem.Text = "统计年级学生信息";
-            this.统计年级学生信息ToolStripMenuItem.Click += new System.EventHandler(this.统计年级学生信息ToolStripMenuItem_Click);
             // 
             // 统计班级学生信息ToolStripMenuItem
             // 
             this.统计班级学生信息ToolStripMenuItem.Name = "统计班级学生信息ToolStripMenuItem";
             this.统计班级学生信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.统计班级学生信息ToolStripMenuItem.Text = "统计班级学生信息";
-            this.统计班级学生信息ToolStripMenuItem.Click += new System.EventHandler(this.统计班级学生信息ToolStripMenuItem_Click);
             // 
             // 统计学生个人信息ToolStripMenuItem
             // 
             this.统计学生个人信息ToolStripMenuItem.Name = "统计学生个人信息ToolStripMenuItem";
             this.统计学生个人信息ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.统计学生个人信息ToolStripMenuItem.Text = "统计学生个人信息";
-            this.统计学生个人信息ToolStripMenuItem.Click += new System.EventHandler(this.统计学生个人信息ToolStripMenuItem_Click);
             // 
             // 查询教师信息ToolStripMenuItem
             // 
@@ -194,7 +191,7 @@ namespace testlog
             this.审批教学计划立项ToolStripMenuItem,
             this.审批教学计划变更申请ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(98, 28);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(98, 32);
             this.toolStripMenuItem1.Text = "待办事项";
             // 
             // 审批教学计划立项ToolStripMenuItem
@@ -217,9 +214,9 @@ namespace testlog
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 40);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 34);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(382, 31);
+            this.statusStrip1.Size = new System.Drawing.Size(488, 31);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -233,7 +230,7 @@ namespace testlog
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(201, 24);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(307, 24);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
@@ -256,11 +253,18 @@ namespace testlog
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(98, 32);
+            this.toolStripMenuItem2.Text = "地图交互";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // 管理员功能区界面
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 71);
+            this.ClientSize = new System.Drawing.Size(488, 65);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -304,5 +308,6 @@ namespace testlog
         private System.Windows.Forms.ToolStripMenuItem 审批教学计划立项ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 审批教学计划变更申请ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出系统ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

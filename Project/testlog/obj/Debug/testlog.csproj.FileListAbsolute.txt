@@ -66,3 +66,4 @@ D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学情查询.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生信息管理.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click教师信息管理.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click添加课程1.resources
+D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click排教学班.resources

@@ -12,9 +12,18 @@ namespace testlog
 {
     public partial class 管理员功能区界面 : Form
     {
+        string AdminID;
         public 管理员功能区界面()
         {
             //启动时即获取时间
+            InitializeComponent();
+            toolStripStatusLabel3.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            timer1.Start();
+        }
+        public 管理员功能区界面(string ID)
+        {
+            //启动时即获取时间
+            AdminID = ID;
             InitializeComponent();
             toolStripStatusLabel3.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             timer1.Start();
@@ -75,25 +84,7 @@ namespace testlog
 
         //使用Click事件调用
 
-        private void 统计班级学生信息ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void 统计年级学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 统计班级学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 统计学生个人信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void 添加学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -101,10 +92,6 @@ namespace testlog
             Insert_student.ShowDialog();
         }
 
-        private void 信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void 修改学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -112,14 +99,16 @@ namespace testlog
             Upudate_student.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void 学情查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Click学情查询 study_search = new Click学情查询();
+            study_search.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            地图交互 study_search = new 地图交互("Admin", 0);
             study_search.ShowDialog();
         }
     }

@@ -204,13 +204,69 @@ namespace testlog
 
                 try
                 {
-                    MessageBox.Show(Cno);
+                    Click排教学班 Choose_course = new Click排教学班(Cno,classroom);
+                    Choose_course.Show();
                 }
                 catch (SqlException sqlExc)
                 {
                     MessageBox.Show(sqlExc.ToString());
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmsDelete_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

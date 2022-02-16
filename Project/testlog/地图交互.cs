@@ -12,9 +12,9 @@ namespace testlog
 {
     public partial class 地图交互 : Form
     {
-        string Tno = "liweifeng101";
-        string Sno = "20201000830";
-        string Admin;
+        string Tno = "";
+        string Sno = "";
+        string Admin = "";
         int role = 0;//1学生 2老师 0管理员
         string classroom;
         public 地图交互()
@@ -580,12 +580,10 @@ namespace testlog
 
                 if (dr_1.Read())
                 {
-                    MessageBox.Show("此教室曾被占用，请注意避免时间冲突！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //1、insert课程表,接受classroom并传递给insert排课表
-                    Click添加课程1 insert_course = new Click添加课程1();
+                    MessageBox.Show("此教室在某个时间段被占用，请注意避免时间冲突！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //排课程
+                    Click添加课程1 insert_course = new Click添加课程1(classroom);
                     insert_course.ShowDialog();
-                    string[] pos = {  };
-                    //2、insert排课表
                 }
                 dr_1.Close();
             }
@@ -808,67 +806,7 @@ namespace testlog
                 Choose_course.ShowDialog();
             }
         }
-        /*private void button18_Click_1(object sender, EventArgs i)
-{
-
-if (textBox1.Text != "")
-{
-string a, b, c, d, e, f, g, h;
-string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
-Door Sql = new Door();
-IDataReader dr = Sql.Reader(sql);
-dataGridView1.Rows.Clear();
-while (dr.Read())
-{
-showPos("", 0);
-a = dr["课程号"].ToString();
-b = dr["课程"].ToString();
-c = dr["课程类型"].ToString();
-d = dr["学分"].ToString();
-e = dr["上课时间"].ToString();
-f = dr["教室编号"].ToString();
-g = dr["授课老师"].ToString();
-h = dr["计划上限"].ToString();
-label5.Text = "当前层数：" + dr["教室编号"].ToString()[2] + "层";
-label5.BackColor = Color.LightGreen;
-string[] str = { a, b, c, d, e, f, g, h };
-dataGridView1.Rows.Add(str);
-f = f.Substring(3);//截取教室编号
-showPos(f, 1);
-}
-dr.Close();
-}
-else
-{
-MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-}
-}*/
+      
     }
-    /*            if (textBox1.Text != "")
-            {
-                string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
-                Door Sql = new Door();
-                IDataReader dr = Sql.Reader(sql);
-                while (dr.Read())
-                {
-                    string a, b, c, d, e, f, g, h;
-                    a = dr["课程号"].ToString();
-                    b = dr["课程"].ToString();
-                    c = dr["课程"].ToString();
-                    d = dr["学分"].ToString();
-                    e = dr["上课时间"].ToString();
-                    f = dr["教室编号"].ToString();
-                    g = dr["授课教师"].ToString();
-                    h = dr["计划上限"].ToString();
-                    string[] str = { a, b, c, d, e, f, g, h };
-                    dataGridView1.Rows.Add(str);
-                }
-                dr.Close();
-            }
-            else
-            {
-                MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-    */
+    
 }

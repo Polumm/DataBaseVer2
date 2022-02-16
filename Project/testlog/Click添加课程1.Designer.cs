@@ -66,6 +66,7 @@ namespace testlog
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "课程信息";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView1
             // 
@@ -128,6 +129,7 @@ namespace testlog
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 28);
             this.textBox3.TabIndex = 10;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -135,6 +137,7 @@ namespace testlog
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 28);
             this.textBox2.TabIndex = 9;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -142,6 +145,7 @@ namespace testlog
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 28);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox4
             // 
@@ -155,6 +159,7 @@ namespace testlog
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 26);
             this.comboBox4.TabIndex = 7;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -164,6 +169,7 @@ namespace testlog
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "课程类型";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -173,6 +179,7 @@ namespace testlog
             this.label3.Size = new System.Drawing.Size(44, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "学分";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -182,6 +189,7 @@ namespace testlog
             this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "课程名";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -191,6 +199,7 @@ namespace testlog
             this.label1.Size = new System.Drawing.Size(80, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "课程代号";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox3
             // 
@@ -203,6 +212,7 @@ namespace testlog
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "操作";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // button4
             // 
@@ -233,6 +243,7 @@ namespace testlog
             this.删除ToolStripMenuItem});
             this.cmsDelete.Name = "cmsDelete";
             this.cmsDelete.Size = new System.Drawing.Size(117, 34);
+            this.cmsDelete.Opening += new System.ComponentModel.CancelEventHandler(this.cmsDelete_Opening);
             // 
             // 删除ToolStripMenuItem
             // 
