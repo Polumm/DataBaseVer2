@@ -69,7 +69,6 @@ namespace testlog
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -81,6 +80,7 @@ namespace testlog
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button24 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,7 +93,7 @@ namespace testlog
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(330, 87);
+            this.button18.Location = new System.Drawing.Point(330, 47);
             this.button18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(106, 59);
@@ -104,12 +104,12 @@ namespace testlog
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(330, 168);
+            this.button16.Location = new System.Drawing.Point(330, 252);
             this.button16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(106, 59);
             this.button16.TabIndex = 54;
-            this.button16.Text = "添加";
+            this.button16.Text = "进入排课";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -148,7 +148,7 @@ namespace testlog
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(330, 247);
+            this.button17.Location = new System.Drawing.Point(330, 114);
             this.button17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(106, 59);
@@ -501,8 +501,8 @@ namespace testlog
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button24);
             this.groupBox2.Controls.Add(this.button23);
-            this.groupBox2.Controls.Add(this.button22);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.groupBox6);
@@ -527,15 +527,6 @@ namespace testlog
             this.button23.TabIndex = 66;
             this.button23.Text = "我的课程";
             this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(267, 16);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(186, 64);
-            this.button22.TabIndex = 65;
-            this.button22.Text = "选中行点击跳转";
-            this.button22.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -710,6 +701,17 @@ namespace testlog
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(330, 181);
+            this.button24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(106, 59);
+            this.button24.TabIndex = 67;
+            this.button24.Text = "我的课程";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
             // 地图交互
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -785,11 +787,11 @@ namespace testlog
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button24;
     }
 }

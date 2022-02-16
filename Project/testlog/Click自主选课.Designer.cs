@@ -238,7 +238,7 @@ namespace testlog
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Click自主选课";
-            this.Text = "自主选课";
+            this.Text = "*";
             this.Load += new System.EventHandler(this.Form_SC_Choose_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

@@ -12,10 +12,42 @@ namespace testlog
 {
     public partial class 地图交互 : Form
     {
+        string Tno = "liweifeng101";
+        string Sno = "20201000830";
+        string Admin;
+        int role = 0;//1学生 2老师 0管理员
         public 地图交互()
         {
             InitializeComponent();
             showTable();
+            if (role != 0)
+            {
+                button16.Visible = false;
+            }
+        }
+        public 地图交互(string ID, int roleNo)
+        {
+            if(roleNo == 1)
+            {
+                Tno = ID;
+                role = roleNo;
+            }
+            else if(roleNo == 2)
+            {
+                Tno = ID;
+                role = roleNo;
+            }
+            else if(roleNo == 0)
+            {
+                Admin = ID;
+                role = roleNo;
+            }
+            InitializeComponent();
+            showTable();
+            if(role != 0)
+            {
+                button16.Visible = false;
+            }
         }
 
         private string Loc = "";//全局变量，用于记录点击button的教室位置
@@ -225,21 +257,27 @@ namespace testlog
 
         private void input_table(string classroom)
         {
+            dataGridView1.Rows.Clear();
+            string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
             string sql = "select * from 学生可选课表 where 教室编号 ='" + classroom + "'";
             Door Sql = new Door();
             IDataReader dr = Sql.Reader(sql);
             while (dr.Read())
             {
-                string a, b, c, d, e, f, g, h;
-                a = dr["课程号"].ToString();
-                b = dr["课程"].ToString();
-                c = dr["课程"].ToString();
-                d = dr["学分"].ToString();
+                a = dr["课程"].ToString();
+                b = dr["课程号"].ToString();
+                c = dr["学分"].ToString();
+                d = dr["授课老师"].ToString();
                 e = dr["上课时间"].ToString();
-                f = dr["教室编号"].ToString();
-                g = dr["授课老师"].ToString();
-                h = dr["计划上限"].ToString();
-                string[] str = { a, b, c, d, e, f, g, h };
+                temp1 = dr["空间位置"].ToString();
+                temp2 = dr["教室编号"].ToString();
+                temp3 = dr["当前人数"].ToString();
+                temp4 = dr["计划上限"].ToString();
+                f = temp1 + " " + temp2;
+                g = temp3 + "/" + temp4;
+                h = dr["课程类型"].ToString();
+                i = dr["课程教学ID"].ToString();
+                string[] str = { a, b, h, c, d, e, f, g, i };
                 dataGridView1.Rows.Add(str);
             }
             dr.Close();
@@ -255,7 +293,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button1.Text);
                 input_table(classroom);
             }
             else
@@ -283,7 +321,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button3.Text);
                 input_table(classroom);
             }
             else
@@ -297,7 +335,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button4.Text);
                 input_table(classroom);
             }
             else
@@ -311,7 +349,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button5.Text);
                 input_table(classroom);
             }
             else
@@ -325,7 +363,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button6.Text);
                 input_table(classroom);
             }
             else
@@ -339,7 +377,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button7.Text);
                 input_table(classroom);
             }
             else
@@ -353,7 +391,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button8.Text);
                 input_table(classroom);
             }
             else
@@ -367,7 +405,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button9.Text);
                 input_table(classroom);
             }
             else
@@ -381,7 +419,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button10.Text);
                 input_table(classroom);
             }
             else
@@ -395,7 +433,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button21.Text);
                 input_table(classroom);
             }
             else
@@ -409,7 +447,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button12.Text);
                 input_table(classroom);
             }
             else
@@ -423,7 +461,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button13.Text);
                 input_table(classroom);
             }
             else
@@ -437,7 +475,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button14.Text);
                 input_table(classroom);
             }
             else
@@ -451,7 +489,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button15.Text);
                 input_table(classroom);
             }
             else
@@ -465,7 +503,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button19.Text);
                 input_table(classroom);
             }
             else
@@ -479,7 +517,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button11.Text);
                 input_table(classroom);
             }
             else
@@ -493,7 +531,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button21.Text);
                 input_table(classroom);
             }
             else
@@ -507,7 +545,7 @@ namespace testlog
         {
             if (judge())
             {
-                string classroom = class_room(comboBox2.Text, button2.Text);
+                string classroom = class_room(comboBox2.Text, button20.Text);
                 input_table(classroom);
             }
             else
@@ -618,7 +656,6 @@ namespace testlog
                 h = dr["课程类型"].ToString();
                 i = dr["课程教学ID"].ToString();
                 string[] str = { a, b, h, c, d, e, f, g, i };
-                //dataGridView1.Rows.Add(str);
                 dataGridView1.Rows.Add(str);
             }
             //防止产生重复列
@@ -708,42 +745,81 @@ namespace testlog
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                //清零
+                showPos("", 0);
+                //获取空间信息
+                String temp = dataGridView1.SelectedCells[6].Value.ToString();
+                string level = temp.Substring(6, 1);
+                string pos = temp.Substring(7);
+                label5.Text = "当前层数：" + level + "层";
+                comboBox2.Text = level;
+                label5.BackColor = Color.LightGreen;
+                showPos(pos, 1);
+            }
+            catch
+            {
+            }
+        }
 
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+             if(role == 1)
+            {
+                Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
+                Choose_course.ShowDialog();
+            }
+            else if(role == 2)
+            {
+                Click学生成绩录入 Choose_course = new Click学生成绩录入(Tno);
+                Choose_course.ShowDialog();
+            }
+            else if(role == 3)
+            {
+                Click学生个人课表查询 Choose_course = new Click学生个人课表查询(Sno);
+                Choose_course.ShowDialog();
+            }
         }
         /*private void button18_Click_1(object sender, EventArgs i)
 {
 
-   if (textBox1.Text != "")
-   {
-       string a, b, c, d, e, f, g, h;
-       string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
-       Door Sql = new Door();
-       IDataReader dr = Sql.Reader(sql);
-       dataGridView1.Rows.Clear();
-       while (dr.Read())
-       {
-           showPos("", 0);
-           a = dr["课程号"].ToString();
-           b = dr["课程"].ToString();
-           c = dr["课程类型"].ToString();
-           d = dr["学分"].ToString();
-           e = dr["上课时间"].ToString();
-           f = dr["教室编号"].ToString();
-           g = dr["授课老师"].ToString();
-           h = dr["计划上限"].ToString();
-           label5.Text = "当前层数：" + dr["教室编号"].ToString()[2] + "层";
-           label5.BackColor = Color.LightGreen;
-           string[] str = { a, b, c, d, e, f, g, h };
-           dataGridView1.Rows.Add(str);
-           f = f.Substring(3);//截取教室编号
-           showPos(f, 1);
-       }
-        dr.Close();
-   }
-   else
-   {
-       MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-   }
+if (textBox1.Text != "")
+{
+string a, b, c, d, e, f, g, h;
+string sql = "select * from 学生可选课表 where 课程号 ='" + textBox1.Text + "'";
+Door Sql = new Door();
+IDataReader dr = Sql.Reader(sql);
+dataGridView1.Rows.Clear();
+while (dr.Read())
+{
+showPos("", 0);
+a = dr["课程号"].ToString();
+b = dr["课程"].ToString();
+c = dr["课程类型"].ToString();
+d = dr["学分"].ToString();
+e = dr["上课时间"].ToString();
+f = dr["教室编号"].ToString();
+g = dr["授课老师"].ToString();
+h = dr["计划上限"].ToString();
+label5.Text = "当前层数：" + dr["教室编号"].ToString()[2] + "层";
+label5.BackColor = Color.LightGreen;
+string[] str = { a, b, c, d, e, f, g, h };
+dataGridView1.Rows.Add(str);
+f = f.Substring(3);//截取教室编号
+showPos(f, 1);
+}
+dr.Close();
+}
+else
+{
+MessageBox.Show("课程号为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+}
 }*/
     }
     /*            if (textBox1.Text != "")
