@@ -576,7 +576,7 @@ namespace testlog
             if (judge())
             {
                 string classroom = class_room(comboBox2.Text, Loc);
-                string sql_1 = "select *from 排课表 where 教室编号 ='" + class_room(comboBox2.Text, Loc) + "'";
+                string sql_1 = "select *from 教学班 where 教室编号 ='" + class_room(comboBox2.Text, Loc) + "'";
                 Door Sql = new Door();
                 IDataReader dr_1 = Sql.Reader(sql_1);
 
@@ -624,6 +624,23 @@ namespace testlog
                         string[] str = { a, b, h, c, d, e, f, g, i };
                         dataGridView1.Rows.Add(str);
                     }
+                    try
+                    {
+                        dataGridView1.Columns.Remove("MangementButtons");
+                    }
+                    catch
+                    { }
+                    //添加buttons列
+                    DataGridViewButtonColumn dgv_button_col_M = new DataGridViewButtonColumn();
+                    // 设定列的名字
+                    dgv_button_col_M.Name = "MangementButtons";
+                    // 在所有按钮上表示"查看详情"
+                    dgv_button_col_M.UseColumnTextForButtonValue = true;
+                    dgv_button_col_M.Text = "管理";
+                    // 设置列标题
+                    dgv_button_col_M.HeaderText = "管理课程";
+                    // 向DataGridView追加
+                    dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col_M);
                 }
 
                 else
@@ -633,7 +650,7 @@ namespace testlog
                     string MyCourse_Stu;
                     if (role == 1)
                     {//如果是学生
-                        MyCourse_Stu = "select 排课表.课程教学ID 课程教学ID from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
+                        MyCourse_Stu = "select 教学班.课程教学ID 课程教学ID from 课程学生SC, 教学班 where 课程学生SC.课程教学ID = 教学班.课程教学ID and 学号 = '" + Sno + "'";
                     }
                     else
                     {//如果是老师
@@ -781,7 +798,7 @@ namespace testlog
         {
             try
             {
-                //获取行列索引
+                //如果是学生，跳转选课
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Choosebuttons")
                 {
                     //获取课程代号
@@ -789,7 +806,7 @@ namespace testlog
                     String Cno = dataGridView1.SelectedCells[CnoIndex].Value.ToString();
                     //获取课程代号
                     //检验是否重复选课
-                    string check_sql = "select 课程代号 from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
+                    string check_sql = "select 课程代号 from 课程学生SC, 教学班 where 课程学生SC.课程教学ID = 教学班.课程教学ID and 学号 = '" + Sno + "'";
                     Door Check_course = new Door();
                     IDataReader dr = Check_course.Reader(check_sql);
                     while (dr.Read())
@@ -817,7 +834,14 @@ namespace testlog
                     {
                     }
                 }
-                //清零
+                //如果是管理员跳转至课程管理
+                else if (dataGridView1.Columns[e.ColumnIndex].Name == "MangementButtons")
+                {
+                    Click排课程 insert_course = new Click排课程(classroom);
+                    insert_course.ShowDialog();
+                }
+
+                //只要点击就示意位置
                 showPos("", 0);
                 //获取空间信息
                 String temp = dataGridView1.SelectedCells[6].Value.ToString();
@@ -847,7 +871,7 @@ namespace testlog
             }
             else if(role == 2)
             {
-                Click学生成绩录入 Choose_course = new Click学生成绩录入(Tno);
+                教学管理 Choose_course = new 教学管理(Tno);
                 Choose_course.Show();
             }
         }

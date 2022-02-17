@@ -64,11 +64,11 @@
     <Compile Include="Click学生信息管理.Designer.cs">
       <DependentUpon>Click学生信息管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="Click学生成绩录入.cs">
+    <Compile Include="教学管理.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Click学生成绩录入.Designer.cs">
-      <DependentUpon>Click学生成绩录入.cs</DependentUpon>
+    <Compile Include="教学管理.Designer.cs">
+      <DependentUpon>教学管理.cs</DependentUpon>
     </Compile>
     <Compile Include="Click忘记密码.cs">
       <SubType>Form</SubType>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Click学生信息管理.resx">
       <DependentUpon>Click学生信息管理.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Click学生成绩录入.resx">
-      <DependentUpon>Click学生成绩录入.cs</DependentUpon>
+    <EmbeddedResource Include="教学管理.resx">
+      <DependentUpon>教学管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click忘记密码.resx">
       <DependentUpon>Click忘记密码.cs</DependentUpon>

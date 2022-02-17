@@ -60,7 +60,7 @@ namespace testlog
 
         private void 学生成绩录入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Click学生成绩录入 ScoreLoad = new Click学生成绩录入(TID1);
+            教学管理 ScoreLoad = new 教学管理(TID1);
             ScoreLoad.ShowDialog();
         }
 

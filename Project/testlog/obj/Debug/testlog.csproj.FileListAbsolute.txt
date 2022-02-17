@@ -36,7 +36,6 @@ D:\Coding\ver2\Project\testlog\bin\Debug\testlog.pdb
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.csproj.AssemblyReference.cache
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click修改密码.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生个人课表查询.resources
-D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生成绩录入.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生成绩总表打印.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.学生功能区界面.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.教师功能区界面.resources
@@ -56,3 +55,4 @@ D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click学生个人信息维护.r
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click教师个人信息维护.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.Click排课程.resources
 D:\Coding\ver2\Project\testlog\obj\Debug\testlog.多功能教务平台.resources
+D:\Coding\ver2\Project\testlog\obj\Debug\testlog.教学管理.resources

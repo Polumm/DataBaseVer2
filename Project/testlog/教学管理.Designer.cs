@@ -1,7 +1,7 @@
 ﻿
 namespace testlog
 {
-    partial class Click学生成绩录入
+    partial class 教学管理
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,6 @@ namespace testlog
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -53,9 +52,10 @@ namespace testlog
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(798, 260);
+            this.groupBox1.Size = new System.Drawing.Size(826, 260);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "教学任务";
@@ -81,7 +81,7 @@ namespace testlog
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(792, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(820, 233);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -151,9 +151,10 @@ namespace testlog
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(15, 298);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Location = new System.Drawing.Point(0, 260);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(488, 315);
+            this.groupBox2.Size = new System.Drawing.Size(452, 379);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "教学班信息";
@@ -171,22 +172,14 @@ namespace testlog
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 30;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(482, 288);
+            this.dataGridView2.Size = new System.Drawing.Size(446, 352);
             this.dataGridView2.TabIndex = 9;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(710, 322);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "Tips:\na\nb\nc";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(609, 569);
+            this.button1.Location = new System.Drawing.Point(593, 569);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(91, 41);
             this.button1.TabIndex = 3;
             this.button1.Text = "撤销";
             this.button1.UseVisualStyleBackColor = true;
@@ -194,25 +187,26 @@ namespace testlog
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(735, 569);
+            this.button2.Location = new System.Drawing.Point(724, 569);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 44);
             this.button2.TabIndex = 4;
             this.button2.Text = "提交";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Click学生成绩录入
+            // 教学管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 639);
+            this.ClientSize = new System.Drawing.Size(826, 639);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Click学生成绩录入";
+            this.MaximumSize = new System.Drawing.Size(848, 695);
+            this.MinimumSize = new System.Drawing.Size(848, 695);
+            this.Name = "教学管理";
             this.Text = "教务工作区";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -235,7 +229,6 @@ namespace testlog
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;

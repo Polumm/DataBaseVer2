@@ -252,7 +252,7 @@ namespace testlog
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
-            // Click添加课程1
+            // Click排课程
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,7 +262,7 @@ namespace testlog
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(1033, 581);
             this.MinimumSize = new System.Drawing.Size(1033, 581);
-            this.Name = "Click添加课程1";
+            this.Name = "Click排课程";
             this.Text = "排课程";
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

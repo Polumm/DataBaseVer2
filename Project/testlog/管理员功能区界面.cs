@@ -117,9 +117,10 @@ namespace testlog
             Update_password.ShowDialog();
         }
 
-        private void 教学成绩管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 教学管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            教学管理 Choose_course = new 教学管理();
+            Choose_course.Show();
         }
     }
     

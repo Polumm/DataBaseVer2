@@ -11,7 +11,7 @@ using System.Data.SqlClient;//添加命名空间
 
 namespace testlog
 {
-    public partial class Click学生成绩录入 : Form
+    public partial class 教学管理 : Form
     {
         String TID1;
         //数据集和适配器全局可见
@@ -24,15 +24,18 @@ namespace testlog
         //授课教师
         String Ctname;
         //上课时间
-        String Ctime; 
+        String Ctime;
+        int mode = 0;    //默认管理员初始化为0，教师初始化为1
 
-        public Click学生成绩录入()
+        public 教学管理()
         {
             InitializeComponent();
+            showTable1();
         }
-        public Click学生成绩录入(string TID)
+        public 教学管理(string TID)
         {
             TID1 = TID;
+            mode = 1;
             InitializeComponent();
             showTable1();
         }
@@ -41,8 +44,17 @@ namespace testlog
         {
             dataGridView1.Rows.Clear();
             string sql = " select* from 学生可选课表 where 教师编号 = '" + TID1 + "'";
+            string sql2 = " select* from 学生可选课表 ";
             Door Choose_course = new Door();
-            IDataReader dr = Choose_course.Reader(sql);
+            IDataReader dr;
+            if (mode == 1)
+            {
+                dr = Choose_course.Reader(sql);
+            }
+            else
+            {
+                dr = Choose_course.Reader(sql2);
+            }
             while (dr.Read())
             {
                 string a, b, c, d, e, f, g, h, temp1, temp2, temp3, temp4;

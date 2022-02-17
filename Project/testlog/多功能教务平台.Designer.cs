@@ -67,15 +67,15 @@ namespace testlog
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button24 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button24 = new System.Windows.Forms.Button();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,7 +103,7 @@ namespace testlog
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(106, 59);
             this.button16.TabIndex = 54;
-            this.button16.Text = "进入排课";
+            this.button16.Text = "开始排课";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -494,6 +494,14 @@ namespace testlog
             this.Column9.Visible = false;
             this.Column9.Width = 150;
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "已选标记";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.Visible = false;
+            this.Column10.Width = 150;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button24);
@@ -511,6 +519,17 @@ namespace testlog
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能区";
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(333, 226);
+            this.button24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(106, 59);
+            this.button24.TabIndex = 67;
+            this.button24.Text = "我的课程";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // radioButton2
             // 
@@ -601,26 +620,7 @@ namespace testlog
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "地图区";
             // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(333, 226);
-            this.button24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(106, 59);
-            this.button24.TabIndex = 67;
-            this.button24.Text = "我的课程";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "已选标记";
-            this.Column10.MinimumWidth = 8;
-            this.Column10.Name = "Column10";
-            this.Column10.Visible = false;
-            this.Column10.Width = 150;
-            // 
-            // 地图交互
+            // 多功能教务平台
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -630,7 +630,7 @@ namespace testlog
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(1205, 743);
             this.MinimumSize = new System.Drawing.Size(1205, 743);
-            this.Name = "地图交互";
+            this.Name = "多功能教务平台";
             this.Text = "地图交互";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);

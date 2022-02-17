@@ -198,7 +198,7 @@ namespace testlog
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(900, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(270, 552);
+            this.groupBox2.Size = new System.Drawing.Size(353, 552);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "新建教学班";
@@ -301,10 +301,12 @@ namespace testlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 552);
+            this.ClientSize = new System.Drawing.Size(1253, 552);
             this.ContextMenuStrip = this.cmsDelete;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(1275, 608);
+            this.MinimumSize = new System.Drawing.Size(1275, 608);
             this.Name = "Click排教学班";
             this.Text = "排教学班";
             this.groupBox3.ResumeLayout(false);

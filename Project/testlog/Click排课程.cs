@@ -13,7 +13,7 @@ namespace testlog
 {
     public partial class Click排课程 : Form
     {
-        string classroom;
+        string classroom = null;
         //数据集dataset + 适配器实现快速绑定
         //数据集和适配器全局可见
         DataSet dsCoures = null;
@@ -204,8 +204,16 @@ namespace testlog
 
                 try
                 {
-                    Click排教学班 Choose_course = new Click排教学班(Cno,classroom);
-                    Choose_course.Show();
+                    if (classroom != null)
+                    {
+                        Click排教学班 Choose_course = new Click排教学班(Cno, classroom);
+                        Choose_course.Show();
+                    }
+                    else 
+                    {
+                        Click排教学班 Choose_course = new Click排教学班(Cno);
+                        Choose_course.Show();
+                    }
                 }
                 catch (SqlException sqlExc)
                 {

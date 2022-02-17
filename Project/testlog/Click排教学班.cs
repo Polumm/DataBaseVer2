@@ -21,8 +21,9 @@ namespace testlog
         DataSet dsSectionClass = null;
         SqlDataAdapter adapterSectionClass = null;
 
-        public Click排教学班()
+        public Click排教学班(string CourseNo)
         {
+            Cno = CourseNo;
             InitializeComponent();
             button3.Text = "提\n交\n修\n改\n";
             button4.Text = "撤\n消\n修\n改\n";
@@ -56,7 +57,7 @@ namespace testlog
             label9.Text = Cno;
             Door door = new Door();
             SqlConnection conn = door.Connection();
-            string sql = " select* from 排课表 where 课程代号 = '"+ Cno +"'";
+            string sql = " select* from 教学班 where 课程代号 = '"+ Cno +"'";
             //快速绑定：
             //1、新建适配器
             adapterSectionClass = new SqlDataAdapter(sql, conn);
@@ -104,7 +105,7 @@ namespace testlog
             }
             else
             {
-                string check_id = " select * from 排课表 where 课程教学ID = '"+ textBox1.Text + "'";
+                string check_id = " select * from 教学班 where 课程教学ID = '"+ textBox1.Text + "'";
                 Door check_door0 = new Door();
                 IDataReader dr0 = check_door0.Reader(check_id);
                 if (dr0.Read())
@@ -113,7 +114,7 @@ namespace testlog
                     dr0.Close();
                     return;
                 }
-                string check_classroom = " select * from 排课表 where 教室编号 = '" + textBox3.Text + "' and 上课时间 = '" + textBox2.Text + "'";
+                string check_classroom = " select * from 教学班 where 教室编号 = '" + textBox3.Text + "' and 上课时间 = '" + textBox2.Text + "'";
                 Door check_door1 = new Door();
                 IDataReader dr1 = check_door1.Reader(check_classroom);
                 if (dr1.Read())
@@ -134,7 +135,7 @@ namespace testlog
 
                 //若合法择插入
                 int num = Convert.ToInt32(textBox5.Text);
-                string sql = "insert into 排课表 values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','"+ num + "',0,'"+ Cno +"')";
+                string sql = "insert into 教学班 values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','"+ num + "',0,'"+ Cno +"')";
                 Door InsertDoor = new Door();
                 try
                 {
@@ -183,7 +184,7 @@ namespace testlog
                     //先执行删除成绩信息
                     Door door = new Door();
                     SqlConnection conn = door.Connection();
-                    String DelSectionClass = "delete from 排课表 where 课程教学ID='" + ID + "'";
+                    String DelSectionClass = "delete from 教学班 where 课程教学ID='" + ID + "'";
                     SqlCommand command = new SqlCommand(DelSectionClass, conn);
                     try
                     {
