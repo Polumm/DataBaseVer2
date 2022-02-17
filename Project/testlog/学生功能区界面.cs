@@ -84,6 +84,21 @@ namespace testlog
             地图交互 mapLoad = new 地图交互(SID1, 1);
             mapLoad.ShowDialog();
         }
+
+        private void 用户信息维护ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click用户个人信息维护 change = new Click用户个人信息维护(SID1);
+            change.ShowDialog();
+        }
+
+        private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确认要退出系统吗？", "提示信息", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
 

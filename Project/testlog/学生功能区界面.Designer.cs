@@ -105,6 +105,7 @@ namespace testlog
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
             this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
+            this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
             // 
             // 修改密码ToolStripMenuItem
             // 
@@ -118,6 +119,7 @@ namespace testlog
             this.用户信息维护ToolStripMenuItem.Name = "用户信息维护ToolStripMenuItem";
             this.用户信息维护ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.用户信息维护ToolStripMenuItem.Text = "用户信息维护";
+            this.用户信息维护ToolStripMenuItem.Click += new System.EventHandler(this.用户信息维护ToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
