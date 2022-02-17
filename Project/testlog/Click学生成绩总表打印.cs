@@ -63,7 +63,8 @@ namespace testlog
             while (dr3.Read())
             {
                 label8.Text = "     已修学分：" + dr3["已修学分"].ToString();
-                string temp = dr3["平均学分绩点"].ToString().Substring(0,4);
+                float temp0 = Convert.ToSingle(dr3["平均学分绩点"].ToString());
+                string temp = string.Format("{0:N2}", temp0);//先转浮点再利用Format方法，注意该方法不对字符串生效，所以得先转float
                 label9.Text = spacer + "历年平均学分绩点：" + temp;
             }
             dr3.Close();

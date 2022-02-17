@@ -58,7 +58,7 @@ namespace testlog
             }
             else
             {
-                string sql = "select 用户名, 密码 from " + right1 + "密码表 where 用户名 ='" + UserName1 + "' and 密码 = '" + EncryptWithMD5(textBox1.Text.Trim()) + "'";
+                string sql = "select 用户名, 密码 from 用户安全信息 where 用户名 ='" + UserName1 + "' and 密码 = '" + EncryptWithMD5(textBox1.Text.Trim()) + "'";
                 Door dr = new Door();
                 IDataReader check_origin_password = dr.Reader(sql);//Reader是Door封装的读入方法
                 if (!check_origin_password.Read())//.Read()是IDataReader自带的方法，若成功读到信息，返回1
@@ -73,7 +73,7 @@ namespace testlog
                     }
                     else
                     {
-                        string sql1 = "Update " + right1 + "密码表 set 密码 = '" + EncryptWithMD5(textBox3.Text.Trim()) + "' where 用户名 = '"+ UserName1 +"'";
+                        string sql1 = "Update 用户安全信息 set 密码 = '" + EncryptWithMD5(textBox3.Text.Trim()) + "' where 用户名 = '"+ UserName1 +"'";
                         Door Update_password = new Door();
                         int check = Update_password.Excute(sql1);//若添加成功，check值为1
                         if (check > 0)

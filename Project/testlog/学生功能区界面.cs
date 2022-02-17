@@ -42,10 +42,6 @@ namespace testlog
             Choose_course.ShowDialog();
         }
 
-        private void toolStripStatusLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -56,16 +52,6 @@ namespace testlog
         {
             Click学生个人课表查询 Choose_course = new Click学生个人课表查询(SID1);
             Choose_course.ShowDialog();
-        }
-
-        private void 选课ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 选课情况确认ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void 成绩总表打印ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,7 +72,14 @@ namespace testlog
             Update_password.ShowDialog();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+
+        private void 信息查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click学生成绩总表打印 Choose_course = new Click学生成绩总表打印(SID1);
+            Choose_course.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             地图交互 mapLoad = new 地图交互(SID1, 1);
             mapLoad.ShowDialog();
