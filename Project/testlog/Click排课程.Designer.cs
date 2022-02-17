@@ -1,7 +1,7 @@
 ﻿
 namespace testlog
 {
-    partial class Click添加课程1
+    partial class Click排课程
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,9 @@ namespace testlog
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,15 +46,12 @@ namespace testlog
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.cmsDelete = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.cmsDelete.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,41 @@ namespace testlog
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "课程信息";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(644, 24);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(66, 498);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "操作";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Location = new System.Drawing.Point(3, 264);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(60, 231);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "撤销修改";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Location = new System.Drawing.Point(3, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 240);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "提交修改";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -201,41 +236,6 @@ namespace testlog
             this.label1.Text = "课程代号";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(644, 24);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(66, 498);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "操作";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 264);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 231);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "撤销修改";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(3, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 240);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "提交修改";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // cmsDelete
             // 
             this.cmsDelete.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -248,7 +248,7 @@ namespace testlog
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(116, 30);
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
@@ -263,12 +263,12 @@ namespace testlog
             this.MaximumSize = new System.Drawing.Size(1033, 581);
             this.MinimumSize = new System.Drawing.Size(1033, 581);
             this.Name = "Click添加课程1";
-            this.Text = "Click添加课程1";
+            this.Text = "排课程";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.cmsDelete.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -144,7 +144,7 @@ namespace testlog
             this.Controls.Add(this.labelpassword);
             this.Controls.Add(this.labelusername);
             this.Name = "Click忘记密码";
-            this.Text = "Click忘记密码";
+            this.Text = "忘记密码";
             this.ResumeLayout(false);
             this.PerformLayout();
 

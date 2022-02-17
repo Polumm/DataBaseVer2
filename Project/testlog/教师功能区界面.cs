@@ -42,12 +42,6 @@ namespace testlog
 
         }
 
-        private void 教学任务查询ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Click教学任务查询 Choose_course = new Click教学任务查询(TID1);
-            Choose_course.ShowDialog();
-        }
-
         private void 教学计划申请ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -72,7 +66,7 @@ namespace testlog
 
         private void 地图交互ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            地图交互 mapLoad = new 地图交互(TID1,2);
+            多功能教务平台 mapLoad = new 多功能教务平台(TID1,2);
             mapLoad.ShowDialog();
         }
 

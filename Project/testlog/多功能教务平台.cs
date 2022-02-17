@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace testlog
 {
-    public partial class 地图交互 : Form
+    public partial class 多功能教务平台 : Form
     {
         string Tno = "";
         string Sno = "";
         string Admin = "";
         int role = 0;//1学生 2老师 0管理员
         string classroom;
-        public 地图交互()
+        public 多功能教务平台()
         {
             InitializeComponent();
             showTable();
@@ -26,7 +26,7 @@ namespace testlog
                 button16.Visible = false;
             }
         }
-        public 地图交互(string ID, int roleNo)
+        public 多功能教务平台(string ID, int roleNo)
         {
             InitializeComponent();
             if (roleNo == 1)
@@ -584,7 +584,7 @@ namespace testlog
                 {
                     MessageBox.Show("此教室在某个时间段被占用，请注意避免时间冲突！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     //排课程
-                    Click添加课程1 insert_course = new Click添加课程1(classroom);
+                    Click排课程 insert_course = new Click排课程(classroom);
                     insert_course.ShowDialog();
                 }
                 dr_1.Close();

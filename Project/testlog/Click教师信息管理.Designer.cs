@@ -30,37 +30,37 @@ namespace testlog
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode177 = new System.Windows.Forms.TreeNode("地理系", 0, 0);
-            System.Windows.Forms.TreeNode treeNode178 = new System.Windows.Forms.TreeNode("测绘系", 1, 1);
-            System.Windows.Forms.TreeNode treeNode179 = new System.Windows.Forms.TreeNode("软件工程系");
-            System.Windows.Forms.TreeNode treeNode180 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode177,
-            treeNode178,
-            treeNode179});
-            System.Windows.Forms.TreeNode treeNode181 = new System.Windows.Forms.TreeNode("应用数学系");
-            System.Windows.Forms.TreeNode treeNode182 = new System.Windows.Forms.TreeNode("物理系");
-            System.Windows.Forms.TreeNode treeNode183 = new System.Windows.Forms.TreeNode("数理学院", new System.Windows.Forms.TreeNode[] {
-            treeNode181,
-            treeNode182});
-            System.Windows.Forms.TreeNode treeNode184 = new System.Windows.Forms.TreeNode("地质系");
-            System.Windows.Forms.TreeNode treeNode185 = new System.Windows.Forms.TreeNode("地球科学学院", new System.Windows.Forms.TreeNode[] {
-            treeNode184});
-            System.Windows.Forms.TreeNode treeNode186 = new System.Windows.Forms.TreeNode("思想政治教育");
-            System.Windows.Forms.TreeNode treeNode187 = new System.Windows.Forms.TreeNode("马克思主义学院", new System.Windows.Forms.TreeNode[] {
-            treeNode186});
-            System.Windows.Forms.TreeNode treeNode188 = new System.Windows.Forms.TreeNode("经济系");
-            System.Windows.Forms.TreeNode treeNode189 = new System.Windows.Forms.TreeNode("经管学院", new System.Windows.Forms.TreeNode[] {
-            treeNode188});
-            System.Windows.Forms.TreeNode treeNode190 = new System.Windows.Forms.TreeNode("英语系");
-            System.Windows.Forms.TreeNode treeNode191 = new System.Windows.Forms.TreeNode("外国语学院", new System.Windows.Forms.TreeNode[] {
-            treeNode190});
-            System.Windows.Forms.TreeNode treeNode192 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
-            treeNode180,
-            treeNode183,
-            treeNode185,
-            treeNode187,
-            treeNode189,
-            treeNode191});
+            System.Windows.Forms.TreeNode treeNode193 = new System.Windows.Forms.TreeNode("地理系", 0, 0);
+            System.Windows.Forms.TreeNode treeNode194 = new System.Windows.Forms.TreeNode("测绘系", 1, 1);
+            System.Windows.Forms.TreeNode treeNode195 = new System.Windows.Forms.TreeNode("软件工程系");
+            System.Windows.Forms.TreeNode treeNode196 = new System.Windows.Forms.TreeNode("地理与信息工程学院", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode193,
+            treeNode194,
+            treeNode195});
+            System.Windows.Forms.TreeNode treeNode197 = new System.Windows.Forms.TreeNode("应用数学系");
+            System.Windows.Forms.TreeNode treeNode198 = new System.Windows.Forms.TreeNode("物理系");
+            System.Windows.Forms.TreeNode treeNode199 = new System.Windows.Forms.TreeNode("数理学院", new System.Windows.Forms.TreeNode[] {
+            treeNode197,
+            treeNode198});
+            System.Windows.Forms.TreeNode treeNode200 = new System.Windows.Forms.TreeNode("地质系");
+            System.Windows.Forms.TreeNode treeNode201 = new System.Windows.Forms.TreeNode("地球科学学院", new System.Windows.Forms.TreeNode[] {
+            treeNode200});
+            System.Windows.Forms.TreeNode treeNode202 = new System.Windows.Forms.TreeNode("思想政治教育");
+            System.Windows.Forms.TreeNode treeNode203 = new System.Windows.Forms.TreeNode("马克思主义学院", new System.Windows.Forms.TreeNode[] {
+            treeNode202});
+            System.Windows.Forms.TreeNode treeNode204 = new System.Windows.Forms.TreeNode("经济系");
+            System.Windows.Forms.TreeNode treeNode205 = new System.Windows.Forms.TreeNode("经管学院", new System.Windows.Forms.TreeNode[] {
+            treeNode204});
+            System.Windows.Forms.TreeNode treeNode206 = new System.Windows.Forms.TreeNode("英语系");
+            System.Windows.Forms.TreeNode treeNode207 = new System.Windows.Forms.TreeNode("外国语学院", new System.Windows.Forms.TreeNode[] {
+            treeNode206});
+            System.Windows.Forms.TreeNode treeNode208 = new System.Windows.Forms.TreeNode("全部", 2, 2, new System.Windows.Forms.TreeNode[] {
+            treeNode196,
+            treeNode199,
+            treeNode201,
+            treeNode203,
+            treeNode205,
+            treeNode207});
             this.Tree1 = new System.Windows.Forms.TreeView();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -118,48 +118,48 @@ namespace testlog
             this.Tree1.Location = new System.Drawing.Point(3, 24);
             this.Tree1.Margin = new System.Windows.Forms.Padding(4);
             this.Tree1.Name = "Tree1";
-            treeNode177.ImageIndex = 0;
-            treeNode177.Name = "nodeX1";
-            treeNode177.SelectedImageIndex = 0;
-            treeNode177.Text = "地理系";
-            treeNode178.ImageIndex = 1;
-            treeNode178.Name = "nodeX2";
-            treeNode178.SelectedImageIndex = 1;
-            treeNode178.Text = "测绘系";
-            treeNode179.Name = "NodeX3";
-            treeNode179.Text = "软件工程系";
-            treeNode180.ImageIndex = 2;
-            treeNode180.Name = "nodeY1";
-            treeNode180.SelectedImageIndex = 2;
-            treeNode180.Text = "地理与信息工程学院";
-            treeNode181.Name = "节点6";
-            treeNode181.Text = "应用数学系";
-            treeNode182.Name = "节点7";
-            treeNode182.Text = "物理系";
-            treeNode183.Name = "节点1";
-            treeNode183.Text = "数理学院";
-            treeNode184.Name = "节点8";
-            treeNode184.Text = "地质系";
-            treeNode185.Name = "节点3";
-            treeNode185.Text = "地球科学学院";
-            treeNode186.Name = "节点9";
-            treeNode186.Text = "思想政治教育";
-            treeNode187.Name = "节点2";
-            treeNode187.Text = "马克思主义学院";
-            treeNode188.Name = "节点10";
-            treeNode188.Text = "经济系";
-            treeNode189.Name = "节点4";
-            treeNode189.Text = "经管学院";
-            treeNode190.Name = "节点11";
-            treeNode190.Text = "英语系";
-            treeNode191.Name = "节点5";
-            treeNode191.Text = "外国语学院";
-            treeNode192.ImageIndex = 2;
-            treeNode192.Name = "AllNodes";
-            treeNode192.SelectedImageIndex = 2;
-            treeNode192.Text = "全部";
+            treeNode193.ImageIndex = 0;
+            treeNode193.Name = "nodeX1";
+            treeNode193.SelectedImageIndex = 0;
+            treeNode193.Text = "地理系";
+            treeNode194.ImageIndex = 1;
+            treeNode194.Name = "nodeX2";
+            treeNode194.SelectedImageIndex = 1;
+            treeNode194.Text = "测绘系";
+            treeNode195.Name = "NodeX3";
+            treeNode195.Text = "软件工程系";
+            treeNode196.ImageIndex = 2;
+            treeNode196.Name = "nodeY1";
+            treeNode196.SelectedImageIndex = 2;
+            treeNode196.Text = "地理与信息工程学院";
+            treeNode197.Name = "节点6";
+            treeNode197.Text = "应用数学系";
+            treeNode198.Name = "节点7";
+            treeNode198.Text = "物理系";
+            treeNode199.Name = "节点1";
+            treeNode199.Text = "数理学院";
+            treeNode200.Name = "节点8";
+            treeNode200.Text = "地质系";
+            treeNode201.Name = "节点3";
+            treeNode201.Text = "地球科学学院";
+            treeNode202.Name = "节点9";
+            treeNode202.Text = "思想政治教育";
+            treeNode203.Name = "节点2";
+            treeNode203.Text = "马克思主义学院";
+            treeNode204.Name = "节点10";
+            treeNode204.Text = "经济系";
+            treeNode205.Name = "节点4";
+            treeNode205.Text = "经管学院";
+            treeNode206.Name = "节点11";
+            treeNode206.Text = "英语系";
+            treeNode207.Name = "节点5";
+            treeNode207.Text = "外国语学院";
+            treeNode208.ImageIndex = 2;
+            treeNode208.Name = "AllNodes";
+            treeNode208.SelectedImageIndex = 2;
+            treeNode208.Text = "全部";
             this.Tree1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode192});
+            treeNode208});
             this.Tree1.Size = new System.Drawing.Size(281, 169);
             this.Tree1.TabIndex = 1;
             this.Tree1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.Tree1_NodeMouseDoubleClick);
@@ -566,7 +566,7 @@ namespace testlog
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Name = "Click教师信息管理";
-            this.Text = "Click教师信息管理";
+            this.Text = "教师信息管理";
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox8.ResumeLayout(false);

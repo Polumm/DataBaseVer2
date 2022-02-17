@@ -106,8 +106,8 @@ namespace testlog
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(98, 28);
-            this.toolStripMenuItem2.Text = "地图交互";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 28);
+            this.toolStripMenuItem2.Text = "多功能教务平台";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // statusStrip1

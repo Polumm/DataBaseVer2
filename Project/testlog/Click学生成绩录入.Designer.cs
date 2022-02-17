@@ -38,12 +38,12 @@ namespace testlog
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -140,6 +140,14 @@ namespace testlog
             this.Column7.Name = "Column7";
             this.Column7.Width = 65;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "课程教学ID";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.Visible = false;
+            this.Column8.Width = 150;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView2);
@@ -194,15 +202,7 @@ namespace testlog
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "课程教学ID";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
-            this.Column8.Visible = false;
-            this.Column8.Width = 150;
-            // 
-            // Click学生成绩录入xxx
+            // Click学生成绩录入
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,8 +212,8 @@ namespace testlog
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Click学生成绩录入xxx";
-            this.Text = "Click学生成绩录入xxx";
+            this.Name = "Click学生成绩录入";
+            this.Text = "教务工作区";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);

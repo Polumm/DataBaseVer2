@@ -46,35 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Click修改学生信息.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click修改学生信息.Designer.cs">
-      <DependentUpon>Click修改学生信息.cs</DependentUpon>
-    </Compile>
     <Compile Include="Click修改密码.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Click修改密码.Designer.cs">
       <DependentUpon>Click修改密码.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click写入修改信息.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click写入修改信息.Designer.cs">
-      <DependentUpon>Click写入修改信息.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click写入学生成绩.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click写入学生成绩.Designer.cs">
-      <DependentUpon>Click写入学生成绩.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click删除学生信息.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click删除学生信息.Designer.cs">
-      <DependentUpon>Click删除学生信息.cs</DependentUpon>
     </Compile>
     <Compile Include="Click学生个人课表查询.cs">
       <SubType>Form</SubType>
@@ -94,12 +70,6 @@
     <Compile Include="Click学生成绩录入.Designer.cs">
       <DependentUpon>Click学生成绩录入.cs</DependentUpon>
     </Compile>
-    <Compile Include="Click平均学分绩点查询.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click平均学分绩点查询.Designer.cs">
-      <DependentUpon>Click平均学分绩点查询.cs</DependentUpon>
-    </Compile>
     <Compile Include="Click忘记密码.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,24 +81,6 @@
     </Compile>
     <Compile Include="Click排教学班.Designer.cs">
       <DependentUpon>Click排教学班.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click教学任务查询.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click教学任务查询.Designer.cs">
-      <DependentUpon>Click教学任务查询.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click教学计划变更申请.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click教学计划变更申请.Designer.cs">
-      <DependentUpon>Click教学计划变更申请.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click教学计划立项申请.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click教学计划立项申请.Designer.cs">
-      <DependentUpon>Click教学计划立项申请.cs</DependentUpon>
     </Compile>
     <Compile Include="Click教师信息管理.cs">
       <SubType>Form</SubType>
@@ -142,11 +94,11 @@
     <Compile Include="Click教师个人信息维护.Designer.cs">
       <DependentUpon>Click教师个人信息维护.cs</DependentUpon>
     </Compile>
-    <Compile Include="Click添加课程1.cs">
+    <Compile Include="Click排课程.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Click添加课程1.Designer.cs">
-      <DependentUpon>Click添加课程1.cs</DependentUpon>
+    <Compile Include="Click排课程.Designer.cs">
+      <DependentUpon>Click排课程.cs</DependentUpon>
     </Compile>
     <Compile Include="Click学生个人信息维护.cs">
       <SubType>Form</SubType>
@@ -173,11 +125,11 @@
     <Compile Include="Click学情查询.Designer.cs">
       <DependentUpon>Click学情查询.cs</DependentUpon>
     </Compile>
-    <Compile Include="地图交互.cs">
+    <Compile Include="多功能教务平台.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="地图交互.Designer.cs">
-      <DependentUpon>地图交互.cs</DependentUpon>
+    <Compile Include="多功能教务平台.Designer.cs">
+      <DependentUpon>多功能教务平台.cs</DependentUpon>
     </Compile>
     <Compile Include="学生功能区界面.cs">
       <SubType>Form</SubType>
@@ -203,64 +155,10 @@
     <Compile Include="管理员功能区界面.Designer.cs">
       <DependentUpon>管理员功能区界面.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMy.Designer.cs">
-      <DependentUpon>FormMy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSPA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSPA.Designer.cs">
-      <DependentUpon>FormSPA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click添加学生信息.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click添加学生信息.Designer.cs">
-      <DependentUpon>Click添加学生信息.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Insert_Teacher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Insert_Teacher.Designer.cs">
-      <DependentUpon>Form_Insert_Teacher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click自主选课.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click自主选课.Designer.cs">
-      <DependentUpon>Click自主选课.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Click年级学生排名.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Click年级学生排名.Designer.cs">
-      <DependentUpon>Click年级学生排名.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="temp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="temp.Designer.cs">
-      <DependentUpon>temp.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Click修改学生信息.resx">
-      <DependentUpon>Click修改学生信息.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Click修改密码.resx">
       <DependentUpon>Click修改密码.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click写入修改信息.resx">
-      <DependentUpon>Click写入修改信息.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click写入学生成绩.resx">
-      <DependentUpon>Click写入学生成绩.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click删除学生信息.resx">
-      <DependentUpon>Click删除学生信息.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click学生个人课表查询.resx">
       <DependentUpon>Click学生个人课表查询.cs</DependentUpon>
@@ -271,20 +169,11 @@
     <EmbeddedResource Include="Click学生成绩录入.resx">
       <DependentUpon>Click学生成绩录入.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Click平均学分绩点查询.resx">
-      <DependentUpon>Click平均学分绩点查询.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Click忘记密码.resx">
       <DependentUpon>Click忘记密码.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click排教学班.resx">
       <DependentUpon>Click排教学班.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click教学任务查询.resx">
-      <DependentUpon>Click教学任务查询.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click教学计划立项申请.resx">
-      <DependentUpon>Click教学计划立项申请.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click学生成绩总表打印.resx">
       <DependentUpon>Click学生成绩总表打印.cs</DependentUpon>
@@ -298,14 +187,14 @@
     <EmbeddedResource Include="Click教师个人信息维护.resx">
       <DependentUpon>Click教师个人信息维护.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Click添加课程1.resx">
-      <DependentUpon>Click添加课程1.cs</DependentUpon>
+    <EmbeddedResource Include="Click排课程.resx">
+      <DependentUpon>Click排课程.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click学生个人信息维护.resx">
       <DependentUpon>Click学生个人信息维护.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="地图交互.resx">
-      <DependentUpon>地图交互.cs</DependentUpon>
+    <EmbeddedResource Include="多功能教务平台.resx">
+      <DependentUpon>多功能教务平台.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="学生功能区界面.resx">
       <DependentUpon>学生功能区界面.cs</DependentUpon>
@@ -319,24 +208,6 @@
     <EmbeddedResource Include="管理员功能区界面.resx">
       <DependentUpon>管理员功能区界面.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMy.resx">
-      <DependentUpon>FormMy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSPA.resx">
-      <DependentUpon>FormSPA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click添加学生信息.resx">
-      <DependentUpon>Click添加学生信息.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Insert_Teacher.resx">
-      <DependentUpon>Form_Insert_Teacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click自主选课.resx">
-      <DependentUpon>Click自主选课.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Click年级学生排名.resx">
-      <DependentUpon>Click年级学生排名.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -346,9 +217,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="temp.resx">
-      <DependentUpon>temp.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

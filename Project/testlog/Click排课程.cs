@@ -11,7 +11,7 @@ using System.Data.SqlClient;//添加命名空间
 
 namespace testlog
 {
-    public partial class Click添加课程1 : Form
+    public partial class Click排课程 : Form
     {
         string classroom;
         //数据集dataset + 适配器实现快速绑定
@@ -20,14 +20,14 @@ namespace testlog
         SqlDataAdapter adapterCourse = null;
 
 
-        public Click添加课程1()
+        public Click排课程()
         {
             InitializeComponent();
             button3.Text = "提\n交\n修\n改\n";
             button4.Text = "撤\n消\n修\n改\n";
             showTable();
         }
-        public Click添加课程1(string classroom_info)
+        public Click排课程(string classroom_info)
         {
             classroom = classroom_info;
             InitializeComponent();

@@ -1,7 +1,7 @@
 ﻿
 namespace testlog
 {
-    partial class 地图交互
+    partial class 多功能教务平台
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace testlog
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(地图交互));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(多功能教务平台));
             this.button18 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();

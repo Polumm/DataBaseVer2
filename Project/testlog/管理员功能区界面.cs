@@ -63,12 +63,6 @@ namespace testlog
         {
 
         }
-
-        private void 删除学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Click删除学生信息 delete = new Click删除学生信息();
-            delete.ShowDialog();
-        }
         //Application.Exit();//分窗口关闭，程序强制退出
 
         private void Form2_Win_Load(object sender, EventArgs e)
@@ -84,22 +78,6 @@ namespace testlog
 
         //使用Click事件调用
 
-
-
-        private void 添加学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Click添加学生信息 Insert_student = new Click添加学生信息();
-            Insert_student.ShowDialog();
-        }
-
-
-        private void 修改学生信息ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Click修改学生信息 Upudate_student = new Click修改学生信息();
-            Upudate_student.ShowDialog();
-        }
-
-
         private void 学情查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Click学情查询 study_search = new Click学情查询();
@@ -108,7 +86,7 @@ namespace testlog
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            地图交互 mapLoad = new 地图交互(AdminID, 0);
+            多功能教务平台 mapLoad = new 多功能教务平台(AdminID, 0);
             mapLoad.ShowDialog();
         }
 

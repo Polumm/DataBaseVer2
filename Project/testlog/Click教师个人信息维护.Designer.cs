@@ -283,7 +283,7 @@ namespace testlog
             this.textBox2.Size = new System.Drawing.Size(195, 31);
             this.textBox2.TabIndex = 202;
             // 
-            // Click教师信息维护
+            // Click教师个人信息维护
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -309,8 +309,8 @@ namespace testlog
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label);
-            this.Name = "Click教师信息维护";
-            this.Text = "Click教师信息维护";
+            this.Name = "Click教师个人信息维护";
+            this.Text = "教师信息维护";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
