@@ -1,7 +1,7 @@
 ﻿
 namespace testlog
 {
-    partial class Click教师信息维护
+    partial class Click教师个人信息维护
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace testlog
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Click教师信息维护));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Click教师个人信息维护));
             this.label5 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();

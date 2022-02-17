@@ -78,7 +78,7 @@ namespace testlog
 
         private void 用户个人信息维护ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Click教师信息维护 mapLoad = new Click教师信息维护(TID1);
+            Click教师个人信息维护 mapLoad = new Click教师个人信息维护(TID1);
             mapLoad.ShowDialog();
         }
 

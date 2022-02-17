@@ -136,11 +136,11 @@
     <Compile Include="Click教师信息管理.Designer.cs">
       <DependentUpon>Click教师信息管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="Click教师信息维护.cs">
+    <Compile Include="Click教师个人信息维护.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Click教师信息维护.Designer.cs">
-      <DependentUpon>Click教师信息维护.cs</DependentUpon>
+    <Compile Include="Click教师个人信息维护.Designer.cs">
+      <DependentUpon>Click教师个人信息维护.cs</DependentUpon>
     </Compile>
     <Compile Include="Click添加课程1.cs">
       <SubType>Form</SubType>
@@ -295,8 +295,8 @@
     <EmbeddedResource Include="Click教师信息管理.resx">
       <DependentUpon>Click教师信息管理.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Click教师信息维护.resx">
-      <DependentUpon>Click教师信息维护.cs</DependentUpon>
+    <EmbeddedResource Include="Click教师个人信息维护.resx">
+      <DependentUpon>Click教师个人信息维护.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Click添加课程1.resx">
       <DependentUpon>Click添加课程1.cs</DependentUpon>

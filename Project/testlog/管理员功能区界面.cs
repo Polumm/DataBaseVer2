@@ -111,6 +111,27 @@ namespace testlog
             地图交互 mapLoad = new 地图交互(AdminID, 0);
             mapLoad.ShowDialog();
         }
+
+        private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确认要退出系统吗？", "提示信息", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void 学生信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click学生信息管理 study_search = new Click学生信息管理();
+            study_search.ShowDialog();
+        }
+
+        private void 教师信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click教师信息管理 study_search = new Click教师信息管理();
+            study_search.ShowDialog();
+        }
     }
     
 }

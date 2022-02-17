@@ -624,24 +624,6 @@ namespace testlog
                         string[] str = { a, b, h, c, d, e, f, g, i };
                         dataGridView1.Rows.Add(str);
                     }
-                    //防止产生重复列
-                    try
-                    {
-                        dataGridView1.Columns.Remove("Choosebuttons");
-                    }
-                    catch
-                    { }
-                    //添加buttons列
-                    DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
-                    // 设定列的名字
-                    dgv_button_col.Name = "Choosebuttons";
-                    // 在所有按钮上表示"查看详情"
-                    dgv_button_col.UseColumnTextForButtonValue = true;
-                    dgv_button_col.Text = "选课";
-                    // 设置列标题
-                    dgv_button_col.HeaderText = "点击选课";
-                    // 向DataGridView追加
-                    dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
                 }
 
                 else

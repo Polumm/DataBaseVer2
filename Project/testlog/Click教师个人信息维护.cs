@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace testlog
 {
-    public partial class Click教师信息维护 : Form
+    public partial class Click教师个人信息维护 : Form
     {
         string Sno = "null";
-        public Click教师信息维护()
+        public Click教师个人信息维护()
         {
             InitializeComponent();
         }
-        public Click教师信息维护(string id)
+        public Click教师个人信息维护(string id)
         {
             Sno = id;
             InitializeComponent();
