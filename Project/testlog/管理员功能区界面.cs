@@ -110,6 +110,17 @@ namespace testlog
             Click教师信息管理 study_search = new Click教师信息管理();
             study_search.ShowDialog();
         }
+
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click修改密码 Update_password = new Click修改密码(AdminID, "管理员");
+            Update_password.ShowDialog();
+        }
+
+        private void 教学成绩管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

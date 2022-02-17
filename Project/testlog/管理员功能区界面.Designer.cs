@@ -34,6 +34,8 @@ namespace testlog
             this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.教师信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学情查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +45,8 @@ namespace testlog
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.学生信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.教师信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.教学成绩管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,8 @@ namespace testlog
             // 系统ToolStripMenuItem
             // 
             this.系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.退出系统ToolStripMenuItem});
+            this.退出系统ToolStripMenuItem,
+            this.修改密码ToolStripMenuItem});
             this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
             this.系统ToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
             this.系统ToolStripMenuItem.Text = "系统";
@@ -88,10 +91,25 @@ namespace testlog
             this.信息管理ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
             this.信息管理ToolStripMenuItem.Text = "信息管理";
             // 
+            // 学生信息管理ToolStripMenuItem
+            // 
+            this.学生信息管理ToolStripMenuItem.Name = "学生信息管理ToolStripMenuItem";
+            this.学生信息管理ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.学生信息管理ToolStripMenuItem.Text = "学生信息管理";
+            this.学生信息管理ToolStripMenuItem.Click += new System.EventHandler(this.学生信息管理ToolStripMenuItem_Click);
+            // 
+            // 教师信息管理ToolStripMenuItem
+            // 
+            this.教师信息管理ToolStripMenuItem.Name = "教师信息管理ToolStripMenuItem";
+            this.教师信息管理ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.教师信息管理ToolStripMenuItem.Text = "教师信息管理";
+            this.教师信息管理ToolStripMenuItem.Click += new System.EventHandler(this.教师信息管理ToolStripMenuItem_Click);
+            // 
             // 信息查询ToolStripMenuItem
             // 
             this.信息查询ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.学情查询ToolStripMenuItem});
+            this.学情查询ToolStripMenuItem,
+            this.教学成绩管理ToolStripMenuItem});
             this.信息查询ToolStripMenuItem.Name = "信息查询ToolStripMenuItem";
             this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
             this.信息查询ToolStripMenuItem.Text = "信息查询";
@@ -99,7 +117,7 @@ namespace testlog
             // 学情查询ToolStripMenuItem
             // 
             this.学情查询ToolStripMenuItem.Name = "学情查询ToolStripMenuItem";
-            this.学情查询ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.学情查询ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.学情查询ToolStripMenuItem.Text = "学情查询";
             this.学情查询ToolStripMenuItem.Click += new System.EventHandler(this.学情查询ToolStripMenuItem_Click);
             // 
@@ -157,19 +175,19 @@ namespace testlog
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // 学生信息管理ToolStripMenuItem
+            // 修改密码ToolStripMenuItem
             // 
-            this.学生信息管理ToolStripMenuItem.Name = "学生信息管理ToolStripMenuItem";
-            this.学生信息管理ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.学生信息管理ToolStripMenuItem.Text = "学生信息管理";
-            this.学生信息管理ToolStripMenuItem.Click += new System.EventHandler(this.学生信息管理ToolStripMenuItem_Click);
+            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.修改密码ToolStripMenuItem.Text = "修改密码";
+            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
-            // 教师信息管理ToolStripMenuItem
+            // 教学成绩管理ToolStripMenuItem
             // 
-            this.教师信息管理ToolStripMenuItem.Name = "教师信息管理ToolStripMenuItem";
-            this.教师信息管理ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.教师信息管理ToolStripMenuItem.Text = "教师信息管理";
-            this.教师信息管理ToolStripMenuItem.Click += new System.EventHandler(this.教师信息管理ToolStripMenuItem_Click);
+            this.教学成绩管理ToolStripMenuItem.Name = "教学成绩管理ToolStripMenuItem";
+            this.教学成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.教学成绩管理ToolStripMenuItem.Text = "教学成绩管理";
+            this.教学成绩管理ToolStripMenuItem.Click += new System.EventHandler(this.教学成绩管理ToolStripMenuItem_Click);
             // 
             // 管理员功能区界面
             // 
@@ -209,5 +227,7 @@ namespace testlog
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem 学生信息管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 教师信息管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 教学成绩管理ToolStripMenuItem;
     }
 }
