@@ -17,7 +17,7 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 学生功能区界面("20201003150"));
+            Application.Run(new 教师功能区界面("liweifeng101"));
         }
     }
 }

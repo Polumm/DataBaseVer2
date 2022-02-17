@@ -75,5 +75,26 @@ namespace testlog
             地图交互 mapLoad = new 地图交互(TID1,2);
             mapLoad.ShowDialog();
         }
+
+        private void 用户个人信息维护ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Click教师信息维护 mapLoad = new Click教师信息维护(TID1);
+            mapLoad.ShowDialog();
+        }
+
+        private void 学情统计分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确认要退出系统吗？", "提示信息", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void 修改密码ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Click修改密码 Update_password = new Click修改密码(TID1, "教师");
+            Update_password.ShowDialog();
+        }
     }
 }

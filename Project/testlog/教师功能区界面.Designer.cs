@@ -31,22 +31,17 @@ namespace testlog
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.教学任务查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.教学计划变更申请ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.教学计划申请ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.选课ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学情统计分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生成绩录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.地图交互ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.地图交互ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学情统计分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.选课ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户个人信息维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,81 +51,20 @@ namespace testlog
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.系统ToolStripMenuItem,
             this.选课ToolStripMenuItem,
             this.地图交互ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 36);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 系统ToolStripMenuItem
+            // 地图交互ToolStripMenuItem
             // 
-            this.系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.退出系统ToolStripMenuItem,
-            this.修改密码ToolStripMenuItem,
-            this.教学任务查询ToolStripMenuItem,
-            this.教学计划变更申请ToolStripMenuItem,
-            this.教学计划申请ToolStripMenuItem});
-            this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
-            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
-            this.系统ToolStripMenuItem.Text = "教师管理";
-            // 
-            // 退出系统ToolStripMenuItem
-            // 
-            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
-            this.退出系统ToolStripMenuItem.Text = "退出系统";
-            // 
-            // 修改密码ToolStripMenuItem
-            // 
-            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
-            this.修改密码ToolStripMenuItem.Text = "修改密码";
-            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
-            // 
-            // 教学任务查询ToolStripMenuItem
-            // 
-            this.教学任务查询ToolStripMenuItem.Name = "教学任务查询ToolStripMenuItem";
-            this.教学任务查询ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
-            this.教学任务查询ToolStripMenuItem.Text = "教学任务查询";
-            this.教学任务查询ToolStripMenuItem.Click += new System.EventHandler(this.教学任务查询ToolStripMenuItem_Click);
-            // 
-            // 教学计划变更申请ToolStripMenuItem
-            // 
-            this.教学计划变更申请ToolStripMenuItem.Name = "教学计划变更申请ToolStripMenuItem";
-            this.教学计划变更申请ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
-            this.教学计划变更申请ToolStripMenuItem.Text = "教学计划变更申请";
-            // 
-            // 教学计划申请ToolStripMenuItem
-            // 
-            this.教学计划申请ToolStripMenuItem.Name = "教学计划申请ToolStripMenuItem";
-            this.教学计划申请ToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
-            this.教学计划申请ToolStripMenuItem.Text = "教学计划立项申请";
-            this.教学计划申请ToolStripMenuItem.Click += new System.EventHandler(this.教学计划申请ToolStripMenuItem_Click);
-            // 
-            // 选课ToolStripMenuItem
-            // 
-            this.选课ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.学情统计分析ToolStripMenuItem,
-            this.学生成绩录入ToolStripMenuItem});
-            this.选课ToolStripMenuItem.Name = "选课ToolStripMenuItem";
-            this.选课ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
-            this.选课ToolStripMenuItem.Text = "教务管理";
-            // 
-            // 学情统计分析ToolStripMenuItem
-            // 
-            this.学情统计分析ToolStripMenuItem.Name = "学情统计分析ToolStripMenuItem";
-            this.学情统计分析ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
-            this.学情统计分析ToolStripMenuItem.Text = "学情统计分析";
-            // 
-            // 学生成绩录入ToolStripMenuItem
-            // 
-            this.学生成绩录入ToolStripMenuItem.Name = "学生成绩录入ToolStripMenuItem";
-            this.学生成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
-            this.学生成绩录入ToolStripMenuItem.Text = "学生成绩录入";
-            this.学生成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.学生成绩录入ToolStripMenuItem_Click);
+            this.地图交互ToolStripMenuItem.Name = "地图交互ToolStripMenuItem";
+            this.地图交互ToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.地图交互ToolStripMenuItem.Text = "多功能教务平台";
+            this.地图交互ToolStripMenuItem.Click += new System.EventHandler(this.地图交互ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -175,12 +109,36 @@ namespace testlog
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // 地图交互ToolStripMenuItem
+            // 学情统计分析ToolStripMenuItem
             // 
-            this.地图交互ToolStripMenuItem.Name = "地图交互ToolStripMenuItem";
-            this.地图交互ToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
-            this.地图交互ToolStripMenuItem.Text = "地图交互";
-            this.地图交互ToolStripMenuItem.Click += new System.EventHandler(this.地图交互ToolStripMenuItem_Click);
+            this.学情统计分析ToolStripMenuItem.Name = "学情统计分析ToolStripMenuItem";
+            this.学情统计分析ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.学情统计分析ToolStripMenuItem.Text = "退出系统";
+            this.学情统计分析ToolStripMenuItem.Click += new System.EventHandler(this.学情统计分析ToolStripMenuItem_Click);
+            // 
+            // 选课ToolStripMenuItem
+            // 
+            this.选课ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.学情统计分析ToolStripMenuItem,
+            this.用户个人信息维护ToolStripMenuItem,
+            this.修改密码ToolStripMenuItem});
+            this.选课ToolStripMenuItem.Name = "选课ToolStripMenuItem";
+            this.选课ToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
+            this.选课ToolStripMenuItem.Text = "系统";
+            // 
+            // 用户个人信息维护ToolStripMenuItem
+            // 
+            this.用户个人信息维护ToolStripMenuItem.Name = "用户个人信息维护ToolStripMenuItem";
+            this.用户个人信息维护ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.用户个人信息维护ToolStripMenuItem.Text = "用户个人信息维护";
+            this.用户个人信息维护ToolStripMenuItem.Click += new System.EventHandler(this.用户个人信息维护ToolStripMenuItem_Click);
+            // 
+            // 修改密码ToolStripMenuItem
+            // 
+            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.修改密码ToolStripMenuItem.Text = "修改密码";
+            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click_1);
             // 
             // 教师功能区界面
             // 
@@ -204,21 +162,16 @@ namespace testlog
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 系统ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出系统ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 选课ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 教学任务查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 教学计划变更申请ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 教学计划申请ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 学情统计分析ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 学生成绩录入ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 地图交互ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 选课ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 学情统计分析ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 用户个人信息维护ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
     }
 }
