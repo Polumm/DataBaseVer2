@@ -87,7 +87,7 @@ namespace testlog
 
         private void 用户信息维护ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Click用户个人信息维护 change = new Click用户个人信息维护(SID1);
+            Click学生个人信息维护 change = new Click学生个人信息维护(SID1);
             change.ShowDialog();
         }
 

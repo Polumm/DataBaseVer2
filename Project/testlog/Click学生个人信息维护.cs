@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace testlog
 {
-    public partial class Click用户个人信息维护 : Form
+    public partial class Click学生个人信息维护 : Form
     {
         string Sno = "20201000830";
-        public Click用户个人信息维护()
+        public Click学生个人信息维护()
         {
             InitializeComponent();
         }
         
-        public Click用户个人信息维护(string id)
+        public Click学生个人信息维护(string id)
         {
             Sno = id;
             InitializeComponent();
