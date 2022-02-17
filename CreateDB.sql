@@ -51,7 +51,7 @@ create table 课程
 学分 tinyint,
 )
 
-create table 排课表
+create table 教学班
 (
 课程教学ID varchar(20) primary key,
 上课时间 varchar(40),
@@ -72,17 +72,17 @@ create table 课程学生SC
 成绩 float,
 primary key(学号,课程教学ID),
 foreign key(学号) references 学生(学号),
-foreign key(课程教学ID) references 排课表(课程教学ID)
+foreign key(课程教学ID) references 教学班(课程教学ID)
 )
 
 create table 用户安全信息          
- (	
- 用户名 varchar(20) PRIMARY KEY,                          
- 密码 varchar(max), 
- 身份 varchar(20),
- 手机号码 varchar(11),
- 用户照片 image
- ); 
+(	
+用户名 varchar(20) PRIMARY KEY,                          
+密码 varchar(max), 
+身份 varchar(20),
+手机号码 varchar(11),
+用户照片 image
+); 
 
 
 
@@ -110,12 +110,12 @@ as
 begin
     declare @学号 varchar(20), @课程教学ID varchar(20), @课程代号 varchar(20), @计划上限 smallint, @当前人数 smallint, @成绩 smallint, @课程类型 varchar(20);
     select @学号=学号, @课程教学ID=课程教学ID, @成绩=成绩 from inserted;
-	select @计划上限=计划上限, @当前人数=已选人数 from 排课表 where 课程教学ID=@课程教学ID;
-	select @课程类型=课程类型,@课程代号=课程代号 from 课程 where 课程代号 = (select 课程代号 from 排课表 where 课程教学ID=@课程教学ID);
+	select @计划上限=计划上限, @当前人数=已选人数 from 教学班 where 课程教学ID=@课程教学ID;
+	select @课程类型=课程类型,@课程代号=课程代号 from 课程 where 课程代号 = (select 课程代号 from 教学班 where 课程教学ID=@课程教学ID);
     if (@计划上限>=@当前人数)
 	begin
 		print '选课成功！';
-		update 排课表 set 已选人数 = 已选人数+1 where 课程教学ID = @课程教学ID;
+		update 教学班 set 已选人数 = 已选人数+1 where 课程教学ID = @课程教学ID;
 		if(@成绩=null)
 		begin
 			insert into 绩点模型(学号,课程代号)
@@ -204,7 +204,7 @@ as
 begin
 	declare @学号 varchar(20), @课程教学ID varchar(20), @课程代号 varchar(20), @成绩_before float, @成绩 float;
     select @学号=学号, @课程教学ID=课程教学ID from inserted;
-	select @课程代号 = 课程代号 from 排课表 where 课程教学ID=@课程教学ID;
+	select @课程代号 = 课程代号 from 教学班 where 课程教学ID=@课程教学ID;
 	select @成绩_before=成绩 from deleted;
 	select @成绩=成绩 from inserted;
 	begin
@@ -294,7 +294,7 @@ as
 begin
 	declare @学号 varchar(20), @课程教学ID varchar(20),@课程代号 varchar(20),@成绩 smallint;
     select @学号=学号, @课程教学ID=课程教学ID, @成绩=成绩 from deleted;
-	select @课程代号 = 课程代号 from 排课表 where 课程教学ID=@课程教学ID;
+	select @课程代号 = 课程代号 from 教学班 where 课程教学ID=@课程教学ID;
 	if(@成绩 between 0 and 100)
 	begin
 		print '成绩已录入，操作无效！';
@@ -305,7 +305,7 @@ begin
 		delete
 		from 绩点模型
 		where 学号=@学号 and 课程代号 = @课程代号
-		update 排课表 set 已选人数 = 已选人数-1 where 课程教学ID = @课程教学ID;
+		update 教学班 set 已选人数 = 已选人数-1 where 课程教学ID = @课程教学ID;
 	end
 end
 go
@@ -553,79 +553,79 @@ values('2113040','计算科学基础','专业必修',2)
 
 
 
-insert into 排课表
+insert into 教学班
 values('21212711', '周一1-2节','A-406','liweifeng101',120,0, '2121271')
-insert into 排课表
+insert into 教学班
 values('21212712', '周一3-4节','A-509','xiaohaijun65',120,0, '2121271')
-insert into 排课表
+insert into 教学班
 values('21212801', '周一3-4节','A-212','liweifeng101',70,0, '2121280')
-insert into 排课表
+insert into 教学班
 values('21212802', '周一3-4节','A-214','hupeng110709',70,0, '2121280')
-insert into 排课表
+insert into 教学班
 values('21213013', '周一5-6节','A-212','zguangyong09',80,0, '2121301')
-insert into 排课表
+insert into 教学班
 values('21213023', '周一5-6节','A-214','hekaihua9809',80,0, '2121301')
-insert into 排课表
+insert into 教学班
 values('20119600', '周一7-8节','A-104','fanruoying11',30,0, '2011960')
-insert into 排课表
+insert into 教学班
 values('12005200', '周一9-10节','A-111','wuguobin7372',100,0, '1200520')
-insert into 排课表
+insert into 教学班
 values('12005201', '周一9-10节','A-406','guoguanyu747',100,0, '1200520')
-insert into 排课表
+insert into 教学班
 values('11706200', '周二1-2节','A-111','wenhui721206',90,0, '1170620')
-insert into 排课表
+insert into 教学班
 values('11706201', '周二1-2节','A-509','luwenzhong01',90,0, '1170620')
-insert into 排课表
+insert into 教学班
 values('10923410', '周二3-4节','A-310','zhaoyingke97',110,0, '1092341')
-insert into 排课表
+insert into 教学班
 values('10923420', '周二3-4节','A-406','zhouliehong9',110,0, '1092341')
-insert into 排课表
+insert into 教学班
 values('10923430', '周二3-4节','A-509','wangguonian8',110,0, '1092341')
-insert into 排课表
+insert into 教学班
 values('8spoc001', '周二5-6节','A-104','lijiangmin98',60,0, '8spoc00')
-insert into 排课表
+insert into 教学班
 values('8spoc002', '周二5-6节','A-105','liangyueling',60,0, '8spoc00')
-insert into 排课表
+insert into 教学班
 values('8spoc005', '周二7-8节','A-109','wangguonian8',50,0, '9spoc00')
-insert into 排课表
+insert into 教学班
 values('70800600', '周二7-8节','A-310','huhuaimin214',150,0, '7080060')
-insert into 排课表
+insert into 教学班
 values('70400600', '周二9-10节','A-310','qinyangmin07',100,0, '7040060')
-insert into 排课表
+insert into 教学班
 values('21931100', '周三1-2节','A-104','qikunlun0630',50,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('21931110', '周三3-4节','A-105','guomingqiang',50,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('41931200', '周三5-8节','A-201','liuxiuguo225',30,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('41931210', '周三5-8节','A-202','panxiong0029',30,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('41931220', '周三5-8节','A-203','yaoyao180305',30,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('41931230', '周三9-12节','A-104','songxiaoqing',30,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('41931240', '周三9-12节','A-105','huaweihua601',30,0, '2193110')
-insert into 排课表
+insert into 教学班
 values('21130600', '周四1-2节','A-109','lihui9790314',60,0, '2113060')
-insert into 排课表
+insert into 教学班
 values('21130700', '周四1-2节','A-212','liujianyu106',60,0, '2113060')
-insert into 排课表
+insert into 教学班
 values('21130800', '周四1-2节','A-214','lvjianjun007',60,0, '2113060')
-insert into 排课表
+insert into 教学班
 values('20105600', '周四3-4节','A-212','songxiaoqing',60,0, '2010560')
-insert into 排课表
+insert into 教学班
 values('20105700', '周四3-4节','A-214','guanqinfeng1',60,0, '2010560')
-insert into 排课表
+insert into 教学班
 values('21717600', '周四3-4节','A-310','wanglunche13',150,0, '2171760')
-insert into 排课表
+insert into 教学班
 values('21130701', '周四5-8节','A-201','gongjunfang1',30,0, '2113070')
-insert into 排课表
+insert into 教学班
 values('21130702', '周五1-4节','A-202','chaoyi010701',30,0, '2113070')
-insert into 排课表
+insert into 教学班
 values('21130703', '周五1-4节','A-203','yaoyao180305',30,0, '2113070')
-insert into 排课表
+insert into 教学班
 values('21130400', '周五5-8节','A-109','qikunlun0630',70,0, '2113040')
-insert into 排课表
+insert into 教学班
 values('21130500', '周五5-8节','A-111','huaweihua601',90,0, '2113040')
 
 
@@ -1641,28 +1641,28 @@ from 教师, 系
 where 教师.系编号 = 系.系编号
 go
 
-/*用于选课和教学任务查询，全校可见，基于排课表*/
+/*用于选课和教学任务查询，全校可见，基于教学班*/
 create view 学生可选课表(课程教学ID, 课程, 课程号, 课程类型, 学分, 教师编号,授课老师, 空间位置, 教室编号, 上课时间, 计划上限, 当前人数)
 as
-select 课程教学ID, 课程.课程名, 课程.课程代号, 课程类型 ,学分, 教师.教师编号, 教师.姓名, 空间位置, 排课表.教室编号, 上课时间, 排课表.计划上限, 排课表.已选人数
-from 课程, 教师, 教室, 排课表
-where 排课表.课程代号 = 课程.课程代号 and 排课表.教师编号 = 教师.教师编号 and 排课表.教室编号 = 教室.教室编号
+select 课程教学ID, 课程.课程名, 课程.课程代号, 课程类型 ,学分, 教师.教师编号, 教师.姓名, 空间位置, 教学班.教室编号, 上课时间, 教学班.计划上限, 教学班.已选人数
+from 课程, 教师, 教室, 教学班
+where 教学班.课程代号 = 课程.课程代号 and 教学班.教师编号 = 教师.教师编号 and 教学班.教室编号 = 教室.教室编号
 go
 
 /*用于查看选课记录，部分可见部分隐藏，基于课程学生SC表*/
 create view 学生当前选课情况(课程教学ID, 学号, 课程, 课程号, 课程类型, 学分, 授课老师, 空间位置, 教室编号, 上课时间, 计划上限, 当前人数, 成绩)
 as
-select 排课表.课程教学ID, 学号, 课程.课程名, 课程.课程代号 ,课程类型, 学分, 教师.姓名, 空间位置, 排课表.教室编号, 上课时间, 排课表.计划上限, 排课表.已选人数, 成绩
-from 课程, 教师, 教室, 排课表, 课程学生SC
-where  排课表.课程教学ID = 课程学生SC.课程教学ID and 排课表.课程代号 = 课程.课程代号 and 排课表.教师编号 = 教师.教师编号 and 排课表.教室编号 = 教室.教室编号
+select 教学班.课程教学ID, 学号, 课程.课程名, 课程.课程代号 ,课程类型, 学分, 教师.姓名, 空间位置, 教学班.教室编号, 上课时间, 教学班.计划上限, 教学班.已选人数, 成绩
+from 课程, 教师, 教室, 教学班, 课程学生SC
+where  教学班.课程教学ID = 课程学生SC.课程教学ID and 教学班.课程代号 = 课程.课程代号 and 教学班.教师编号 = 教师.教师编号 and 教学班.教室编号 = 教室.教室编号
 go
 
 /*用于学生成绩总表打印*/
 create view 学生成绩评价表(学号,姓名,课程号,课程,学分,课程类型,成绩,等级,绩点,权重)
 as
-select 学生.学号,姓名,排课表.课程代号,课程.课程名,学分,课程类型,成绩,等级,绩点,权重
-from 学生,课程,课程学生SC,绩点模型,排课表
-where 课程学生SC.学号=学生.学号 and 课程学生SC.课程教学ID = 排课表.课程教学ID and 排课表.课程代号 = 课程.课程代号 and 课程学生SC.学号=绩点模型.学号 and 课程.课程代号 = 绩点模型.课程代号
+select 学生.学号,姓名,教学班.课程代号,课程.课程名,学分,课程类型,成绩,等级,绩点,权重
+from 学生,课程,课程学生SC,绩点模型,教学班
+where 课程学生SC.学号=学生.学号 and 课程学生SC.课程教学ID = 教学班.课程教学ID and 教学班.课程代号 = 课程.课程代号 and 课程学生SC.学号=绩点模型.学号 and 课程.课程代号 = 绩点模型.课程代号
 go
 
 
