@@ -17,7 +17,7 @@ namespace testlog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 学生功能区界面("20201003150"));
+            Application.Run(new Click教师信息管理());
         }
     }
 }
@@ -26,11 +26,12 @@ namespace testlog
 
 //登陆验证界面()
 //new 管理员功能区界面("Admin")
-//new 地图交互()
+//new 学生功能区界面("20201003150")
 //new 教师功能区界面("liweifeng101")
+
 //new Click学生信息管理()
 //new 学生功能区界面("1")
-//new 学生功能区界面("20201003150")
+//new Click教师信息管理()
 //new 管理员功能区界面()
 //Click学生成绩录入xxx
 //new Click学生成绩录入xxx("liweifeng101")

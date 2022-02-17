@@ -22,7 +22,7 @@ namespace testlog
         DataSet dsStu = null;
         SqlDataAdapter adapterStu = null;
         //当前视图全局可见
-        String sql;
+        String sql = null;
         public Click学生信息管理()
         {
             InitializeComponent();
@@ -31,34 +31,37 @@ namespace testlog
 
         private void ShowStudentAll()
         {
-            Door door = new Door();
-            SqlConnection conn = door.Connection();
-            /*            //普通绑定，以BindingSource作为数据（引用）的容器进行传递
-            //1、新建适配器
-            adapterStu = new SqlDataAdapter(sql, conn);
-            //2、新建数据表，是虚拟表，临时保存数据。DataTable的对象包括DataSet和DataView。
-            dt = new DataTable();
-            //3、将数据注入虚拟表
-            adapterStu.Fill(dt);
-            //4、将虚拟表与dataGridView绑定
-            dataGridView1.DataSource = dt;
-            //5、新建并绑定BindingSource 
-            bs = new BindingSource();
-            bs.DataSource = dt; 
-            conn.Close();
-            // 设定单元格的ToolTip内容
-            //dataGridView1.Columns[0].ToolTipText = "该列单元格的内容不能为空";*/
+            if (sql != null)
+            {
+                Door door = new Door();
+                SqlConnection conn = door.Connection();
+                /*            //普通绑定，以BindingSource作为数据（引用）的容器进行传递
+                //1、新建适配器
+                adapterStu = new SqlDataAdapter(sql, conn);
+                //2、新建数据表，是虚拟表，临时保存数据。DataTable的对象包括DataSet和DataView。
+                dt = new DataTable();
+                //3、将数据注入虚拟表
+                adapterStu.Fill(dt);
+                //4、将虚拟表与dataGridView绑定
+                dataGridView1.DataSource = dt;
+                //5、新建并绑定BindingSource 
+                bs = new BindingSource();
+                bs.DataSource = dt; 
+                conn.Close();
+                // 设定单元格的ToolTip内容
+                //dataGridView1.Columns[0].ToolTipText = "该列单元格的内容不能为空";*/
 
 
-            //快速绑定：
-            //1、新建适配器
-            adapterStu = new SqlDataAdapter(sql, conn);
-            //2、新建数据集
-            dsStu = new DataSet();
-            //3、将数据注入数据集，建立StudentInfo虚拟表
-            adapterStu.Fill(dsStu, "StudentInfo");
-            //4、将数据集的虚拟表与dataGridView绑定
-            dataGridView1.DataSource = dsStu.Tables["StudentInfo"];
+                //快速绑定：
+                //1、新建适配器
+                adapterStu = new SqlDataAdapter(sql, conn);
+                //2、新建数据集
+                dsStu = new DataSet();
+                //3、将数据注入数据集，建立StudentInfo虚拟表
+                adapterStu.Fill(dsStu, "StudentInfo");
+                //4、将数据集的虚拟表与dataGridView绑定
+                dataGridView1.DataSource = dsStu.Tables["StudentInfo"];
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -164,7 +167,8 @@ namespace testlog
         {
             textBox1.Text = null;
             textBox2.Text = null;
-            textBox3.Text = null;
+            comboBox3.Text = null;
+            comboBox1.Text = null;
             textBox4.Text = null;
             textBox5.Text = null;
             textBox6.Text = null;
@@ -198,8 +202,6 @@ namespace testlog
                 sql = "select * from 学生信息表 where 学号 in (select 学号 from 学生信息表 where 班级 = '" + i.Node.Text + "')";
                 ShowStudentAll();
             }
-
-
         }
 
         private void btnSelect_Click(object sender, EventArgs i)
@@ -232,20 +234,18 @@ namespace testlog
             }
             if (radioButton1.Checked)
             {
-                if (textBox4.Text == "" && textBox3.Text == "")
+                if (comboBox3.Text == "" || textBox4.Text == "")
                 {
                     MessageBox.Show("学生信息为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (textBox4.Text == "")
+                else if (comboBox3.Text == "学号")
                 {
-                    //Column4.HeaderText = "专业排名,姓名搜索";
-                    sql = "select * from 学生信息表 where 姓名 = '" + textBox3.Text + "' ";
+                    sql = "select * from 学生信息表 where 学号 = '" + textBox4.Text + "' ";
                     ShowStudentAll();
                 }
                 else
                 {
-                    //Column4.HeaderText = "专业排名，学号搜索";
-                    sql = "select * from 学生信息表 where 学号 = '" + textBox4.Text + "' ";
+                    sql = "select * from 学生信息表 where 姓名 = '" + textBox4.Text + "' ";
                     ShowStudentAll();
                 }
             }

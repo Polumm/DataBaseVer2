@@ -131,15 +131,15 @@ namespace testlog
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(390, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(390, 36);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 28);
-            this.toolStripMenuItem1.Text = "多功能地图交互";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 32);
+            this.toolStripMenuItem1.Text = "多功能教务平台";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
             // 
             // 信息查询ToolStripMenuItem

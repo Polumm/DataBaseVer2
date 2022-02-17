@@ -598,109 +598,39 @@ namespace testlog
   
         private void showTable(string sql = " select* from 学生可选课表")
         {
-            string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
-            if (role == 0)//如果是管理员
+            if (sql != null)
             {
-                dataGridView1.Rows.Clear();
-                Door Course = new Door();
-                IDataReader drAdmin = Course.Reader(sql);
-                while (drAdmin.Read())
+                string a, b, c, d, e, f, g, h, i, temp1, temp2, temp3, temp4;
+                if (role == 0)//如果是管理员
                 {
-                    a = drAdmin["课程"].ToString();
-                    b = drAdmin["课程号"].ToString();
-                    c = drAdmin["学分"].ToString();
-                    d = drAdmin["授课老师"].ToString();
-                    e = drAdmin["上课时间"].ToString();
-                    temp1 = drAdmin["空间位置"].ToString();
-                    temp2 = drAdmin["教室编号"].ToString();
-                    temp3 = drAdmin["当前人数"].ToString();
-                    temp4 = drAdmin["计划上限"].ToString();
-                    f = temp1 + " " + temp2;
-                    g = temp3 + "/" + temp4;
-                    h = drAdmin["课程类型"].ToString();
-                    i = drAdmin["课程教学ID"].ToString();
-                    string[] str = { a, b, h, c, d, e, f, g, i };
-                    dataGridView1.Rows.Add(str);
-                }
-                //防止产生重复列
-                try
-                {
-                    dataGridView1.Columns.Remove("Choosebuttons");
-                }
-                catch
-                { }
-                //添加buttons列
-                DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
-                // 设定列的名字
-                dgv_button_col.Name = "Choosebuttons";
-                // 在所有按钮上表示"查看详情"
-                dgv_button_col.UseColumnTextForButtonValue = true;
-                dgv_button_col.Text = "选课";
-                // 设置列标题
-                dgv_button_col.HeaderText = "点击选课";
-                // 向DataGridView追加
-                dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
-            }
-
-            else 
-            {
-                //该学生已选的课程教学ID
-                List<string> MyCourseList = new List<string>();
-                string MyCourse_Stu;
-                if (role == 1)
-                {//如果是学生
-                    MyCourse_Stu = "select 排课表.课程教学ID 课程教学ID from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
-                }
-                else
-                {//如果是老师
-                    MyCourse_Stu =  " select* from 学生可选课表 where 教师编号 = '" + Tno + "'";
-                }
-                Door Check_course = new Door();
-                IDataReader dr0 = Check_course.Reader(MyCourse_Stu);
-                while (dr0.Read())
-                {
-                    MyCourseList.Add(dr0["课程教学ID"].ToString());
-                }
-
-                string sign;
-                dataGridView1.Rows.Clear();
-                Door Choose_course = new Door();
-                IDataReader dr = Choose_course.Reader(sql);
-                while (dr.Read())
-                {
-                    a = dr["课程"].ToString();
-                    b = dr["课程号"].ToString();
-                    c = dr["学分"].ToString();
-                    d = dr["授课老师"].ToString();
-                    e = dr["上课时间"].ToString();
-                    temp1 = dr["空间位置"].ToString();
-                    temp2 = dr["教室编号"].ToString();
-                    temp3 = dr["当前人数"].ToString();
-                    temp4 = dr["计划上限"].ToString();
-                    f = temp1 + " " + temp2;
-                    g = temp3 + "/" + temp4;
-                    h = dr["课程类型"].ToString();
-                    i = dr["课程教学ID"].ToString();
-                    if (MyCourseList.Contains(i))
-                    {//已选课程，不可复选
-                        sign = "0";
+                    dataGridView1.Rows.Clear();
+                    Door Course = new Door();
+                    IDataReader drAdmin = Course.Reader(sql);
+                    while (drAdmin.Read())
+                    {
+                        a = drAdmin["课程"].ToString();
+                        b = drAdmin["课程号"].ToString();
+                        c = drAdmin["学分"].ToString();
+                        d = drAdmin["授课老师"].ToString();
+                        e = drAdmin["上课时间"].ToString();
+                        temp1 = drAdmin["空间位置"].ToString();
+                        temp2 = drAdmin["教室编号"].ToString();
+                        temp3 = drAdmin["当前人数"].ToString();
+                        temp4 = drAdmin["计划上限"].ToString();
+                        f = temp1 + " " + temp2;
+                        g = temp3 + "/" + temp4;
+                        h = drAdmin["课程类型"].ToString();
+                        i = drAdmin["课程教学ID"].ToString();
+                        string[] str = { a, b, h, c, d, e, f, g, i };
+                        dataGridView1.Rows.Add(str);
                     }
-                    else
-                    {//可选
-                        sign = "1";
+                    //防止产生重复列
+                    try
+                    {
+                        dataGridView1.Columns.Remove("Choosebuttons");
                     }
-                    string[] str = { a, b, h, c, d, e, f, g, i, sign };
-                    dataGridView1.Rows.Add(str);
-                }
-                //防止产生重复列
-                try
-                {
-                    dataGridView1.Columns.Remove("Choosebuttons");
-                }
-                catch
-                { }
-                if (role == 1)//如果是学生，添加选课按钮
-                {
+                    catch
+                    { }
                     //添加buttons列
                     DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
                     // 设定列的名字
@@ -713,19 +643,92 @@ namespace testlog
                     // 向DataGridView追加
                     dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
                 }
-                foreach (DataGridViewRow dgr in dataGridView1.Rows)
+
+                else
                 {
-                    if (dgr.Cells["Column10"].Value == null)
-                    {
-                        break;
+                    //该学生已选的课程教学ID
+                    List<string> MyCourseList = new List<string>();
+                    string MyCourse_Stu;
+                    if (role == 1)
+                    {//如果是学生
+                        MyCourse_Stu = "select 排课表.课程教学ID 课程教学ID from 课程学生SC, 排课表 where 课程学生SC.课程教学ID = 排课表.课程教学ID and 学号 = '" + Sno + "'";
                     }
-                    if (dgr.Cells["Column10"].Value.ToString() == "0")
+                    else
+                    {//如果是老师
+                        MyCourse_Stu = " select* from 学生可选课表 where 教师编号 = '" + Tno + "'";
+                    }
+                    Door Check_course = new Door();
+                    IDataReader dr0 = Check_course.Reader(MyCourse_Stu);
+                    while (dr0.Read())
                     {
-                        dgr.DefaultCellStyle.BackColor = Color.LightBlue;
+                        MyCourseList.Add(dr0["课程教学ID"].ToString());
+                    }
+
+                    string sign;
+                    dataGridView1.Rows.Clear();
+                    Door Choose_course = new Door();
+                    IDataReader dr = Choose_course.Reader(sql);
+                    while (dr.Read())
+                    {
+                        a = dr["课程"].ToString();
+                        b = dr["课程号"].ToString();
+                        c = dr["学分"].ToString();
+                        d = dr["授课老师"].ToString();
+                        e = dr["上课时间"].ToString();
+                        temp1 = dr["空间位置"].ToString();
+                        temp2 = dr["教室编号"].ToString();
+                        temp3 = dr["当前人数"].ToString();
+                        temp4 = dr["计划上限"].ToString();
+                        f = temp1 + " " + temp2;
+                        g = temp3 + "/" + temp4;
+                        h = dr["课程类型"].ToString();
+                        i = dr["课程教学ID"].ToString();
+                        if (MyCourseList.Contains(i))
+                        {//已选课程，不可复选
+                            sign = "0";
+                        }
+                        else
+                        {//可选
+                            sign = "1";
+                        }
+                        string[] str = { a, b, h, c, d, e, f, g, i, sign };
+                        dataGridView1.Rows.Add(str);
+                    }
+                    //防止产生重复列
+                    try
+                    {
+                        dataGridView1.Columns.Remove("Choosebuttons");
+                    }
+                    catch
+                    { }
+                    if (role == 1)//如果是学生，添加选课按钮
+                    {
+                        //添加buttons列
+                        DataGridViewButtonColumn dgv_button_col = new DataGridViewButtonColumn();
+                        // 设定列的名字
+                        dgv_button_col.Name = "Choosebuttons";
+                        // 在所有按钮上表示"查看详情"
+                        dgv_button_col.UseColumnTextForButtonValue = true;
+                        dgv_button_col.Text = "选课";
+                        // 设置列标题
+                        dgv_button_col.HeaderText = "点击选课";
+                        // 向DataGridView追加
+                        dataGridView1.Columns.Insert(dataGridView1.Columns.Count, dgv_button_col);
+                    }
+                    foreach (DataGridViewRow dgr in dataGridView1.Rows)
+                    {
+                        if (dgr.Cells["Column10"].Value == null)
+                        {
+                            break;
+                        }
+                        if (dgr.Cells["Column10"].Value.ToString() == "0")
+                        {
+                            dgr.DefaultCellStyle.BackColor = Color.LightBlue;
+                        }
                     }
                 }
             }
-            
+
         }
 
         private void button18_Click_1(object sender, EventArgs j)
