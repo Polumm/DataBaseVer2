@@ -60,6 +60,42 @@ dgv表格就是为了直观呈现查询结果，绑定后，绑定后增删改�
 - 主码不明确的视图或多表连接的表和视图难以通过消解法进行增删改操作
 
   解决方法：适配器设置参数，指定Updatecommand的sql语句
+  
+  ```C#
+  //快速绑定：
+  //1、新建适配器
+  adapterStu = new SqlDataAdapter(sql, conn);
+  //2、新建数据集
+  dsStu = new DataSet();
+  //3、将数据注入数据集，建立StudentInfo虚拟表
+  adapterStu.Fill(dsStu, "StudentInfo");
+  //4、将数据集的虚拟表与dataGridView绑定
+  dataGridView1.DataSource = dsStu.Tables["StudentInfo"];
+  
+  //1、指定UpdateCommand所执行的sql语句
+  adapterStu.UpdateCommand = new SqlCommand("update 学生 set 姓名 = @姓名, 性别 = @性别, 出生日期 = @出生日期, 班级编号 = @班级编号 where 学号 = @学号");
+  //2、传递参数
+  adapterStu.UpdateCommand.Parameters.Add("@学号", SqlDbType.VarChar, 50, "学号");
+  adapterStu.UpdateCommand.Parameters.Add("@姓名", SqlDbType.VarChar, 50, "姓名");
+  adapterStu.UpdateCommand.Parameters.Add("@性别", SqlDbType.VarChar, 50, "性别");
+  adapterStu.UpdateCommand.Parameters.Add("@出生日期", SqlDbType.VarChar, 50, "出生年月");
+  adapterStu.UpdateCommand.Parameters.Add("@班级编号", SqlDbType.VarChar, 50, "班级");
+  
+  //
+  SqlCommandBuilder builder = new SqlCommandBuilder(adapterStu);
+  try
+  {
+    adapterStu.Update(dsStu.Tables["StudentInfo"]);
+    MessageBox.Show("提交修改成功！");
+    CancelAll();
+  }
+  catch(Exception ex)
+  {
+    MessageBox.Show(ex.ToString());
+  }
+  ```
+  
+  
 
 
 
