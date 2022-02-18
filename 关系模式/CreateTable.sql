@@ -1,3 +1,4 @@
+/*CreateTable*/
 create table 系
 (
 系编号 varchar(30) primary key,
@@ -50,7 +51,7 @@ create table 课程
 学分 tinyint,
 )
 
-create table 排课表
+create table 教学班
 (
 课程教学ID varchar(20) primary key,
 上课时间 varchar(40),
@@ -59,7 +60,7 @@ create table 排课表
 计划上限 tinyint,
 已选人数 tinyint,
 课程代号 varchar(20),
-foreign key(教室编号) references 教室(教室编号),
+/*foreign key(教室编号) references 教室(教室编号),*/
 foreign key(教师编号) references 教师(教师编号),
 foreign key(课程代号) references 课程(课程代号)
 )
@@ -71,41 +72,14 @@ create table 课程学生SC
 成绩 float,
 primary key(学号,课程教学ID),
 foreign key(学号) references 学生(学号),
-foreign key(课程教学ID) references 排课表(课程教学ID)
+foreign key(课程教学ID) references 教学班(课程教学ID)
 )
 
-create table 课程教师TC
-(
-课程号 varchar(20),
-教师编号 varchar(20),
-上课时间 varchar(40),
-计划上限 tinyint,
-primary key(教师编号,课程号,上课时间),
-foreign key(教师编号) references 教师(教师编号),
-foreign key(课程号) references 课程(课程号)
-)
-
-create table 课程教室CC
-(
-课程号 varchar(20),
-教室编号 varchar(10),
-上课时间 varchar(40),
-primary key(教室编号,课程号,上课时间),
-foreign key(教室编号) references 教室(教室编号),
-foreign key(课程号) references 课程(课程号)
-)
-
-create table 管理员密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
-
-create table 教师密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
-
-create table 学生密码表
-(用户名 varchar(20) primary key,
- 密码  varchar(max)
-)
+create table 用户安全信息          
+(	
+用户名 varchar(20) PRIMARY KEY,                          
+密码 varchar(max), 
+身份 varchar(20),
+手机号码 varchar(11),
+用户照片 image
+); 

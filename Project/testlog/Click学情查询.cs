@@ -179,14 +179,14 @@ namespace testlog
             }
             if (radioButton1.Checked)
             {
-                if (textBox4.Text == "" && textBox3.Text == "")
+                if (textBox4.Text == "" || comboBox3.Text == "")
                 {
                     MessageBox.Show("学生信息为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (textBox4.Text == "")
+                else if (comboBox3.Text == "姓名")
                 {
                     Column4.HeaderText = "专业排名";
-                    string sql0 = "select 专业 from 学生, 班 where 学生.班级编号 = 班.班级编号 and 学生.姓名 = '" + textBox3.Text + "' ";
+                    string sql0 = "select 专业 from 学生, 班 where 学生.班级编号 = 班.班级编号 and 学生.姓名 = '" + textBox4.Text + "' ";
                     Door dao0 = new Door();
                     IDataReader dr0 = dao0.Reader(sql0);
                     if (dr0.Read())
@@ -197,7 +197,7 @@ namespace testlog
                         IDataReader dr = dao.Reader(sql);
                         while (dr.Read())
                         {
-                            if (dr["姓名"].ToString() == textBox3.Text)
+                            if (dr["姓名"].ToString() == textBox4.Text)
                             {
                                 string a, b, c, d, e, f, g;
                                 a = dr["学号"].ToString();
@@ -255,7 +255,7 @@ namespace testlog
             dataGridView1.Rows.Clear();
             textBox1.Text = null;
             textBox2.Text = null;
-            textBox3.Text = null;
+            comboBox3.Text = null;
             textBox4.Text = null;
         }
     }

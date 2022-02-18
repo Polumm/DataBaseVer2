@@ -631,7 +631,7 @@ namespace testlog
             this.MaximumSize = new System.Drawing.Size(1205, 743);
             this.MinimumSize = new System.Drawing.Size(1205, 743);
             this.Name = "多功能教务平台";
-            this.Text = "地图交互";
+            this.Text = "多功能教务平台";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -1,232 +1,51 @@
-create table 绩点模型
-(
-学号 varchar(20),
-课程代号 varchar(20),
-等级 varchar(10),
-绩点 float,
-权重 float,
-primary key(学号,课程代号),
-foreign key(学号) references 学生(学号),
-foreign key(课程代号) references 课程(课程代号)
-)
+/*CreateViews*/
+/*用于学生信息的管理维护*/
+go
+create view 学生信息表(班级,学号,姓名,性别,出生年月,系,学院,专业)
+as
+select 学生.班级编号,学号,姓名,性别,出生日期,系名,学院,专业 
+from 学生,班,系
+where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号
+go
+
+/*用于教师信息管理维护*/
+create view 教师信息表(姓名,教师编号,职称,联系方式,系,系编号, 学院)
+as
+select 姓名,教师编号,职称,联系方式,系名,系.系编号,学院
+from 教师, 系
+where 教师.系编号 = 系.系编号
+go
+
+/*用于选课和教学任务查询，全校可见，基于教学班*/
+create view 学生可选课表(课程教学ID, 课程, 课程号, 课程类型, 学分, 教师编号,授课老师, 空间位置, 教室编号, 上课时间, 计划上限, 当前人数)
+as
+select 课程教学ID, 课程.课程名, 课程.课程代号, 课程类型 ,学分, 教师.教师编号, 教师.姓名, 空间位置, 教学班.教室编号, 上课时间, 教学班.计划上限, 教学班.已选人数
+from 课程, 教师, 教室, 教学班
+where 教学班.课程代号 = 课程.课程代号 and 教学班.教师编号 = 教师.教师编号 and 教学班.教室编号 = 教室.教室编号
+go
+
+/*用于查看选课记录，部分可见部分隐藏，基于课程学生SC表*/
+create view 学生当前选课情况(课程教学ID, 学号, 课程, 课程号, 课程类型, 学分, 授课老师, 空间位置, 教室编号, 上课时间, 计划上限, 当前人数, 成绩)
+as
+select 教学班.课程教学ID, 学号, 课程.课程名, 课程.课程代号 ,课程类型, 学分, 教师.姓名, 空间位置, 教学班.教室编号, 上课时间, 教学班.计划上限, 教学班.已选人数, 成绩
+from 课程, 教师, 教室, 教学班, 课程学生SC
+where  教学班.课程教学ID = 课程学生SC.课程教学ID and 教学班.课程代号 = 课程.课程代号 and 教学班.教师编号 = 教师.教师编号 and 教学班.教室编号 = 教室.教室编号
+go
+
+/*用于学生成绩总表打印*/
+create view 学生成绩评价表(学号,姓名,课程号,课程,学分,课程类型,成绩,等级,绩点,权重)
+as
+select 学生.学号,姓名,教学班.课程代号,课程.课程名,学分,课程类型,成绩,等级,绩点,权重
+from 学生,课程,课程学生SC,绩点模型,教学班
+where 课程学生SC.学号=学生.学号 and 课程学生SC.课程教学ID = 教学班.课程教学ID and 教学班.课程代号 = 课程.课程代号 and 课程学生SC.学号=绩点模型.学号 and 课程.课程代号 = 绩点模型.课程代号
+go
 
 
-go
-create trigger insert_绩点
-on 课程学生SC
-after insert
+/*平均学分绩点的计算*/
+create view 年级排名表(学号,姓名,学院,专业,系,班级,已修学分,平均学分绩点)
 as
-begin
-    declare @学号 varchar(20), @课程教学ID varchar(20), @课程代号 varchar(20), @计划上限 smallint, @当前人数 smallint, @成绩 smallint, @课程类型 varchar(20);
-    select @学号=学号, @课程教学ID=课程教学ID, @成绩=成绩 from inserted;
-	select @计划上限=计划上限, @当前人数=已选人数 from 排课表 where 课程教学ID=@课程教学ID;
-	select @课程类型=课程类型,@课程代号=课程代号 from 课程 where 课程代号 = (select 课程代号 from 排课表 where 课程教学ID=@课程教学ID);
-    if (@计划上限>=@当前人数)
-	begin
-		print '选课成功！';
-		update 排课表 set 已选人数 = 已选人数+1 where 课程教学ID = @课程教学ID;
-		if(@成绩=null)
-		begin
-			insert into 绩点模型(学号,课程代号)
-			values(@学号,@课程代号)
-		end
-		else if(@成绩>=90 and @成绩<100)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'A',4.0)
-		end
-		else if(@成绩>=85 and @成绩<90)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'A-',3.7)
-		end
-		else if(@成绩>=82 and @成绩<85)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'B+',3.3)
-		end
-		else if(@成绩>=78 and @成绩<82)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'B',3.0)
-		end
-		else if(@成绩>=75 and @成绩<78)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'B-',2.7)
-		end
-		else if(@成绩>=71 and @成绩<75)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'C+',2.3)
-		end
-		else if(@成绩>=66 and @成绩<71)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'C',2.0)
-		end
-		else if(@成绩>=62 and @成绩<66)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'C-',1.7)
-		end
-		else if(@成绩>=60 and @成绩<62)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'D',1.3)
-		end
-		else if(@成绩<60)
-		begin
-			insert into 绩点模型(学号,课程代号,等级,绩点)
-			values(@学号,@课程代号,'D-',1.0)
-		end
-		if(@课程类型='基础必修')
-		begin
-			update 绩点模型
-			set 权重=1.2
-			where 学号=@学号 and 课程代号=@课程代号
-		end
-		else if(@课程类型='专业必修')
-		begin
-			update 绩点模型
-			set 权重=1.1
-			where 学号=@学号 and 课程代号=@课程代号
-		end
-		else if(@课程类型='选修')
-		begin
-			update 绩点模型
-			set 权重=1.0
-			where 学号=@学号 and 课程代号=@课程代号
-		end
-	end
-    else if(@计划上限<@当前人数)
-	begin
-		rollback transaction
-		print '选课失败，课程已满！';
-	end
-end
-go
-create trigger update_绩点
-on 课程学生SC
-after update
-as
-begin
-	declare @学号 varchar(20), @课程教学ID varchar(20), @课程代号 varchar(20), @成绩_before float, @成绩 float;
-    select @学号=学号, @课程教学ID=课程教学ID from inserted;
-	select @课程代号 = 课程代号 from 排课表 where 课程教学ID=@课程教学ID;
-	select @成绩_before=成绩 from deleted;
-	select @成绩=成绩 from inserted;
-	if(@成绩_before is null)
-	begin
-		if (update(成绩))
-		begin
-			print '绩点录入成功！';
-			if(@成绩=null)
-			begin
-				update 绩点模型
-				set 等级=null,绩点=null
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=90 and @成绩<100)
-			begin
-				update 绩点模型
-				set 等级='A',绩点=4.0
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=85 and @成绩<90)
-			begin
-				update 绩点模型
-				set 等级='A-',绩点=3.7
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=82 and @成绩<85)
-			begin
-				update 绩点模型
-				set 等级='B+',绩点=3.3
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=78 and @成绩<82)
-			begin
-				update 绩点模型
-				set 等级='B',绩点=3.0
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=75 and @成绩<78)
-			begin
-				update 绩点模型
-				set 等级='B-',绩点=2.7
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=71 and @成绩<75)
-			begin
-				update 绩点模型
-				set 等级='C+',绩点=2.3
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=66 and @成绩<71)
-			begin
-				update 绩点模型
-				set 等级='C',绩点=2.0
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=62 and @成绩<66)
-			begin
-				update 绩点模型
-				set 等级='C-',绩点=1.7
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩>=60 and @成绩<62)
-			begin
-				update 绩点模型
-				set 等级='D',绩点=1.3
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-			else if(@成绩<60)
-			begin
-				update 绩点模型
-				set 等级='D-',绩点=1.0
-				where 学号=@学号 and 课程代号=@课程代号
-			end
-		end
-		else if(update(学号) or update(课程教学ID))
-		begin
-			rollback transaction
-			print '操作无效！';
-		end
-	end
-	else
-	begin
-		rollback transaction
-		if (update(成绩))
-		begin
-			print '已录入绩点，不可修改！'
-		end
-		else if(update(学号) or update(课程教学ID))
-		begin
-			print '操作无效！';
-		end
-	end
-end
-go
-create trigger delete_绩点
-on 课程学生SC
-after delete
-as
-begin
-	declare @学号 varchar(20), @课程教学ID varchar(20),@课程代号 varchar(20),@成绩 smallint;
-    select @学号=学号, @课程教学ID=课程教学ID, @成绩=成绩 from deleted;
-	select @课程代号 = 课程代号 from 排课表 where 课程教学ID=@课程教学ID;
-	if(@成绩 between 0 and 100)
-	begin
-		print '成绩已录入，操作无效！';
-		rollback transaction
-	end
-	else
-	begin
-		delete
-		from 绩点模型
-		where 学号=@学号 and 课程代号 = @课程代号
-		update 排课表 set 已选人数 = 已选人数-1 where 课程教学ID = @课程教学ID;
-	end
-end
+select 学生.学号,姓名,学院,专业,系名,学生.班级编号,总学分,平均学分绩点 
+from
+学生, 班, 系,(select 学生.学号,总学分,总绩点/总学分 平均学分绩点 from 学生,(select 学号,Sum(学分) from 学生成绩评价表 group by 学号) as temporary1(学号,总学分),(select 学号,Sum(学分*绩点*权重) from 学生成绩评价表 group by 学号) as temporary2(学号,总绩点) where 学生.学号=temporary1.学号 and 学生.学号=temporary2.学号) as temporary3
+where 学生.班级编号=班.班级编号 and 系.系编号=班.系编号 and 学生.学号 = temporary3.学号
 go
