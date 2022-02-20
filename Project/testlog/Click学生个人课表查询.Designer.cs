@@ -52,17 +52,16 @@ namespace testlog
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 402);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 405);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(919, 31);
+            this.statusStrip1.Size = new System.Drawing.Size(919, 28);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(298, 24);
-            this.toolStripStatusLabel1.Text = "选中课程后，点击删除按钮可以退课";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 21);
             this.toolStripStatusLabel1.ToolTipText = "退选";
             // 
             // dataGridView4
@@ -104,7 +103,7 @@ namespace testlog
             this.dataGridView4.RowHeadersWidth = 62;
             this.dataGridView4.RowTemplate.Height = 30;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(919, 402);
+            this.dataGridView4.Size = new System.Drawing.Size(919, 405);
             this.dataGridView4.TabIndex = 14;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
